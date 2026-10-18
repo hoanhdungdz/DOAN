@@ -1,0 +1,9 @@
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["F"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/prepare_ui_smoke.py" = ["E402"]

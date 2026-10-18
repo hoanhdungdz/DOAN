@@ -1,0 +1,1850 @@
+{
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1.png": {
+    "local": "/product-images/5cf88a736282f8b8c3a0bb1b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/0/1/01_6_3_1.png",
+    "sha256": "5cf88a736282f8b8c3a0bb1b04861de6cc6410899aaab61d1d621c7d245ab6f0",
+    "bytes": 311663
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1_1.png": {
+    "local": "/product-images/5cf88a736282f8b8c3a0bb1b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/0/1/01_6_3_1_1.png",
+    "sha256": "5cf88a736282f8b8c3a0bb1b04861de6cc6410899aaab61d1d621c7d245ab6f0",
+    "bytes": 311663
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1_2_1.png": {
+    "local": "/product-images/5cf88a736282f8b8c3a0bb1b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1_2_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/0/1/01_6_3_1_2_1.png",
+    "sha256": "5cf88a736282f8b8c3a0bb1b04861de6cc6410899aaab61d1d621c7d245ab6f0",
+    "bytes": 311663
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1_4.png": {
+    "local": "/product-images/5cf88a736282f8b8c3a0bb1b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/0/1/01_6_3_1_4.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/0/1/01_6_3_1_4.png",
+    "sha256": "5cf88a736282f8b8c3a0bb1b04861de6cc6410899aaab61d1d621c7d245ab6f0",
+    "bytes": 311663
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_1_1.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1_2_1_1.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_1_2.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_1_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1_2_1_2.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_2.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1_2_2.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_3.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_2_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1_2_3.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_4.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_4.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1_4.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_5.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_5.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1_5.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_6.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_1__1_1_6.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_1__1_1_6.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_720_3_1_3.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_720_3_1_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_720_3_1_3.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_720_3_1_4.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_720_3_1_4.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_720_3_1_4.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_720_3_2.png": {
+    "local": "/product-images/081974cfc58c1a23ba1a96df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/1/_/1_720_3_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/1/_/1_720_3_2.png",
+    "sha256": "081974cfc58c1a23ba1a96df1a5c65bb031e987d53ba55d04da4308caa0131d2",
+    "bytes": 310789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/_/e/_e4_1_1_1.jpg": {
+    "local": "/product-images/3ad96e574c1643a4f2369f2e.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/_/e/_e4_1_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/_/e/_e4_1_1_1.jpg",
+    "sha256": "3ad96e574c1643a4f2369f2ec89225807b46ee4ffcbb555095a0a782fe524b06",
+    "bytes": 31264
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/i/air-purifier-4-pro.jpg": {
+    "local": "/product-images/fef4f5c93e9e7142ee3feb91.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-loc-khong-khi-xiaomi-mi-air-purifier-4-pro_1_5.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-loc-khong-khi-xiaomi-mi-air-purifier-4-pro_1_5.png",
+    "sha256": "fef4f5c93e9e7142ee3feb91798a69998ad2843723417b1dfd48f095066914c0",
+    "bytes": 183856
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple-airpods-5-sac-co-day-label.jpg": {
+    "local": "/product-images/c7ccefea847ac922889ab3ab.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple-airpods-5-sac-co-day-label.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple-airpods-5-sac-co-day-label.jpg",
+    "sha256": "c7ccefea847ac922889ab3ab637ebd884beca007c3a3d24ae0f6df57cf37c7ff",
+    "bytes": 40993
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple-airpods-5-sac-khong-day-label.png": {
+    "local": "/product-images/3c1762d3b4c15c9a4135155b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple-airpods-5-sac-khong-day-label.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple-airpods-5-sac-khong-day-label.png",
+    "sha256": "3c1762d3b4c15c9a4135155b900ce891362da522d312e52a3105dc2f29b5e24f",
+    "bytes": 170537
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple-se-3-44_1_3_1.png": {
+    "local": "/product-images/81d401197a49781461913026.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple-se-3-44_1_3_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple-se-3-44_1_3_1.png",
+    "sha256": "81d401197a497814619130263d400f4c43144b959f78ae21705f7285e6541adc",
+    "bytes": 190136
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_10__1_3.png": {
+    "local": "/product-images/b4123f67272f526bca09c4d3.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_10__1_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_10__1_3.png",
+    "sha256": "b4123f67272f526bca09c4d38600df17dc85e6c99e61f046a2561750592b54f7",
+    "bytes": 197362
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_11__1_4.png": {
+    "local": "/product-images/4a139bcec29eb84d955e9e1a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_11__1_4.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_11__1_4.png",
+    "sha256": "4a139bcec29eb84d955e9e1acb838e0a37c252cb9fd289f7bead5d666e55db62",
+    "bytes": 276884
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_11__1_5.png": {
+    "local": "/product-images/4a139bcec29eb84d955e9e1a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_11__1_5.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_11__1_5.png",
+    "sha256": "4a139bcec29eb84d955e9e1acb838e0a37c252cb9fd289f7bead5d666e55db62",
+    "bytes": 276884
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_11__1_6.png": {
+    "local": "/product-images/4a139bcec29eb84d955e9e1a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_11__1_6.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_11__1_6.png",
+    "sha256": "4a139bcec29eb84d955e9e1acb838e0a37c252cb9fd289f7bead5d666e55db62",
+    "bytes": 276884
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_12__1_2.png": {
+    "local": "/product-images/facf7f2a9d49716303ac1604.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_12__1_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_12__1_2.png",
+    "sha256": "facf7f2a9d49716303ac1604ebfb56eaba846864615cd07cee0919f93016c957",
+    "bytes": 256490
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_12__1_3.png": {
+    "local": "/product-images/facf7f2a9d49716303ac1604.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_12__1_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_12__1_3.png",
+    "sha256": "facf7f2a9d49716303ac1604ebfb56eaba846864615cd07cee0919f93016c957",
+    "bytes": 256490
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_1__1_23.png": {
+    "local": "/product-images/44187221768ec906e49a40c0.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_1__1_23.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_1__1_23.png",
+    "sha256": "44187221768ec906e49a40c0726ac9b95c0bb6e9cfdb83e770d18d699947669c",
+    "bytes": 284600
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_1__1_24.png": {
+    "local": "/product-images/44187221768ec906e49a40c0.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_1__1_24.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_1__1_24.png",
+    "sha256": "44187221768ec906e49a40c0726ac9b95c0bb6e9cfdb83e770d18d699947669c",
+    "bytes": 284600
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_1__1_25.png": {
+    "local": "/product-images/44187221768ec906e49a40c0.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_1__1_25.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_1__1_25.png",
+    "sha256": "44187221768ec906e49a40c0726ac9b95c0bb6e9cfdb83e770d18d699947669c",
+    "bytes": 284600
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_2__2_8.png": {
+    "local": "/product-images/48c620c56de82a0b1d5f8ee0.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_2__2_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_2__2_8.png",
+    "sha256": "48c620c56de82a0b1d5f8ee07c670176b31d1eab545113151c8a0a803fd0c9c6",
+    "bytes": 152609
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_2__2_9.png": {
+    "local": "/product-images/48c620c56de82a0b1d5f8ee0.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_2__2_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_2__2_9.png",
+    "sha256": "48c620c56de82a0b1d5f8ee07c670176b31d1eab545113151c8a0a803fd0c9c6",
+    "bytes": 152609
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3_69.png": {
+    "local": "/product-images/f0ddb6322ebe133527afde0a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3_69.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_3_69.png",
+    "sha256": "f0ddb6322ebe133527afde0aea5160bee43760e901f471d02e217d5cd35d3f3c",
+    "bytes": 156380
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3_70.png": {
+    "local": "/product-images/f0ddb6322ebe133527afde0a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3_70.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_3_70.png",
+    "sha256": "f0ddb6322ebe133527afde0aea5160bee43760e901f471d02e217d5cd35d3f3c",
+    "bytes": 156380
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_10.png": {
+    "local": "/product-images/b507882f1b2c15e774909377.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_10.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_3__1_10.png",
+    "sha256": "b507882f1b2c15e7749093779d39a10693d1742f41ee0e3ac894640c34448ebe",
+    "bytes": 163758
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_7.png": {
+    "local": "/product-images/b507882f1b2c15e774909377.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_7.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_3__1_7.png",
+    "sha256": "b507882f1b2c15e7749093779d39a10693d1742f41ee0e3ac894640c34448ebe",
+    "bytes": 163758
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_8.png": {
+    "local": "/product-images/b507882f1b2c15e774909377.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_3__1_8.png",
+    "sha256": "b507882f1b2c15e7749093779d39a10693d1742f41ee0e3ac894640c34448ebe",
+    "bytes": 163758
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_9.png": {
+    "local": "/product-images/b507882f1b2c15e774909377.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_3__1_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_3__1_9.png",
+    "sha256": "b507882f1b2c15e7749093779d39a10693d1742f41ee0e3ac894640c34448ebe",
+    "bytes": 163758
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_4__1_10.png": {
+    "local": "/product-images/948b2adb770ad318503a8fc5.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_4__1_10.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_4__1_10.png",
+    "sha256": "948b2adb770ad318503a8fc5a1390b91b2b500034f90f7691dd60eb8d51c5379",
+    "bytes": 286897
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_4__1_8.png": {
+    "local": "/product-images/948b2adb770ad318503a8fc5.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_4__1_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_4__1_8.png",
+    "sha256": "948b2adb770ad318503a8fc5a1390b91b2b500034f90f7691dd60eb8d51c5379",
+    "bytes": 286897
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_4__1_9.png": {
+    "local": "/product-images/948b2adb770ad318503a8fc5.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_4__1_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_4__1_9.png",
+    "sha256": "948b2adb770ad318503a8fc5a1390b91b2b500034f90f7691dd60eb8d51c5379",
+    "bytes": 286897
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_10.png": {
+    "local": "/product-images/14d8a7de6f370920e83a5b5c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_10.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_5__1_10.png",
+    "sha256": "14d8a7de6f370920e83a5b5ca8731afdfd47581dd5809f31c8adc262f09a9bae",
+    "bytes": 130234
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_11.png": {
+    "local": "/product-images/14d8a7de6f370920e83a5b5c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_11.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_5__1_11.png",
+    "sha256": "14d8a7de6f370920e83a5b5ca8731afdfd47581dd5809f31c8adc262f09a9bae",
+    "bytes": 130234
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_8.png": {
+    "local": "/product-images/14d8a7de6f370920e83a5b5c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_5__1_8.png",
+    "sha256": "14d8a7de6f370920e83a5b5ca8731afdfd47581dd5809f31c8adc262f09a9bae",
+    "bytes": 130234
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_9.png": {
+    "local": "/product-images/14d8a7de6f370920e83a5b5c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_5__1_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_5__1_9.png",
+    "sha256": "14d8a7de6f370920e83a5b5ca8731afdfd47581dd5809f31c8adc262f09a9bae",
+    "bytes": 130234
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_6__1_5.png": {
+    "local": "/product-images/8dfd18af007c2995ad205583.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_6__1_5.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_6__1_5.png",
+    "sha256": "8dfd18af007c2995ad2055832887a00bada506ae7bd97d7a3f1fbf65eb435d9b",
+    "bytes": 280673
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_6__1_6.png": {
+    "local": "/product-images/8dfd18af007c2995ad205583.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_6__1_6.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_6__1_6.png",
+    "sha256": "8dfd18af007c2995ad2055832887a00bada506ae7bd97d7a3f1fbf65eb435d9b",
+    "bytes": 280673
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_6__1_7.png": {
+    "local": "/product-images/8dfd18af007c2995ad205583.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_6__1_7.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_6__1_7.png",
+    "sha256": "8dfd18af007c2995ad2055832887a00bada506ae7bd97d7a3f1fbf65eb435d9b",
+    "bytes": 280673
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_7__1_7.png": {
+    "local": "/product-images/79f75050d735b2f7c6f0894c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_7__1_7.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_7__1_7.png",
+    "sha256": "79f75050d735b2f7c6f0894c0a76b47d8aca14b2ff4aad21e8164c7996b3effc",
+    "bytes": 154462
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_7__1_8.png": {
+    "local": "/product-images/79f75050d735b2f7c6f0894c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_7__1_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_7__1_8.png",
+    "sha256": "79f75050d735b2f7c6f0894c0a76b47d8aca14b2ff4aad21e8164c7996b3effc",
+    "bytes": 154462
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_8__2.png": {
+    "local": "/product-images/33abdd63c8485fe468189867.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_8__2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_8__2.png",
+    "sha256": "33abdd63c8485fe468189867acfb850fd991a0b5117482f4ba213bed8b4b7587",
+    "bytes": 158417
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_8__2_1.png": {
+    "local": "/product-images/33abdd63c8485fe468189867.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_8__2_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_8__2_1.png",
+    "sha256": "33abdd63c8485fe468189867acfb850fd991a0b5117482f4ba213bed8b4b7587",
+    "bytes": 158417
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_9__1_1.png": {
+    "local": "/product-images/911944c271367acdfa8c1101.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_9__1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_9__1_1.png",
+    "sha256": "911944c271367acdfa8c11013f0559c6de41700cac24279ccdea854a3f6508e6",
+    "bytes": 286756
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_9__1_2.png": {
+    "local": "/product-images/911944c271367acdfa8c1101.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_9__1_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_9__1_2.png",
+    "sha256": "911944c271367acdfa8c11013f0559c6de41700cac24279ccdea854a3f6508e6",
+    "bytes": 286756
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_9__1_3.png": {
+    "local": "/product-images/911944c271367acdfa8c1101.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/p/apple_lte_9__1_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/a/p/apple_lte_9__1_3.png",
+    "sha256": "911944c271367acdfa8c11013f0559c6de41700cac24279ccdea854a3f6508e6",
+    "bytes": 286756
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/a/u/aula-ag75-pro.png": {
+    "local": "/product-images/0ed61c070a459e54677229ba.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/b/a/ban-phim-co-co-day-aula-ag75-pro-xam.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/b/a/ban-phim-co-co-day-aula-ag75-pro-xam.png",
+    "sha256": "0ed61c070a459e54677229ba0cbf4bd30eb5a3f2ea031399e815e8218b7108f9",
+    "bytes": 210877
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/b/a/ban-phim-apple-magic-keyboard-ipad-air-11-inch-m2-m3-mdfv4_1__3.png": {
+    "local": "/product-images/286664235e3e75f4c6c964e4.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/b/a/ban-phim-apple-magic-keyboard-ipad-air-11-inch-m2-m3-mdfv4_1__3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/b/a/ban-phim-apple-magic-keyboard-ipad-air-11-inch-m2-m3-mdfv4_1__3.png",
+    "sha256": "286664235e3e75f4c6c964e4449dd98810904911a58c115db4da1a801d0554d7",
+    "bytes": 189914
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/b/a/ban-phim-co-aula-hero84he.png": {
+    "local": "/product-images/a295c1e5603c38a75e5a1cc7.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/b/a/ban-phim-co-co-day-aula-hero84he-trang-contour_3_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/b/a/ban-phim-co-co-day-aula-hero84he-trang-contour_3_.png",
+    "sha256": "a295c1e5603c38a75e5a1cc7be93734068589399d14d61306976a6af20094278",
+    "bytes": 186239
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/b/a/ban-phim-logitech-mx-keys-s.png": {
+    "local": "/product-images/d1d5c4f990baa9abbe96b723.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/gaming_8_14__1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/gaming_8_14__1.png",
+    "sha256": "d1d5c4f990baa9abbe96b723ed2c250f4ca228906c0f0bf17ab426f840d9e7a8",
+    "bytes": 126740
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/c/h/chuot-gaming-aula-sc620.png": {
+    "local": "/product-images/fde93993f141866c5e0642ad.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/c/h/chuot-gaming-khong-day-aula-sc620.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/c/h/chuot-gaming-khong-day-aula-sc620.png",
+    "sha256": "fde93993f141866c5e0642ad348393f33e90db2aa3d796dfc1f9ff0462413574",
+    "bytes": 102128
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/c/h/chuot-logitech-mx-master-3s.png": {
+    "local": "/product-images/15df7ef9dea86df71fdb1fcb.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/c/h/chuot-khong-day-logitech-mx-master-3s.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/c/h/chuot-khong-day-logitech-mx-master-3s.png",
+    "sha256": "15df7ef9dea86df71fdb1fcbc36a2a3b4a9653d675b538db4b42ffb1168589cb",
+    "bytes": 82252
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/c/u/cu-sac-anker-prime-100w.png": {
+    "local": "/product-images/37819acf1e259b4713218990.png",
+    "remote": "https://cdn.shopify.com/s/files/1/0765/2137/3999/files/a2668.png?v=1750143308",
+    "fetched": "https://cdn.shopify.com/s/files/1/0765/2137/3999/files/a2668.png?v=1750143308",
+    "sha256": "37819acf1e259b4713218990f21ad70567776a20bfdb3c95ab5ef58df1a6fcbb",
+    "bytes": 243313
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-oppo-find-x9-ultra-cam-8_4.jpg": {
+    "local": "/product-images/a3353265f9138586bc5c3a2a.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-oppo-find-x9-ultra-cam-8_4.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/d/i/dien-thoai-oppo-find-x9-ultra-cam-8_4.jpg",
+    "sha256": "a3353265f9138586bc5c3a2a21d349e0937f8ef27b556763815c348edf24439e",
+    "bytes": 39672
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-oppo-find-x9-ultra-cam-8_5.jpg": {
+    "local": "/product-images/a3353265f9138586bc5c3a2a.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-oppo-find-x9-ultra-cam-8_5.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/d/i/dien-thoai-oppo-find-x9-ultra-cam-8_5.jpg",
+    "sha256": "a3353265f9138586bc5c3a2a21d349e0937f8ef27b556763815c348edf24439e",
+    "bytes": 39672
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-a57-2_5.jpg": {
+    "local": "/product-images/351679ef4ee038ddf1266a76.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-a57-2_5.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-a57-2_5.jpg",
+    "sha256": "351679ef4ee038ddf1266a76ea86110eab2d53e698bb5a80ae8fc936ca83cd61",
+    "bytes": 38376
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-vivo-v70-fe-5g-8gb-256gb-cu-da-kich-hoat_2.jpg": {
+    "local": "/product-images/01bfc4907b824452ca5ebbe1.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-vivo-v70-fe-5g-8gb-256gb-cu-da-kich-hoat_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/d/i/dien-thoai-vivo-v70-fe-5g-8gb-256gb-cu-da-kich-hoat_2.jpg",
+    "sha256": "01bfc4907b824452ca5ebbe152b56f202cbe711c24ad420eaac3313b51df6acd",
+    "bytes": 23523
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-xiaomi-mix-flip-2-12gb-512gb-cu-dep.jpg": {
+    "local": "/product-images/0e61f49d7147ea54443c811a.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-xiaomi-mix-flip-2-12gb-512gb-cu-dep.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/d/i/dien-thoai-xiaomi-mix-flip-2-12gb-512gb-cu-dep.jpg",
+    "sha256": "0e61f49d7147ea54443c811a315abde1505ac255894b542360a48a7902a4a3dc",
+    "bytes": 43493
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-xiaomi-redmi-note-15-pro-5g-vang_5_1.jpg": {
+    "local": "/product-images/91495d599b6c4c7d6a85d66b.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/i/dien-thoai-xiaomi-redmi-note-15-pro-5g-vang_5_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/d/i/dien-thoai-xiaomi-redmi-note-15-pro-5g-vang_5_1.jpg",
+    "sha256": "91495d599b6c4c7d6a85d66b73303a70e0d3c7cbc16cecb0c182306e923e679c",
+    "bytes": 26633
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/r/dreame-l10s-ultra-gen-2.jpg": {
+    "local": "/product-images/4b9fd84bfee3987c06c76ddd.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/d/r/dreame-l10s-ultra-gen-2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/d/r/dreame-l10s-ultra-gen-2.jpg",
+    "sha256": "4b9fd84bfee3987c06c76ddd17ec51e5baa8caca9b26e5c55528dbf8a1b73429",
+    "bytes": 50350
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/e/c/ecovacs-deebot-t30-pro-omni.jpg": {
+    "local": "/product-images/8d8adbf1e9b8dcc05975d472.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/e/c/ecovacs-deebot-t30-pro-omni.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/e/c/ecovacs-deebot-t30-pro-omni.jpg",
+    "sha256": "8d8adbf1e9b8dcc05975d472378d606301ee0a386679c16a5ff001c5b6c7f733",
+    "bytes": 37858
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/f/r/frame_100_1_2__2_1_1_1_1_10.png": {
+    "local": "/product-images/ccd6982bc2d6d01cb185192a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/f/r/frame_100_1_2__2_1_1_1_1_10.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/f/r/frame_100_1_2__2_1_1_1_1_10.png",
+    "sha256": "ccd6982bc2d6d01cb185192a6311a3645c19f9e90f0e288ea44ba7282b633826",
+    "bytes": 157360
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/f/r/frame_100_1_2__2_1_1_3.png": {
+    "local": "/product-images/ccd6982bc2d6d01cb185192a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/f/r/frame_100_1_2__2_1_1_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/f/r/frame_100_1_2__2_1_1_3.png",
+    "sha256": "ccd6982bc2d6d01cb185192a6311a3645c19f9e90f0e288ea44ba7282b633826",
+    "bytes": 157360
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_1__1_20.png": {
+    "local": "/product-images/b6f427698b6ffe499c6601df.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_1__1_20.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_1__1_20.png",
+    "sha256": "b6f427698b6ffe499c6601dfd090f1b6b1873beda58d7d146f13dd84936a1f5b",
+    "bytes": 233294
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_28_3.png": {
+    "local": "/product-images/e33b670d3490ccef62062942.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_28_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_28_3.png",
+    "sha256": "e33b670d3490ccef620629422c43f00cee3456b8552459b189f911d5d3e4b6ab",
+    "bytes": 198802
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_38.png": {
+    "local": "/product-images/8bf3a8ca201c93d11402660e.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_38.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_38.png",
+    "sha256": "8bf3a8ca201c93d11402660ea4246972f7770e2fba9cd3b6f39d89242f289dce",
+    "bytes": 237717
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_39.png": {
+    "local": "/product-images/87a48e9d6396d1f3db764347.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_39.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_39.png",
+    "sha256": "87a48e9d6396d1f3db76434734004da1f3b795533c5632f1da786db62b309b47",
+    "bytes": 205877
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_40.png": {
+    "local": "/product-images/4921cf53cdcf7e4ef30acc76.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_40.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_40.png",
+    "sha256": "4921cf53cdcf7e4ef30acc76830a38075b8f2f3c9e9ede2bf6b9a4a28b4cab0a",
+    "bytes": 202642
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_41.png": {
+    "local": "/product-images/3f031ba1127917a99126e9ac.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_41.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_41.png",
+    "sha256": "3f031ba1127917a99126e9ac0739cb97376202d51c0abd1d0753fe2c59d2776f",
+    "bytes": 232848
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_42.png": {
+    "local": "/product-images/91bea182317e77f091239968.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_42.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_42.png",
+    "sha256": "91bea182317e77f091239968eb7b0fe10edb7d03f00481e3d63e04899c2d489c",
+    "bytes": 212227
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_43.png": {
+    "local": "/product-images/be122c58275535cf37294318.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_43.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_43.png",
+    "sha256": "be122c58275535cf37294318cd861536b1c6455a20a585ac7609d4e9c46929d6",
+    "bytes": 240456
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_44.png": {
+    "local": "/product-images/ee3f3f144ccbdc2f12404d67.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/a/garmin_2_44.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/a/garmin_2_44.png",
+    "sha256": "ee3f3f144ccbdc2f12404d67f49152981964150430bc57750c82f449dfa5f596",
+    "bytes": 217513
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1029_1.png": {
+    "local": "/product-images/769023382d99ddff514dfb37.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1029_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_1029_1.png",
+    "sha256": "769023382d99ddff514dfb37a2db48f3ce63b5686afc8a84855223cc2caaf938",
+    "bytes": 356046
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1062.png": {
+    "local": "/product-images/61cb1b27b675fcdc9255f871.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1062.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_1062.png",
+    "sha256": "61cb1b27b675fcdc9255f871a1d683f38eeb17abd7546471175b3ca97fcccd40",
+    "bytes": 207632
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1065.png": {
+    "local": "/product-images/a745ff4aa3bd0c47a4f9e876.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1065.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_1065.png",
+    "sha256": "a745ff4aa3bd0c47a4f9e8768b179f3eada140154515ca2db3288317565cf44c",
+    "bytes": 301794
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1091_1.png": {
+    "local": "/product-images/8295523780dace38e5600de0.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1091_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_1091_1.png",
+    "sha256": "8295523780dace38e5600de0bd07cf0cc729bb828af21320a527b369b0ac2fca",
+    "bytes": 152677
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1558_1.png": {
+    "local": "/product-images/e679cd7a318f69e498a3b7d3.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1558_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_1558_1.png",
+    "sha256": "e679cd7a318f69e498a3b7d3ef54c27e978919ecbe193e0d9b7c80e5cb611c7b",
+    "bytes": 101989
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1794.png": {
+    "local": "/product-images/f730a26ac9a0b0448de1aa95.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1794.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_1794.png",
+    "sha256": "f730a26ac9a0b0448de1aa95f4b676ecc553e7fcaf4bbd4c9ce61206b5078b97",
+    "bytes": 97470
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_179_1__4_12_2.png": {
+    "local": "/product-images/48f5a1731c656d0d35b791f9.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_179_1__4_12_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_179_1__4_12_2.png",
+    "sha256": "48f5a1731c656d0d35b791f97a05a353c1f86bc620859f652cc3cbb9d4184961",
+    "bytes": 237075
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1805.png": {
+    "local": "/product-images/bda83755f0ede169734d74fc.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_1805.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_1805.png",
+    "sha256": "bda83755f0ede169734d74fc00cde3d667f9ce85596d60f80b30253792d0e0c8",
+    "bytes": 143117
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_406_1__2.png": {
+    "local": "/product-images/388dfc52c5751a6a2caa6556.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_406_1__2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_406_1__2.png",
+    "sha256": "388dfc52c5751a6a2caa65565810fb6b6813a72f5abf539777c09c078452aab4",
+    "bytes": 360038
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_635_28_1.png": {
+    "local": "/product-images/ceffdb1189a22979f78fb09a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_635_28_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_635_28_1.png",
+    "sha256": "ceffdb1189a22979f78fb09a6b59ebe0d9345e0a905ec2287a5f0847bf6eca86",
+    "bytes": 282136
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_697_1_13.png": {
+    "local": "/product-images/e83b8a4d4c1d92c881bd28a0.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_697_1_13.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_697_1_13.png",
+    "sha256": "e83b8a4d4c1d92c881bd28a0beb8939cbf05bc4aed617697a181b1a02493255f",
+    "bytes": 135417
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_744_1_114_3.png": {
+    "local": "/product-images/1117ae5422c8bbcdb88c1f35.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_744_1_114_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_744_1_114_3.png",
+    "sha256": "1117ae5422c8bbcdb88c1f35befac83bb630231433568a9be7aeaa7633f7c40f",
+    "bytes": 239961
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_806_8.png": {
+    "local": "/product-images/b5b50870c43c5794f6951135.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_806_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_806_8.png",
+    "sha256": "b5b50870c43c5794f69511359e428247e40997abecd1b15faee1f6ecb99ff238",
+    "bytes": 373529
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_806_9.png": {
+    "local": "/product-images/a2e52ccc8602a0b664427f63.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_806_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_806_9.png",
+    "sha256": "a2e52ccc8602a0b664427f63a8d434ddb0ca3ac730ed196dd48a91514c7d8a5b",
+    "bytes": 333364
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_816_5_1.png": {
+    "local": "/product-images/5569e4b4f2a9b28bd6a5929a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_816_5_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_816_5_1.png",
+    "sha256": "5569e4b4f2a9b28bd6a5929af34c0db7793b092b9c067641b64438a5d1c94d61",
+    "bytes": 274589
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_838_5.png": {
+    "local": "/product-images/6e867aa7710fccc96b8a86a1.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_838_5.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_838_5.png",
+    "sha256": "6e867aa7710fccc96b8a86a151c266f2f4a0e808ad5aedf07235c0135a1d58d9",
+    "bytes": 318751
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_838_6.png": {
+    "local": "/product-images/e641f2abe031bc6f56821b51.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_838_6.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_838_6.png",
+    "sha256": "e641f2abe031bc6f56821b51ef131dd6c6709f36bc835f5879282217fe30c77c",
+    "bytes": 244523
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_879_1__1.png": {
+    "local": "/product-images/c85b01f2f6304040c2481fde.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_879_1__1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_879_1__1.png",
+    "sha256": "c85b01f2f6304040c2481fded11d92f639573af885f1b97c6a26f20a33365cce",
+    "bytes": 212251
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_879_5.png": {
+    "local": "/product-images/efbffc23cc1928d607bb4468.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_879_5.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_879_5.png",
+    "sha256": "efbffc23cc1928d607bb446878bc2aee8667da8b5a9e5f61896b4f634a029083",
+    "bytes": 343177
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_879_7.png": {
+    "local": "/product-images/ef754b034b38533a9e26a599.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_879_7.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_879_7.png",
+    "sha256": "ef754b034b38533a9e26a599ed733521d8e8c08250585724247d1bb3d97e82cf",
+    "bytes": 193667
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_.png": {
+    "local": "/product-images/a025fb57f43f7adc6a010e1f.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_.png",
+    "sha256": "a025fb57f43f7adc6a010e1f1f0108f8bab95526b1f5c7ae82b345fd02881a1d",
+    "bytes": 152858
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_11.png": {
+    "local": "/product-images/99323ab2e4c939d1422a506a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_11.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_11.png",
+    "sha256": "99323ab2e4c939d1422a506a022951d3176a6131def64f1d37cc260a9abf7572",
+    "bytes": 152186
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_12.png": {
+    "local": "/product-images/9e6f6e56d1cd1b66b8716c8d.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_12.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_12.png",
+    "sha256": "9e6f6e56d1cd1b66b8716c8dbfb9058be3535e48e530c06d40deb20711d87b43",
+    "bytes": 152649
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_13.png": {
+    "local": "/product-images/e43a6da286fce4ab25302824.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_13.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_13.png",
+    "sha256": "e43a6da286fce4ab2530282442466788660d8ae7ec1842aa91be78f00c50ffdb",
+    "bytes": 343176
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_14.png": {
+    "local": "/product-images/ae8b1f36338c44d05aa14c44.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_14.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_14.png",
+    "sha256": "ae8b1f36338c44d05aa14c44e81d0a452b8014d6bc6fbdc54a462e5ae5dd0686",
+    "bytes": 334858
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_7.png": {
+    "local": "/product-images/ca56818223a4577da7ec01b4.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_7.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_7.png",
+    "sha256": "ca56818223a4577da7ec01b4235ea9835ad68f0a5ff43f6b40678d5200eef0b5",
+    "bytes": 312127
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_8.png": {
+    "local": "/product-images/b641499c6ed58c840379d402.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_8.png",
+    "sha256": "b641499c6ed58c840379d4023a6fd8ef7093cb9cd8824176bf051061a3ab6696",
+    "bytes": 156333
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_9.png": {
+    "local": "/product-images/5585f851ea665080883ba972.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_880_1_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_880_1_9.png",
+    "sha256": "5585f851ea665080883ba97224322faaf552367885eaea3ba543aa61484030c8",
+    "bytes": 158401
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_881_4__1.png": {
+    "local": "/product-images/f25df44a50c5b4d4069abeeb.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_881_4__1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_881_4__1.png",
+    "sha256": "f25df44a50c5b4d4069abeeb152568f7aca37c489371926a93aedf9994f18380",
+    "bytes": 152034
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_881_5_3.png": {
+    "local": "/product-images/329f26fae25e1c1aa662e61d.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_881_5_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_881_5_3.png",
+    "sha256": "329f26fae25e1c1aa662e61d6c1db6e9a97d4583224e3f5c817aca3e1342c4f6",
+    "bytes": 140723
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_894_1_1.png": {
+    "local": "/product-images/b9753d6a06b7db844f734f2c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_894_1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_894_1_1.png",
+    "sha256": "b9753d6a06b7db844f734f2c592e0c8134dfc23257b72a79478c66751d5deff9",
+    "bytes": 167185
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_908_1_1.png": {
+    "local": "/product-images/3c550d4e3daf8b57584149ca.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_908_1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_908_1_1.png",
+    "sha256": "3c550d4e3daf8b57584149ca7dc3cb3c64926b48f914b773bb9c546b6389f50a",
+    "bytes": 194799
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_923_1_1.png": {
+    "local": "/product-images/4d65eb3cf159fd5c50b9fba3.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_923_1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_923_1_1.png",
+    "sha256": "4d65eb3cf159fd5c50b9fba345c3c81483715b735d9368b470c85b46542a4910",
+    "bytes": 259803
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_2.png": {
+    "local": "/product-images/59932b547dbcaf1c56c10416.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_926_1_2.png",
+    "sha256": "59932b547dbcaf1c56c10416275b72891b4110903421904ac32eeab733bf4c69",
+    "bytes": 369508
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_3.png": {
+    "local": "/product-images/b3a5907f357615a66499b4ad.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_926_1_3.png",
+    "sha256": "b3a5907f357615a66499b4ad42bf7c0a16887ad2097d616d72b067d7d54b82fb",
+    "bytes": 365123
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_4.png": {
+    "local": "/product-images/b1158b3d038e5e3aed9b9220.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_4.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_926_1_4.png",
+    "sha256": "b1158b3d038e5e3aed9b9220be4df5ee3b2e01ee2c137d7a07afa7b413c15da6",
+    "bytes": 237120
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_5.png": {
+    "local": "/product-images/9dbde7f58c504de390bb8dfb.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_5.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_926_1_5.png",
+    "sha256": "9dbde7f58c504de390bb8dfb90a6d28dfeb62e136adff7e260adde00a85d31fa",
+    "bytes": 354852
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_7_1.png": {
+    "local": "/product-images/be874a75176f13a6d3c27623.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_7_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_926_1_7_1.png",
+    "sha256": "be874a75176f13a6d3c27623b9836d161f74dd0f1e3616988fd3a896c17bea09",
+    "bytes": 145726
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_9.png": {
+    "local": "/product-images/1021de508cef410063849757.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_926_1_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_926_1_9.png",
+    "sha256": "1021de508cef4100638497577fab35b3c5c23a2d8814c2727a6b709848497ff6",
+    "bytes": 215083
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_1_9_2.png": {
+    "local": "/product-images/7b09a9fc1c842227e0a3789d.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_1_9_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_1_9_2.png",
+    "sha256": "7b09a9fc1c842227e0a3789d615473b2303a7ca850ce2064dbbd746334e7e226",
+    "bytes": 190619
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_28_1.png": {
+    "local": "/product-images/87fdc9c72a68c763cf4b2a6a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_28_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_28_1.png",
+    "sha256": "87fdc9c72a68c763cf4b2a6a2a54e5da1bd2b5d5abc4f97202f2f0fe76889e0d",
+    "bytes": 247957
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_17.png": {
+    "local": "/product-images/9a05f01f13226918da6f1c2c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_17.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_17.png",
+    "sha256": "9a05f01f13226918da6f1c2c2a1dde1e1d5260c66bbfa65dc32dd8e2492a31c1",
+    "bytes": 200165
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_18.png": {
+    "local": "/product-images/5dcfdaa4964e7fff3dd08e3b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_18.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_18.png",
+    "sha256": "5dcfdaa4964e7fff3dd08e3b1bd31795c997c9cb7ed2f371c80aff56be2ac46b",
+    "bytes": 199479
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_19.png": {
+    "local": "/product-images/d54b4020ad2fb8e7c5b8e5a9.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_19.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_19.png",
+    "sha256": "d54b4020ad2fb8e7c5b8e5a92b766d855ce7f94fefa60386a8e3f4a2541458c0",
+    "bytes": 220824
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_20.png": {
+    "local": "/product-images/ee238bcb473fcdd361e54268.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_20.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_20.png",
+    "sha256": "ee238bcb473fcdd361e54268f5b706a2bf7a7c3099c320ba45e81729c56a4ed8",
+    "bytes": 219473
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_22.png": {
+    "local": "/product-images/a7ab19a1ddb4d165a08331a8.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_22.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_22.png",
+    "sha256": "a7ab19a1ddb4d165a08331a8638b6b73852e0a9401bcd27a4038fa9482938e5a",
+    "bytes": 173289
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_23.png": {
+    "local": "/product-images/3471610a2c3b4a1cf8c8333a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_23.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_23.png",
+    "sha256": "3471610a2c3b4a1cf8c8333ac5985f2885e0b4800118c2123d10ea8cff7f6305",
+    "bytes": 172120
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_25.png": {
+    "local": "/product-images/c9955cbd0161d2f20fe2f06b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_25.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_25.png",
+    "sha256": "c9955cbd0161d2f20fe2f06bc520b698c51faed748b7de4c7f5514e597e41379",
+    "bytes": 208383
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_26.png": {
+    "local": "/product-images/3427a48e0b87333afa396db2.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_26.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_26.png",
+    "sha256": "3427a48e0b87333afa396db262b18a006e001689e9a58d64864d9f6320daf829",
+    "bytes": 227355
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_27.png": {
+    "local": "/product-images/302ae86bae349b7d05683e93.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_27.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_27.png",
+    "sha256": "302ae86bae349b7d05683e933ed13af99c98bcd4e0fbf474eff53a6a0c3d577f",
+    "bytes": 132487
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_28.png": {
+    "local": "/product-images/ba5afc1aac299a27d1d9cefe.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_945_2_28.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_945_2_28.png",
+    "sha256": "ba5afc1aac299a27d1d9cefe37fe76671b44bd291ed0f424373a600a9520cbca",
+    "bytes": 129710
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_947_2.png": {
+    "local": "/product-images/f165e4e73334550b7750c64b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_947_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_947_2.png",
+    "sha256": "f165e4e73334550b7750c64bb75c0be1cae68efcdd698223265415caba6f20aa",
+    "bytes": 194905
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_10.png": {
+    "local": "/product-images/7ea5819ef4e1305cb829e65f.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_10.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_970_10.png",
+    "sha256": "7ea5819ef4e1305cb829e65f0710e6a47bd8cec5b78befed8e597c5a04485ff0",
+    "bytes": 396683
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_11.png": {
+    "local": "/product-images/4c2d46b672b3209f9e5b0337.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_11.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_970_11.png",
+    "sha256": "4c2d46b672b3209f9e5b0337cc4bea3cdce47f2d73ff77fecb84e2ab9f6514f3",
+    "bytes": 395066
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_1__1.png": {
+    "local": "/product-images/e5a75f072435b01a1f053e75.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_1__1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_970_1__1.png",
+    "sha256": "e5a75f072435b01a1f053e75fad85d611e510fa9d216e212dc63464a5e09ad99",
+    "bytes": 350708
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_4.png": {
+    "local": "/product-images/51fe14dc8c04b726683ca115.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_4.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_970_4.png",
+    "sha256": "51fe14dc8c04b726683ca115f20c1574b0bd5686ef11966eff6832f96feff7a8",
+    "bytes": 251676
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_9.png": {
+    "local": "/product-images/861bef0a52f4c12ed6796128.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_970_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_970_9.png",
+    "sha256": "861bef0a52f4c12ed67961289bdbcb3634894538b4c2db11b7d75ce21bd0e78e",
+    "bytes": 122266
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_973_9_1.png": {
+    "local": "/product-images/27dc53274a9c26edc0566ac2.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/g/r/group_973_9_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/g/r/group_973_9_1.png",
+    "sha256": "27dc53274a9c26edc0566ac27c4a341f1f93abbbd3e512c0821f24d2b6ebda51",
+    "bytes": 281732
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/m/image_1262703759_1_1.jpg": {
+    "local": "/product-images/699e6a03b73e14d52dc78096.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/m/image_1262703759_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/m/image_1262703759_1_1.jpg",
+    "sha256": "699e6a03b73e14d52dc780960808931c15de93a33bf517eb80c7712676f497c4",
+    "bytes": 28433
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/m/image_1262703759_2_2.jpg": {
+    "local": "/product-images/699e6a03b73e14d52dc78096.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/m/image_1262703759_2_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/m/image_1262703759_2_2.jpg",
+    "sha256": "699e6a03b73e14d52dc780960808931c15de93a33bf517eb80c7712676f497c4",
+    "bytes": 28433
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/m/image_1262703759_5.jpg": {
+    "local": "/product-images/699e6a03b73e14d52dc78096.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/m/image_1262703759_5.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/m/image_1262703759_5.jpg",
+    "sha256": "699e6a03b73e14d52dc780960808931c15de93a33bf517eb80c7712676f497c4",
+    "bytes": 28433
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-a16-11-inch_1__1_4.jpg": {
+    "local": "/product-images/bb08bdb0ea84def325621439.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-a16-11-inch_1__1_4.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-a16-11-inch_1__1_4.jpg",
+    "sha256": "bb08bdb0ea84def325621439665aa9f6723fe3ab7b48fcc0f500d2beac0f83a2",
+    "bytes": 24666
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-air-6-m2-13-inch-256gb_2.jpeg": {
+    "local": "/product-images/56aed990fc44dda44317728e.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-air-6-m2-13-inch-256gb_2.jpeg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-air-6-m2-13-inch-256gb_2.jpeg",
+    "sha256": "56aed990fc44dda44317728ea6de7f024cb5292a4b52f529a523c920e1290e6f",
+    "bytes": 18110
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-2022-12-9-inch-m2_5_1.png": {
+    "local": "/product-images/01fde7010af2542e2bb713ef.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-2022-12-9-inch-m2_5_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-pro-2022-12-9-inch-m2_5_1.png",
+    "sha256": "01fde7010af2542e2bb713eff89c7a15cf32e1ddf938adf6f061ab8e6fd741bf",
+    "bytes": 308711
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_12.jpg": {
+    "local": "/product-images/bb00aa119283f89e31be8129.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_12.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-pro-m5_12.jpg",
+    "sha256": "bb00aa119283f89e31be812961429947fc3fea227d662cc816293289c30ed346",
+    "bytes": 31524
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_1_2_2.jpg": {
+    "local": "/product-images/bb00aa119283f89e31be8129.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_1_2_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-pro-m5_1_1_2_2.jpg",
+    "sha256": "bb00aa119283f89e31be812961429947fc3fea227d662cc816293289c30ed346",
+    "bytes": 31524
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_1_2_3.jpg": {
+    "local": "/product-images/bb00aa119283f89e31be8129.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_1_2_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-pro-m5_1_1_2_3.jpg",
+    "sha256": "bb00aa119283f89e31be812961429947fc3fea227d662cc816293289c30ed346",
+    "bytes": 31524
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_1_3_3.jpg": {
+    "local": "/product-images/bb00aa119283f89e31be8129.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_1_3_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-pro-m5_1_1_3_3.jpg",
+    "sha256": "bb00aa119283f89e31be812961429947fc3fea227d662cc816293289c30ed346",
+    "bytes": 31524
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_5.jpg": {
+    "local": "/product-images/bb00aa119283f89e31be8129.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/ipad-pro-m5_1_5.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/ipad-pro-m5_1_5.jpg",
+    "sha256": "bb00aa119283f89e31be812961429947fc3fea227d662cc816293289c30ed346",
+    "bytes": 31524
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-15-plus-256gb_3_3.png": {
+    "local": "/product-images/fa8f720fdb35bf64d34a0815.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-15-plus-256gb_3_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-15-plus-256gb_3_3.png",
+    "sha256": "fa8f720fdb35bf64d34a081559583b4fc17068597dc123d168ddae57eb41a260",
+    "bytes": 177620
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-15-plus-cu-xuoc-can.jpg": {
+    "local": "/product-images/5d642986ff92384ed8dc7af6.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-15-plus-cu-xuoc-can.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-15-plus-cu-xuoc-can.jpg",
+    "sha256": "5d642986ff92384ed8dc7af63c695e91b51a1c1245c12902173fd29919bae617",
+    "bytes": 22863
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-16-pro_6.png": {
+    "local": "/product-images/ecf76c545a5a41505ac93b00.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-16-pro_6.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-16-pro_6.png",
+    "sha256": "ecf76c545a5a41505ac93b009d4637d8899988304b5a1b6f50a5f269f3478c5d",
+    "bytes": 260352
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-17-pro-max_3_3.jpg": {
+    "local": "/product-images/9138a24900652cae6336cdea.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-17-pro-max_3_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-17-pro-max_3_3.jpg",
+    "sha256": "9138a24900652cae6336cdea8659905ed175e35bfa26cbe32ff039df1f66545f",
+    "bytes": 30488
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_1.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01_1.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_1_1.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01_1_1.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_1_1_1.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_1_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01_1_1_1.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01_2.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2_1.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01_2_1.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2_1_1.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01_2_1_1.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2_1_1_1.jpg": {
+    "local": "/product-images/dbda274602af111c840194ec.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-18-pro-01_2_1_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-18-pro-01_2_1_1_1.jpg",
+    "sha256": "dbda274602af111c840194ec88ad15c88de5a256b53963fa68725565becfe642",
+    "bytes": 32507
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01.jpg": {
+    "local": "/product-images/8864d5fe809c62da922b48b1.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-duo-01.jpg",
+    "sha256": "8864d5fe809c62da922b48b19546b26d4f6f049ebbf664e176475e83679d0849",
+    "bytes": 30801
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01_1.jpg": {
+    "local": "/product-images/8864d5fe809c62da922b48b1.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-duo-01_1.jpg",
+    "sha256": "8864d5fe809c62da922b48b19546b26d4f6f049ebbf664e176475e83679d0849",
+    "bytes": 30801
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01_1_1.jpg": {
+    "local": "/product-images/8864d5fe809c62da922b48b1.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-duo-01_1_1.jpg",
+    "sha256": "8864d5fe809c62da922b48b19546b26d4f6f049ebbf664e176475e83679d0849",
+    "bytes": 30801
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01_1_2.jpg": {
+    "local": "/product-images/8864d5fe809c62da922b48b1.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/i/p/iphone-duo-01_1_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/i/p/iphone-duo-01_1_2.jpg",
+    "sha256": "8864d5fe809c62da922b48b19546b26d4f6f049ebbf664e176475e83679d0849",
+    "bytes": 30801
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-asus-gaming-vivobook-k3605zc-rp364w_7_.png": {
+    "local": "/product-images/ab720b89d37044acb04f5585.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-asus-gaming-vivobook-k3605zc-rp364w_7_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-asus-gaming-vivobook-k3605zc-rp364w_7_.png",
+    "sha256": "ab720b89d37044acb04f55857a63d9c0223d4821a90901bce6f5f12e368559f6",
+    "bytes": 202949
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-asus-zenbook-14-ux3405ca285-0ecbxbjx20_7_.png": {
+    "local": "/product-images/55087d8eef192ef991d53809.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-asus-zenbook-14-ux3405ca285-0ecbxbjx20_7_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-asus-zenbook-14-ux3405ca285-0ecbxbjx20_7_.png",
+    "sha256": "55087d8eef192ef991d538091795a3e7ba8726e5cab0843f856f6bb1ee024e55",
+    "bytes": 135664
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-colorful-rimbook-s1-ca30016512n-g-e1ad_2__2.png": {
+    "local": "/product-images/d2ec84728d78e47e75cee0ef.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-colorful-rimbook-s1-ca30016512n-g-e1ad_2__2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-colorful-rimbook-s1-ca30016512n-g-e1ad_2__2.png",
+    "sha256": "d2ec84728d78e47e75cee0efb86b8611b0ea479b9440ead1b322bc14414b0054",
+    "bytes": 161614
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-dell-latitude-5420-i7-1185g7-8gb-256gb_9_.png": {
+    "local": "/product-images/0169c8fc14656aef2090ce16.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-dell-latitude-5420-i7-1185g7-8gb-256gb_9_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-dell-latitude-5420-i7-1185g7-8gb-256gb_9_.png",
+    "sha256": "0169c8fc14656aef2090ce16df19083ceade565514dfcc214e46a04e6f31284c",
+    "bytes": 201810
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-dell-latitude-5420-i7-1185g7_3__1_1.png": {
+    "local": "/product-images/61447b721515cf3e0edd5cb2.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-dell-latitude-5420-i7-1185g7_3__1_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-dell-latitude-5420-i7-1185g7_3__1_1.png",
+    "sha256": "61447b721515cf3e0edd5cb2db163b8bb1df40bb1639aa5bac369d030e6d6ec7",
+    "bytes": 208496
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-dell-latitude-5430-p137g005_2_.png": {
+    "local": "/product-images/1bf6b1012e6fa7969a0c714f.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-dell-latitude-5430-p137g005_2_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-dell-latitude-5430-p137g005_2_.png",
+    "sha256": "1bf6b1012e6fa7969a0c714fdf76632dc6fad33d36b9ab9c9e394e361aecf10f",
+    "bytes": 228418
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-hp-15-fd0015tu-a19c5pa_2_.png": {
+    "local": "/product-images/451149994beddfbea8ae27b9.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-hp-15-fd0015tu-a19c5pa_2_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-hp-15-fd0015tu-a19c5pa_2_.png",
+    "sha256": "451149994beddfbea8ae27b9c1b7a2768073eefb58182ee1a3de861805b7a85c",
+    "bytes": 183125
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-hp-pavilion-14-ce3067tu-1a1m7pa_2_.png": {
+    "local": "/product-images/20deb2d8bc3745612a1870a1.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-hp-pavilion-14-ce3067tu-1a1m7pa_2_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-hp-pavilion-14-ce3067tu-1a1m7pa_2_.png",
+    "sha256": "20deb2d8bc3745612a1870a18edfb062c1e32d541831457be3693454ff5a80f0",
+    "bytes": 176703
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-lenovo-yoga-7-2-in-1-16ill10-83jt0001us_2_.png": {
+    "local": "/product-images/83a2c7d30a3a3c4c6922f277.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-lenovo-yoga-7-2-in-1-16ill10-83jt0001us_2_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-lenovo-yoga-7-2-in-1-16ill10-83jt0001us_2_.png",
+    "sha256": "83a2c7d30a3a3c4c6922f2775a350c9ccd1bc9963e35a8392ab3d0acdf2cbae3",
+    "bytes": 165545
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-redmi-book-16-2024_3_.png": {
+    "local": "/product-images/b5839bc09e626078e36d07cc.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/l/a/laptop-redmi-book-16-2024_3_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/l/a/laptop-redmi-book-16-2024_3_.png",
+    "sha256": "b5839bc09e626078e36d07ccb8f63fd2fcd3a375d1710cc92d61482fd1a6dad2",
+    "bytes": 222874
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_13_51.png": {
+    "local": "/product-images/35cb5ceea39617fb621e3883.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_13_51.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_13_51.png",
+    "sha256": "35cb5ceea39617fb621e38839cc97dc238ecf4f922394b7c263bcae08c752f85",
+    "bytes": 60166
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_1__7_29.png": {
+    "local": "/product-images/dd60908fd0deeb6973658e29.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_1__7_29.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_1__7_29.png",
+    "sha256": "dd60908fd0deeb6973658e29fd2d303323852a63f76f0298b421dd4d400581c5",
+    "bytes": 77713
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_1__7_30.png": {
+    "local": "/product-images/077fe8c04076bde5ca3a3129.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_1__7_30.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_1__7_30.png",
+    "sha256": "077fe8c04076bde5ca3a31292b971b923f69eebcf31e5c50933954fd1f2f4776",
+    "bytes": 82792
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_1__7_31.png": {
+    "local": "/product-images/607282d542e911ccee1c105a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_1__7_31.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_1__7_31.png",
+    "sha256": "607282d542e911ccee1c105a9611ff9ab3c774722d3421716373fc858afb234d",
+    "bytes": 80353
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_2__1_11.png": {
+    "local": "/product-images/73d38fcd6d1a259e816b3d84.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_2__1_11.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_2__1_11.png",
+    "sha256": "73d38fcd6d1a259e816b3d84742f09fc0d0d51e41144acecb3e29fdda70a3621",
+    "bytes": 80088
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_2__1_9.png": {
+    "local": "/product-images/d1290b0d44cdfeb9328218ed.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_2__1_9.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_2__1_9.png",
+    "sha256": "d1290b0d44cdfeb9328218ed5f9d4762a485924d389252d9649cb7d1b79f067f",
+    "bytes": 80687
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_3__22.png": {
+    "local": "/product-images/fb6c67836cb911b7bba8e49f.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_3__22.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_3__22.png",
+    "sha256": "fb6c67836cb911b7bba8e49fc1b4e28d7f6d6c965f3dd8f8b16f56b512184170",
+    "bytes": 80731
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_3__23.png": {
+    "local": "/product-images/a467f831a8a2958c05210467.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_3__23.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_3__23.png",
+    "sha256": "a467f831a8a2958c05210467acc0d5d342d3678a23d57722a4ba2020445827b5",
+    "bytes": 78639
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_3__24.png": {
+    "local": "/product-images/fb7f54e9c09624a59505e024.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_3__24.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_3__24.png",
+    "sha256": "fb7f54e9c09624a59505e02456b637e5015490b84fcd543aa96d881ce324ca63",
+    "bytes": 80766
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_4__1_7.png": {
+    "local": "/product-images/925697e323a7883961127c50.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_4__1_7.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_4__1_7.png",
+    "sha256": "925697e323a7883961127c505396b6aaef4ba88493aea6de5b91e7a7683eac9c",
+    "bytes": 82789
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_4__1_8.png": {
+    "local": "/product-images/ce5f8c08227cced72e89a944.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_4__1_8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_4__1_8.png",
+    "sha256": "ce5f8c08227cced72e89a94404a5a6f9dd286ef351241928fdbb6f5a566fdd34",
+    "bytes": 78051
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_5__11.png": {
+    "local": "/product-images/b9b12217558a5a5c97e0a932.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_5__11.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_5__11.png",
+    "sha256": "b9b12217558a5a5c97e0a9323904948d1bce6e266e4d51200b6a52a06f67af39",
+    "bytes": 80794
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_6__8.png": {
+    "local": "/product-images/2d1e29fb050cceda9936d732.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/macbook_6__8.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/macbook_6__8.png",
+    "sha256": "2d1e29fb050cceda9936d7326dcaaed1a0970220b276b8087dab8012d5efc89a",
+    "bytes": 81565
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/man-hinh-gaming-lg-ultragear-27gq50f-b-27.png": {
+    "local": "/product-images/cebff0ffb2b2e62ae39d52bd.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/man-hinh-gaming-lg-ultragear-27gq50f-b-27.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/man-hinh-gaming-lg-ultragear-27gq50f-b-27.png",
+    "sha256": "cebff0ffb2b2e62ae39d52bd2fd1fafe5c43b8a61f9e903de98c77824f75c5ea",
+    "bytes": 259547
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-a11-wifi-8gb-128gb-cu-dep.jpg": {
+    "local": "/product-images/f521c693f21bfdc8b718d0fb.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-a11-wifi-8gb-128gb-cu-dep.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-a11-wifi-8gb-128gb-cu-dep.jpg",
+    "sha256": "f521c693f21bfdc8b718d0fbdbe71062a7055707f9c17c044995604fe5599bf0",
+    "bytes": 20258
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-a11-wifi_1_2_1.jpg": {
+    "local": "/product-images/437641b886f9f991f6696f2b.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-a11-wifi_1_2_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-a11-wifi_1_2_1.jpg",
+    "sha256": "437641b886f9f991f6696f2bd044febb2d083d404d3570c69f3d463bfef9cba4",
+    "bytes": 22896
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s10-lite-wifi_1_3.jpg": {
+    "local": "/product-images/1e1fd2df53a66e569fd6cbdd.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s10-lite-wifi_1_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s10-lite-wifi_1_3.jpg",
+    "sha256": "1e1fd2df53a66e569fd6cbddf1297a6002b43029fd77182664d2a7649062ff35",
+    "bytes": 24276
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s10-lite-wifi_7.jpg": {
+    "local": "/product-images/1e1fd2df53a66e569fd6cbdd.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s10-lite-wifi_7.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s10-lite-wifi_7.jpg",
+    "sha256": "1e1fd2df53a66e569fd6cbddf1297a6002b43029fd77182664d2a7649062ff35",
+    "bytes": 24276
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11-ultra_1_2_2.jpg": {
+    "local": "/product-images/05fc2dd3bcf724391ef563b0.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11-ultra_1_2_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11-ultra_1_2_2.jpg",
+    "sha256": "05fc2dd3bcf724391ef563b0aad60c2df14068a8a1f53de3235ca2bf5cc41779",
+    "bytes": 26866
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_5_2.jpg": {
+    "local": "/product-images/d3beee2d6c92a44b26b17d65.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_5_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_5_2.jpg",
+    "sha256": "d3beee2d6c92a44b26b17d65bb79a1d8cfbf943f7fc11c0b71155069311a626c",
+    "bytes": 23767
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_6_1_1.jpg": {
+    "local": "/product-images/d3beee2d6c92a44b26b17d65.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_6_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_6_1_1.jpg",
+    "sha256": "d3beee2d6c92a44b26b17d65bb79a1d8cfbf943f7fc11c0b71155069311a626c",
+    "bytes": 23767
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_6_1_2.jpg": {
+    "local": "/product-images/d3beee2d6c92a44b26b17d65.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_6_1_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-samsung-galaxy-tab-s11_6_1_2.jpg",
+    "sha256": "d3beee2d6c92a44b26b17d65bb79a1d8cfbf943f7fc11c0b71155069311a626c",
+    "bytes": 23767
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-8gb-256gb-1_1_2.jpg": {
+    "local": "/product-images/0756183a957da496829452e4.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-8gb-256gb-1_1_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-8gb-256gb-1_1_2.jpg",
+    "sha256": "0756183a957da496829452e4711d3f0e689632c6efbfd741b3d08e667166bfa4",
+    "bytes": 29879
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_1.jpg": {
+    "local": "/product-images/b31cbdf58d9cdc0ef74e7cd0.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_1.jpg",
+    "sha256": "b31cbdf58d9cdc0ef74e7cd0e342f2485490cdead90f4828f3bcc3d6f3ed3368",
+    "bytes": 27701
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_2.jpg": {
+    "local": "/product-images/b31cbdf58d9cdc0ef74e7cd0.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_2.jpg",
+    "sha256": "b31cbdf58d9cdc0ef74e7cd0e342f2485490cdead90f4828f3bcc3d6f3ed3368",
+    "bytes": 27701
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_5.jpg": {
+    "local": "/product-images/b31cbdf58d9cdc0ef74e7cd0.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_5.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_2_5.jpg",
+    "sha256": "b31cbdf58d9cdc0ef74e7cd0e342f2485490cdead90f4828f3bcc3d6f3ed3368",
+    "bytes": 27701
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_4.jpg": {
+    "local": "/product-images/b31cbdf58d9cdc0ef74e7cd0.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_4.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_4.jpg",
+    "sha256": "b31cbdf58d9cdc0ef74e7cd0e342f2485490cdead90f4828f3bcc3d6f3ed3368",
+    "bytes": 27701
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_5.jpg": {
+    "local": "/product-images/b31cbdf58d9cdc0ef74e7cd0.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_5.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-xiaomi-pad-8-pro-8gb-128gb_5.jpg",
+    "sha256": "b31cbdf58d9cdc0ef74e7cd0e342f2485490cdead90f4828f3bcc3d6f3ed3368",
+    "bytes": 27701
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-redmi-pad-2-pro-wifi-8gb-256gb-cu-dep_2.jpg": {
+    "local": "/product-images/17ac5505a38a251798011c8c.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/m/a/may-tinh-bang-xiaomi-redmi-pad-2-pro-wifi-8gb-256gb-cu-dep_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/m/a/may-tinh-bang-xiaomi-redmi-pad-2-pro-wifi-8gb-256gb-cu-dep_2.jpg",
+    "sha256": "17ac5505a38a251798011c8ce9f52c45b47babb0466d4dd2a92d14ac91c7c571",
+    "bytes": 24144
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/n/o/noi-chien-philips-hd9880.jpg": {
+    "local": "/product-images/8d82d214e012dbcca1d079f2.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/n/o/noi-chien-khong-dau-8-3l-philips-hd9880-90.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/n/o/noi-chien-khong-dau-8-3l-philips-hd9880-90.png",
+    "sha256": "8d82d214e012dbcca1d079f23fab939231fc66a84dbc66da0f31719b5f106a74",
+    "bytes": 100055
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/o/p/oppo-reno16f-pop-white-9_2.jpg": {
+    "local": "/product-images/fcb1ea139a20d7ecbd6ce92a.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/o/p/oppo-reno16f-pop-white-9_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/o/p/oppo-reno16f-pop-white-9_2.jpg",
+    "sha256": "fcb1ea139a20d7ecbd6ce92a8e831637de6704670635bf63b22caa1cba04529b",
+    "bytes": 40683
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/o/p/oppo-reno16f-pop-white-9_3.jpg": {
+    "local": "/product-images/fcb1ea139a20d7ecbd6ce92a.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/o/p/oppo-reno16f-pop-white-9_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/o/p/oppo-reno16f-pop-white-9_3.jpg",
+    "sha256": "fcb1ea139a20d7ecbd6ce92a8e831637de6704670635bf63b22caa1cba04529b",
+    "bytes": 40683
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/a/razer-deathadder-v3-pro.png": {
+    "local": "/product-images/9e092c8bd2d59a93e03cdd6f.png",
+    "remote": "https://assets3.razerzone.com/ey4XGBlRpPk1rOyxpjqLehRIt44=/1500x1000/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fhc9%2Fh51%2F9449963946014%2Fdeathadder-v3-pro-black-v2-500x500.png",
+    "fetched": "https://assets3.razerzone.com/ey4XGBlRpPk1rOyxpjqLehRIt44=/1500x1000/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fhc9%2Fh51%2F9449963946014%2Fdeathadder-v3-pro-black-v2-500x500.png",
+    "sha256": "9e092c8bd2d59a93e03cdd6fbf93dff53f996f6b61e6ff614651a8f8f861ab95",
+    "bytes": 437895
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/e/realme-c100i-4gb-64gb-cu-dep_2.jpg": {
+    "local": "/product-images/a58114bc68826a5e457acb20.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/e/realme-c100i-4gb-64gb-cu-dep_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/r/e/realme-c100i-4gb-64gb-cu-dep_2.jpg",
+    "sha256": "a58114bc68826a5e457acb2079e77a405a4b942a0b9826d625dd8476881b0d87",
+    "bytes": 38963
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/e/redmi-pad-2-9-7-inch_5.jpg": {
+    "local": "/product-images/c6eb94dc5a313dee5ce9b8f4.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/e/redmi-pad-2-9-7-inch_5.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/r/e/redmi-pad-2-9-7-inch_5.jpg",
+    "sha256": "c6eb94dc5a313dee5ce9b8f43fa04d89754b888af3d036143f3032704358e412",
+    "bytes": 23243
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/o/robot-hut-bui-xiaomi-vacuum-s40c_1__2.png": {
+    "local": "/product-images/4c65c6e91394e22ea215b74a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/o/robot-hut-bui-xiaomi-vacuum-s40c_1__2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/r/o/robot-hut-bui-xiaomi-vacuum-s40c_1__2.png",
+    "sha256": "4c65c6e91394e22ea215b74a0cfb610eeb58a08b02ecfe6b594f9156509d8101",
+    "bytes": 87763
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-a27-1_2_2.jpg": {
+    "local": "/product-images/69667440fa667a1fe1a2c497.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-a27-1_2_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-galaxy-a27-1_2_2.jpg",
+    "sha256": "69667440fa667a1fe1a2c4978c72458be58bc1ae170c8726e25e9cd37986f3a5",
+    "bytes": 35883
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-tab-s9-fe-mint-13_1_3.jpg": {
+    "local": "/product-images/1c5bae529e2f04c77db2dd31.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-tab-s9-fe-mint-13_1_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-galaxy-tab-s9-fe-mint-13_1_3.jpg",
+    "sha256": "1c5bae529e2f04c77db2dd31e039ecc7441467886bd830c3c4de182322493c48",
+    "bytes": 19594
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-flip-8-pink-01_4.jpg": {
+    "local": "/product-images/329dad9a7babc4183c54fa3e.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-flip-8-pink-01_4.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-galaxy-z-flip-8-pink-01_4.jpg",
+    "sha256": "329dad9a7babc4183c54fa3e38b8da78a7063f3d7755c8d28c2f4b34ad3309bf",
+    "bytes": 27087
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-cream-01_3_2.jpg": {
+    "local": "/product-images/33031b96f4a721b740b6f9db.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-cream-01_3_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-cream-01_3_2.jpg",
+    "sha256": "33031b96f4a721b740b6f9db0cf8be02b7e15615d3c3b021d34b7448c3ca936b",
+    "bytes": 20145
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-lavender-01_6.jpg": {
+    "local": "/product-images/daa1eb324483ebd3aecc57a2.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-lavender-01_6.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-lavender-01_6.jpg",
+    "sha256": "daa1eb324483ebd3aecc57a2da8a42d12590e6698fea4a328ba87f9e91e009fc",
+    "bytes": 23170
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-ultra-cream_2_1.jpg": {
+    "local": "/product-images/d4aff2796d3f34d802430eb2.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-ultra-cream_2_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-ultra-cream_2_1.jpg",
+    "sha256": "d4aff2796d3f34d802430eb2f10ae531c2dec378ba9cc05230d5fa7827b9d63d",
+    "bytes": 27528
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-violet-01_4.jpg": {
+    "local": "/product-images/e7627e291e1dec3e86b87466.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-violet-01_4.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-galaxy-z-fold-8-violet-01_4.jpg",
+    "sha256": "e7627e291e1dec3e86b8746656d118554b2008c216ae61b437b311f43eed3930",
+    "bytes": 29836
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-s26-fe-tim-03.jpg": {
+    "local": "/product-images/fac34d214f026397fb34a028.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung-s26-fe-tim-03.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung-s26-fe-tim-03.jpg",
+    "sha256": "fac34d214f026397fb34a028521d8a977e836483d0a03441f220dceb0682d7ef",
+    "bytes": 22299
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung_galaxy_tab_s10_lite_5g_1_1_1.jpg": {
+    "local": "/product-images/24c9d7d59a32310185fa2833.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung_galaxy_tab_s10_lite_5g_1_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung_galaxy_tab_s10_lite_5g_1_1_1.jpg",
+    "sha256": "24c9d7d59a32310185fa283315e2aa9bc3f5278197981fb4556434008ff48d06",
+    "bytes": 20074
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung_galaxy_tab_s8_ultra_wifi_12gb_256gb_3__1.png": {
+    "local": "/product-images/b7993cf9ff57fddd6baa50da.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/samsung_galaxy_tab_s8_ultra_wifi_12gb_256gb_3__1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/samsung_galaxy_tab_s8_ultra_wifi_12gb_256gb_3__1.png",
+    "sha256": "b7993cf9ff57fddd6baa50da60ed3716e90c3f5cba2a77242ad7ffe9f96f5430",
+    "bytes": 206290
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/sansung_lte_1_4_1.png": {
+    "local": "/product-images/91ef2e223329f10141d9a1c3.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/a/sansung_lte_1_4_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/s/a/sansung_lte_1_4_1.png",
+    "sha256": "91ef2e223329f10141d9a1c3828daefeef7108b3fed3d42a6be24c0bda73ca72",
+    "bytes": 283483
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/s/m/smart-tivi-samsung-55-inch-ua55du7700.jpg": {
+    "local": "/product-images/b89728a86150ea27f65049fa.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/7/_/7_267_6.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/7/_/7_267_6.png",
+    "sha256": "b89728a86150ea27f65049faa78da92bb6d2d7ac3d53a099a5335422b7a217bd",
+    "bytes": 321489
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_10.png": {
+    "local": "/product-images/075297448644b3f04c8d2b36.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_10.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_11_10.png",
+    "sha256": "075297448644b3f04c8d2b3653e5bcc0de1f7ba53fb25368d3a57e08c854b8e7",
+    "bytes": 253949
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_12.png": {
+    "local": "/product-images/e3d040da0802ea9345104b0a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_12.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_11_12.png",
+    "sha256": "e3d040da0802ea9345104b0ac17c5d4b222250d96947140bba13ee5bccc89660",
+    "bytes": 117302
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_13.png": {
+    "local": "/product-images/ff32b07cfe7c506e199e7550.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_13.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_11_13.png",
+    "sha256": "ff32b07cfe7c506e199e7550b8c0b547ad9de07e07290e33b6ad339a2f187c8a",
+    "bytes": 265433
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_17.png": {
+    "local": "/product-images/5fd748e703d2795c99c58ef8.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_17.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_11_17.png",
+    "sha256": "5fd748e703d2795c99c58ef86260d96bba197ccef1865ec13cf9c1e07c92e2ac",
+    "bytes": 233007
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_18.png": {
+    "local": "/product-images/8e29ef7c0e56c2db2aba8138.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_18.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_11_18.png",
+    "sha256": "8e29ef7c0e56c2db2aba8138e32fce56c020b962e372759544398ff708b608bd",
+    "bytes": 271511
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_21.png": {
+    "local": "/product-images/1e5ca1d0775a06eb7d0dad72.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_21.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_11_21.png",
+    "sha256": "1e5ca1d0775a06eb7d0dad72b350401ec1ded2a49fabbe44c5acf0f54eed207a",
+    "bytes": 239695
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_22.png": {
+    "local": "/product-images/d1aad49897e8ce26f62c80b5.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_11_22.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_11_22.png",
+    "sha256": "d1aad49897e8ce26f62c80b5e5c836fa436480c09d0cf07ea84bb80a07154526",
+    "bytes": 303138
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_1__4_33_2_1.png": {
+    "local": "/product-images/fd1a5575125c4a0ca5191d57.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_1__4_33_2_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_1__4_33_2_1.png",
+    "sha256": "fd1a5575125c4a0ca5191d577bf03eab3b9963182172fad4fca0402bbfacc4dc",
+    "bytes": 201270
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_1__4_85.png": {
+    "local": "/product-images/d5cc155091c40ca4b8c5d9cc.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_1__4_85.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_1__4_85.png",
+    "sha256": "d5cc155091c40ca4b8c5d9cc9fd323c00dfd9e356c43100b278ae57b53341a31",
+    "bytes": 116790
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_7_32_3.png": {
+    "local": "/product-images/02b6d1b8c530afe07e9004e6.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_7_32_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_7_32_3.png",
+    "sha256": "02b6d1b8c530afe07e9004e6854512bf99f710b2b5a3cd442d02b57f3015d45c",
+    "bytes": 219562
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_7_49_2.png": {
+    "local": "/product-images/662d0c77352c74544fdbe762.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_7_49_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_7_49_2.png",
+    "sha256": "662d0c77352c74544fdbe762f91fc380f1a671f6924a1547640e8e5aa0663160",
+    "bytes": 192550
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_7_82_2.png": {
+    "local": "/product-images/93820617267fe8473f64442c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_7_82_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_7_82_2.png",
+    "sha256": "93820617267fe8473f64442cbf37b073043e882ecf26cdf1af54636d6f8487a2",
+    "bytes": 253629
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_8_44_2.png": {
+    "local": "/product-images/5d2758f0813adafe0838cd8e.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_8_44_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_8_44_2.png",
+    "sha256": "5d2758f0813adafe0838cd8e3977127efd898bf75ec4725592cf1566229081d6",
+    "bytes": 200893
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_9_13_1.png": {
+    "local": "/product-images/3aa41e78eef678a86046514f.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_d_i_9_13_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_d_i_9_13_1.png",
+    "sha256": "3aa41e78eef678a86046514fe816aff10bcedd9b4089e75f2da5d314f2e04326",
+    "bytes": 232995
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_13_8_2.png": {
+    "local": "/product-images/aaf461d650f34654caf78ac2.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_13_8_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_13_8_2.png",
+    "sha256": "aaf461d650f34654caf78ac20caa73b039c6118f4f0d92c21ec1ca09927e2d33",
+    "bytes": 181607
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_18_17.png": {
+    "local": "/product-images/2126cf2040f403ed99cd7a0a.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_18_17.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_18_17.png",
+    "sha256": "2126cf2040f403ed99cd7a0a800c46935c4807a6dbdb54002698b6a98d55cb2b",
+    "bytes": 195260
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_18_46.png": {
+    "local": "/product-images/814417ed91326e10174b195b.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_18_46.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_18_46.png",
+    "sha256": "814417ed91326e10174b195b2b43a2156af68f189e2ed9a1e3e8502b916a1402",
+    "bytes": 304967
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_18_48.png": {
+    "local": "/product-images/b502afdbbd859ec5a9315f8c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_18_48.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_18_48.png",
+    "sha256": "b502afdbbd859ec5a9315f8c4a751920ae4d85582a243cba9a214130b3f41b6d",
+    "bytes": 236081
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_1__3_6_4.png": {
+    "local": "/product-images/c3d85f8d66c6aef968894f79.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_1__3_6_4.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_1__3_6_4.png",
+    "sha256": "c3d85f8d66c6aef968894f791b82a191d51c991de23b75808485864aa513c347",
+    "bytes": 204727
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_1__9_257.png": {
+    "local": "/product-images/e308e864a99049894dcd6844.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_1__9_257.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_1__9_257.png",
+    "sha256": "e308e864a99049894dcd68443f7d9d873a74b46a20bc19988a5977787d93f900",
+    "bytes": 195625
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_2__13_48_3.png": {
+    "local": "/product-images/ee995f959b0dd90e5cbafad7.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_2__13_48_3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_2__13_48_3.png",
+    "sha256": "ee995f959b0dd90e5cbafad7bad553bd01ac5314611edea9bd06b94ffa7b8479",
+    "bytes": 205541
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_2__13_49_2_1.png": {
+    "local": "/product-images/6e6bc9edde6c6d491d69aea5.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_2__13_49_2_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_2__13_49_2_1.png",
+    "sha256": "6e6bc9edde6c6d491d69aea5d9e2cbf4e7d8670656a7240dca6048951afd1c12",
+    "bytes": 171731
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_2__14_17_1.png": {
+    "local": "/product-images/7275a4cf70f5142bf875d554.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/e/text_ng_n_2__14_17_1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/e/text_ng_n_2__14_17_1.png",
+    "sha256": "7275a4cf70f5142bf875d5540ab7409dea5e3f685854abd2a07739527332373f",
+    "bytes": 259812
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/i/tivi-xiaomi-a-pro-65-inch.jpg": {
+    "local": "/product-images/051f2d3a9b1b0e4c302da7b7.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/i/tivi-xiaomi-qled-4k-a-pro-65-inch-2026_1_.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/i/tivi-xiaomi-qled-4k-a-pro-65-inch-2026_1_.png",
+    "sha256": "051f2d3a9b1b0e4c302da7b77fd2a9c71b548a41b4e73d503b6e487761feddb8",
+    "bytes": 318557
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/i/tivi-xiaomi-qled-4k-a-pro-55-inch-2026_1__1.png": {
+    "local": "/product-images/ee4f77e91d86e1ec626a18da.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/t/i/tivi-xiaomi-qled-4k-a-pro-55-inch-2026_1__1.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/t/i/tivi-xiaomi-qled-4k-a-pro-55-inch-2026_1__1.png",
+    "sha256": "ee4f77e91d86e1ec626a18da815bf59f9092d0ba5f9e5722726ffa6e52942353",
+    "bytes": 318388
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/v/a/vacuum-mop-5_2.jpg": {
+    "local": "/product-images/f1cee6e90c6179d72cb23224.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/v/a/vacuum-mop-5_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/v/a/vacuum-mop-5_2.jpg",
+    "sha256": "f1cee6e90c6179d72cb2322401a8f49cdd8003b1f1068da2a5eced4308c12a3f",
+    "bytes": 29859
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-17t-pro-1_4_4.jpg": {
+    "local": "/product-images/680cfd792080e37c3e1ce845.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-17t-pro-1_4_4.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-17t-pro-1_4_4.jpg",
+    "sha256": "680cfd792080e37c3e1ce8451882ac1f18314449b4d2782ab949564661f543c2",
+    "bytes": 37009
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-17t_2_2.jpg": {
+    "local": "/product-images/f95a6e23811fbc05c93e79bd.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-17t_2_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-17t_2_2.jpg",
+    "sha256": "f95a6e23811fbc05c93e79bd92d113e6fa0cd970510f6a699dd148da5b8b4e5b",
+    "bytes": 36224
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-pad-7_4__3.png": {
+    "local": "/product-images/fe96a3441a613fa3ba6aea1c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-pad-7_4__3.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-pad-7_4__3.png",
+    "sha256": "fe96a3441a613fa3ba6aea1caebe1fc7390eb72a01105679231a341cf1342068",
+    "bytes": 275429
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-pad-7_4__3_2.png": {
+    "local": "/product-images/fe96a3441a613fa3ba6aea1c.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-pad-7_4__3_2.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-pad-7_4__3_2.png",
+    "sha256": "fe96a3441a613fa3ba6aea1caebe1fc7390eb72a01105679231a341cf1342068",
+    "bytes": 275429
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-pad-mini_3.jpg": {
+    "local": "/product-images/dd3b54c217217e87deee34b1.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-pad-mini_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-pad-mini_3.jpg",
+    "sha256": "dd3b54c217217e87deee34b1dc9e6a195fb00357516028b35d53392f7787f1b7",
+    "bytes": 20917
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-poco-f9-ultra-red_1.jpg": {
+    "local": "/product-images/0b5033540f2d1fce3420b174.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-poco-f9-ultra-red_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-poco-f9-ultra-red_1.jpg",
+    "sha256": "0b5033540f2d1fce3420b17424425ae3dec64b33887f27434aa538552309e4de",
+    "bytes": 31866
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-poco-f9-ultra-red_2.jpg": {
+    "local": "/product-images/0b5033540f2d1fce3420b174.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-poco-f9-ultra-red_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-poco-f9-ultra-red_2.jpg",
+    "sha256": "0b5033540f2d1fce3420b17424425ae3dec64b33887f27434aa538552309e4de",
+    "bytes": 31866
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-17-5g-black_2.jpg": {
+    "local": "/product-images/42ef028a0115806b9854bdb8.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-17-5g-black_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-redmi-17-5g-black_2.jpg",
+    "sha256": "42ef028a0115806b9854bdb805ab277b485190636e26f64b26d90243fff11517",
+    "bytes": 22509
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-17-black_2.jpg": {
+    "local": "/product-images/f85dfaec024c30011369527d.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-17-black_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-redmi-17-black_2.jpg",
+    "sha256": "f85dfaec024c30011369527d29377d2f93a24fbe061718f85dd0c91b32d785aa",
+    "bytes": 22480
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-a7-14_1_1.jpg": {
+    "local": "/product-images/49ea1039823ffe846cd2863f.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-a7-14_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-redmi-a7-14_1_1.jpg",
+    "sha256": "49ea1039823ffe846cd2863f6d8210f61380d2a4f6c75bd75198294869ecf206",
+    "bytes": 21710
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-note-17-5g-blue-01_2_1.jpg": {
+    "local": "/product-images/f44a1f39388c63589e7c5c9c.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-note-17-5g-blue-01_2_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-redmi-note-17-5g-blue-01_2_1.jpg",
+    "sha256": "f44a1f39388c63589e7c5c9c78df32651585d1359ceff79651aae660839e51c0",
+    "bytes": 25309
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-note-17-pro-max-5g-white_2.jpg": {
+    "local": "/product-images/0198b5079278db90cf0560e1.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-note-17-pro-max-5g-white_2.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-redmi-note-17-pro-max-5g-white_2.jpg",
+    "sha256": "0198b5079278db90cf0560e1cf2f9844d06c108e9c10518862a189530047676f",
+    "bytes": 22130
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-note-17-purple_3.jpg": {
+    "local": "/product-images/3beec55cc5adc8ccd2b95325.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-note-17-purple_3.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-redmi-note-17-purple_3.jpg",
+    "sha256": "3beec55cc5adc8ccd2b95325ffe38da66a7431c561c8053b1e83f7249304634d",
+    "bytes": 34596
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-pad-2-wifi-1_5_1_1.jpg": {
+    "local": "/product-images/3fb97784da956524f98743c6.jpg",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-redmi-pad-2-wifi-1_5_1_1.jpg",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/x/i/xiaomi-redmi-pad-2-wifi-1_5_1_1.jpg",
+    "sha256": "3fb97784da956524f98743c6ade6f43ba6252ba878844108e8bb10a376fd1575",
+    "bytes": 27426
+  },
+  "https://cdn2.cellphones.com.vn/200x/media/catalog/product/x/i/xiaomi-robot-vacuum-x20-plus.jpg": {
+    "local": "/product-images/f4fc80e6e08aca73bd074218.png",
+    "remote": "https://cdn2.cellphones.com.vn/200x/media/catalog/product/r/o/robot_hut_bui_kh_ng_dock.png",
+    "fetched": "https://cdn2.cellphones.com.vn/600x/media/catalog/product/r/o/robot_hut_bui_kh_ng_dock.png",
+    "sha256": "f4fc80e6e08aca73bd07421840d5d9b0aeb4e739cbc28eee2746c42b837bcc94",
+    "bytes": 52563
+  }
+}

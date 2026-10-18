@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive QA — development only</title>
+    <style>
+      body {
+        margin: 0;
+        background: #dfe5df;
+        font: 14px system-ui;
+      }
+      form {
+        padding: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        background: white;
+      }
+      iframe {
+        display: block;
+        border: 0;
+        height: 1100px;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label
+        >Chiều rộng
+        <select id="width">
+          <option>320</option>
+          <option selected>390</option>
+          <option>600</option>
+          <option>750</option>
+          <option>768</option>
+          <option>820</option>
+          <option>1024</option>
+          <option>1440</option>
+          <option>1920</option>
+        </select></label
+      >
+      <label>Đường dẫn <input id="path" value="/products" /></label>
+      <button>Kiểm tra</button>
+    </form>
+    <iframe title="Ứng dụng kiểm thử" src="/products" width="390"></iframe>
+    <script>
+      const frame = document.querySelector("iframe");
+      document
+        .querySelector("#width")
+        .addEventListener(
+          "change",
+          (event) => (frame.width = event.target.value),
+        );
+      document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const path = document.querySelector("#path").value;
+        if (path.startsWith("/") && !path.startsWith("//")) frame.src = path;
+      });
+    </script>
+  </body>
+</html>

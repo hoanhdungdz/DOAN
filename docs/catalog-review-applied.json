@@ -1,0 +1,356 @@
+{
+  "dry_run": false,
+  "changes": [
+    {
+      "source_id": "PROD_0071",
+      "kind": "condition",
+      "before": {
+        "condition": "Mới 100% (Chính hãng)"
+      },
+      "after": {
+        "condition": "Đã qua sử dụng"
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0072",
+      "kind": "condition",
+      "before": {
+        "condition": "Mới 100% (Chính hãng)"
+      },
+      "after": {
+        "condition": "Đã qua sử dụng"
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0073",
+      "kind": "condition",
+      "before": {
+        "condition": "Mới 100% (Chính hãng)"
+      },
+      "after": {
+        "condition": "Đã qua sử dụng"
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0074",
+      "kind": "condition",
+      "before": {
+        "condition": "Mới 100% (Chính hãng)"
+      },
+      "after": {
+        "condition": "Đã qua sử dụng"
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0151",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0152",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0153",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0154",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0155",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0156",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0157",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0158",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0159",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0167",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0168",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0169",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0170",
+      "kind": "category",
+      "before": {
+        "category": 13
+      },
+      "after": {
+        "category": 16
+      },
+      "canonical": null
+    },
+    {
+      "source_id": "PROD_0265",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0258"
+    },
+    {
+      "source_id": "PROD_0266",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0259"
+    },
+    {
+      "source_id": "PROD_0267",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0260"
+    },
+    {
+      "source_id": "PROD_0268",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0261"
+    },
+    {
+      "source_id": "PROD_0269",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0262"
+    },
+    {
+      "source_id": "PROD_0270",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0263"
+    },
+    {
+      "source_id": "PROD_0271",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0264"
+    },
+    {
+      "source_id": "PROD_0272",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0251"
+    },
+    {
+      "source_id": "PROD_0273",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0252"
+    },
+    {
+      "source_id": "PROD_0274",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0253"
+    },
+    {
+      "source_id": "PROD_0275",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0254"
+    },
+    {
+      "source_id": "PROD_0276",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0255"
+    },
+    {
+      "source_id": "PROD_0277",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0256"
+    },
+    {
+      "source_id": "PROD_0278",
+      "kind": "duplicate",
+      "before": {
+        "is_active": true
+      },
+      "after": {
+        "is_active": false
+      },
+      "canonical": "PROD_0257"
+    }
+  ],
+  "conflicts": [],
+  "verified": {
+    "source_records": 278,
+    "active_source_records": 264,
+    "active_smarthome": 11,
+    "desktop_mac_mini": 13,
+    "generic_used": 4,
+    "quarantined_stock": 194,
+    "stock_ledger_prices_snapshots_unchanged": true
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "source_file": "final_master_dataset.json",
+  "sha256": "d063b0109c1ee9e29f7d79279b2deca5b0fbcf3f7afe4d425721013341c19964",
+  "count": 278,
+  "categories": {
+    "Laptop": 50,
+    "Dien_thoai": 43,
+    "Gia_dung_Smarthome": 18,
+    "May_tinh_bang": 52,
+    "Phu_kien_Cong_nghe": 15,
+    "Man_hinh_PC": 50,
+    "Am_thanh_Smartwatch": 50
+  },
+  "brands": [
+    "ASUS",
+    "Acer",
+    "Anker",
+    "Apple",
+    "Apple Chính hãng",
+    "Aula",
+    "Baseus",
+    "Bose",
+    "Colorful",
+    "Dahua",
+    "Dell",
+    "Dreame",
+    "E-DRA",
+    "Ecovacs",
+    "Garmin",
+    "Gigabyte",
+    "HP",
+    "HyperX",
+    "Hãng khác",
+    "LG",
+    "Lenovo",
+    "Logitech",
+    "MSI",
+    "OPPO",
+    "Philips",
+    "Razer",
+    "Realme",
+    "Samsung",
+    "Samsung Chính hãng",
+    "VSP",
+    "ViewSonic",
+    "Vivo",
+    "Xiaomi"
+  ],
+  "field_counts": {
+    "16": 278
+  },
+  "types": {
+    "brand": {
+      "str": 278
+    },
+    "category": {
+      "str": 278
+    },
+    "condition": {
+      "str": 278
+    },
+    "description": {
+      "str": 278
+    },
+    "id": {
+      "str": 278
+    },
+    "image": {
+      "str": 278
+    },
+    "inventory": {
+      "dict": 278
+    },
+    "name": {
+      "str": 278
+    },
+    "price": {
+      "int": 278
+    },
+    "sku": {
+      "str": 278
+    },
+    "slug": {
+      "str": 278
+    },
+    "source_url": {
+      "str": 278
+    },
+    "specs": {
+      "str": 278
+    },
+    "total_stock": {
+      "int": 278
+    },
+    "url": {
+      "str": 278
+    },
+    "warranty_months": {
+      "int": 278
+    }
+  },
+  "missing": {
+    "brand": 0,
+    "category": 0,
+    "condition": 0,
+    "description": 0,
+    "id": 0,
+    "image": 0,
+    "inventory": 0,
+    "name": 0,
+    "price": 0,
+    "sku": 0,
+    "slug": 0,
+    "source_url": 0,
+    "specs": 0,
+    "total_stock": 0,
+    "url": 0,
+    "warranty_months": 0
+  },
+  "nulls": {
+    "brand": 0,
+    "category": 0,
+    "condition": 0,
+    "description": 0,
+    "id": 0,
+    "image": 0,
+    "inventory": 0,
+    "name": 0,
+    "price": 0,
+    "sku": 0,
+    "slug": 0,
+    "source_url": 0,
+    "specs": 0,
+    "total_stock": 0,
+    "url": 0,
+    "warranty_months": 0
+  },
+  "empty_strings": {
+    "brand": 0,
+    "category": 0,
+    "condition": 0,
+    "description": 0,
+    "id": 0,
+    "image": 0,
+    "inventory": 0,
+    "name": 0,
+    "price": 0,
+    "sku": 0,
+    "slug": 0,
+    "source_url": 14,
+    "specs": 0,
+    "total_stock": 0,
+    "url": 0,
+    "warranty_months": 0
+  },
+  "duplicates": {
+    "id": {},
+    "sku": {},
+    "slug": {
+      "laptop-dell-latitude-5420-cu-dep": 2,
+      "robot-hut-bui-lau-nha-dreame-l10s-ultra-gen-2": 2,
+      "robot-hut-bui-lau-nha-xiaomi-vacuum-x20": 2,
+      "tivi-xiaomi-google-tivi-a-pro-4k-65-inch-2026": 2,
+      "smart-tivi-samsung-crystal-uhd-4k-55-inch-ua55du7700": 2,
+      "may-loc-khong-khi-xiaomi-smart-air-purifier-4-pro": 2,
+      "ban-phim-co-co-day-aula-hero84he-trang-contour-black-king-switch": 2,
+      "ban-phim-co-khong-day-aula-ag75-pro-tri-mode": 2,
+      "chuot-gaming-khong-day-aula-sc620-tri-mode": 2,
+      "chuot-khong-day-logitech-mx-master-3s": 2,
+      "ban-phim-khong-day-logitech-mx-keys-s": 2,
+      "chuot-gaming-khong-day-razer-deathadder-v3-pro": 2,
+      "cu-sac-nhanh-anker-prime-100w-gan-3-cong-a2668": 2
+    },
+    "url": {
+      "/products/laptop-dell-latitude-5420-cu-dep": 2,
+      "/products/robot-hut-bui-lau-nha-dreame-l10s-ultra-gen-2": 2,
+      "/products/robot-hut-bui-lau-nha-xiaomi-vacuum-x20": 2,
+      "/products/tivi-xiaomi-google-tivi-a-pro-4k-65-inch-2026": 2,
+      "/products/smart-tivi-samsung-crystal-uhd-4k-55-inch-ua55du7700": 2,
+      "/products/may-loc-khong-khi-xiaomi-smart-air-purifier-4-pro": 2,
+      "/products/ban-phim-co-co-day-aula-hero84he-trang-contour-black-king-switch": 2,
+      "/products/ban-phim-co-khong-day-aula-ag75-pro-tri-mode": 2,
+      "/products/chuot-gaming-khong-day-aula-sc620-tri-mode": 2,
+      "/products/chuot-khong-day-logitech-mx-master-3s": 2,
+      "/products/ban-phim-khong-day-logitech-mx-keys-s": 2,
+      "/products/chuot-gaming-khong-day-razer-deathadder-v3-pro": 2,
+      "/products/cu-sac-nhanh-anker-prime-100w-gan-3-cong-a2668": 2
+    },
+    "source_url": {
+      "": 14
+    }
+  },
+  "stock": 2824,
+  "stores": {
+    "Chi nhánh Cầu Giấy - Hà Nội": 956,
+    "Chi nhánh Hoàng Diệu - Hải Phòng": 869,
+    "Chi nhánh Thanh Xuân - Hà Nội": 999
+  },
+  "stock_mismatch": [],
+  "conditions": {
+    "Đã kích hoạt": 38,
+    "Cũ đẹp (Like New)": 62,
+    "Mới 100% (Chính hãng)": 164,
+    "Cũ trầy xước": 2,
+    "Đổi bảo hành": 12
+  },
+  "prices": [
+    490000,
+    109990000
+  ],
+  "brand_whitespace": [
+    [
+      "PROD_0023",
+      "Colorful "
+    ]
+  ]
+}

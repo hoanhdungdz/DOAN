@@ -1,0 +1,471 @@
+[
+  {
+    "source_id": "PROD_0071",
+    "expected": {
+      "name": "Xiaomi Smart Display S Mini LED 65 inch 2025 - Cũ",
+      "sku": "SKU-GIA-0071",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "condition",
+    "value": "Đã qua sử dụng",
+    "reason": "Tên và URL nguồn ghi Cũ, nhưng condition nguồn ghi Mới. Chưa xác định cấp ngoại hình."
+  },
+  {
+    "source_id": "PROD_0072",
+    "expected": {
+      "name": "Robot hút bụi lau nhà Xiaomi Vacuum 5 - Cũ",
+      "sku": "SKU-GIA-0072",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "condition",
+    "value": "Đã qua sử dụng",
+    "reason": "Tên và URL nguồn ghi Cũ, nhưng condition nguồn ghi Mới. Chưa xác định cấp ngoại hình."
+  },
+  {
+    "source_id": "PROD_0073",
+    "expected": {
+      "name": "Robot hút bụi lau nhà Xiaomi Vacuum S40C - Cũ",
+      "sku": "SKU-GIA-0073",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "condition",
+    "value": "Đã qua sử dụng",
+    "reason": "Tên và URL nguồn ghi Cũ, nhưng condition nguồn ghi Mới. Chưa xác định cấp ngoại hình."
+  },
+  {
+    "source_id": "PROD_0074",
+    "expected": {
+      "name": "Tivi Xiaomi A Pro 4K 55 inch QLED 2026 - Cũ",
+      "sku": "SKU-GIA-0074",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "condition",
+    "value": "Đã qua sử dụng",
+    "reason": "Tên và URL nguồn ghi Cũ, nhưng condition nguồn ghi Mới. Chưa xác định cấp ngoại hình."
+  },
+  {
+    "source_id": "PROD_0151",
+    "expected": {
+      "name": "Apple Mac mini M5 Pro 15CPU 16GPU 24GB 1TB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0151",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0152",
+    "expected": {
+      "name": "Apple Mac mini M5 Pro 15CPU 16GPU 48GB 512GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0152",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0153",
+    "expected": {
+      "name": "Apple Mac mini M5 Pro 15CPU 16GPU 64GB 1TB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0153",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0154",
+    "expected": {
+      "name": "Apple Mac mini M5 Pro 18CPU 20GPU 64GB 1TB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0154",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0155",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 16GB 1TB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0155",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0156",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 24GB 1TB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0156",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0157",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 24GB 256GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0157",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0158",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 32GB 256GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0158",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0159",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 32GB 512GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0159",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0167",
+    "expected": {
+      "name": "Apple Mac mini M5 Pro 15CPU 16GPU 24GB 512GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0167",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0168",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 16GB 256GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0168",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0169",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 16GB 512GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0169",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0170",
+    "expected": {
+      "name": "Apple Mac mini M6 12CPU 12GPU 24GB 512GB 2026 | Chính hãng Apple Việt Nam",
+      "sku": "SKU-MAN-0170",
+      "category": "Man_hinh_PC",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "category",
+    "value": "May_tinh_de_ban",
+    "label": "Máy tính để bàn",
+    "reason": "Mac mini là máy tính để bàn, không phải màn hình."
+  },
+  {
+    "source_id": "PROD_0265",
+    "expected": {
+      "name": "Bàn phím cơ có dây Aula Hero84HE trắng Contour Black King switch",
+      "sku": "SKU-PHU-0265",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0258",
+    "canonical_expected": {
+      "name": "Bàn phím cơ có dây Aula Hero84HE trắng Contour Black King switch",
+      "sku": "SKU-PHU-0258",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0266",
+    "expected": {
+      "name": "Bàn phím cơ không dây Aula AG75 Pro Tri-Mode",
+      "sku": "SKU-PHU-0266",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0259",
+    "canonical_expected": {
+      "name": "Bàn phím cơ không dây Aula AG75 Pro Tri-Mode",
+      "sku": "SKU-PHU-0259",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0267",
+    "expected": {
+      "name": "Chuột Gaming không dây Aula SC620 Tri-Mode",
+      "sku": "SKU-PHU-0267",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0260",
+    "canonical_expected": {
+      "name": "Chuột Gaming không dây Aula SC620 Tri-Mode",
+      "sku": "SKU-PHU-0260",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0268",
+    "expected": {
+      "name": "Chuột không dây Logitech MX Master 3S",
+      "sku": "SKU-PHU-0268",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0261",
+    "canonical_expected": {
+      "name": "Chuột không dây Logitech MX Master 3S",
+      "sku": "SKU-PHU-0261",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0269",
+    "expected": {
+      "name": "Bàn phím không dây Logitech MX Keys S",
+      "sku": "SKU-PHU-0269",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0262",
+    "canonical_expected": {
+      "name": "Bàn phím không dây Logitech MX Keys S",
+      "sku": "SKU-PHU-0262",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0270",
+    "expected": {
+      "name": "Chuột Gaming không dây Razer DeathAdder V3 Pro",
+      "sku": "SKU-PHU-0270",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0263",
+    "canonical_expected": {
+      "name": "Chuột Gaming không dây Razer DeathAdder V3 Pro",
+      "sku": "SKU-PHU-0263",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0271",
+    "expected": {
+      "name": "Củ sạc nhanh Anker Prime 100W GaN 3 cổng A2668",
+      "sku": "SKU-PHU-0271",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0264",
+    "canonical_expected": {
+      "name": "Củ sạc nhanh Anker Prime 100W GaN 3 cổng A2668",
+      "sku": "SKU-PHU-0264",
+      "category": "Phu_kien_Cong_nghe",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0272",
+    "expected": {
+      "name": "Robot hút bụi lau nhà Ecovacs Deebot T30 Pro Omni",
+      "sku": "SKU-GIA-0272",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0251",
+    "canonical_expected": {
+      "name": "Robot hút bụi lau nhà Ecovacs Deebot T30 Pro Omni - Trạm sạc tự giặt sấy",
+      "sku": "SKU-GIA-0251",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0273",
+    "expected": {
+      "name": "Robot hút bụi lau nhà Dreame L10s Ultra Gen 2",
+      "sku": "SKU-GIA-0273",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0252",
+    "canonical_expected": {
+      "name": "Robot hút bụi lau nhà Dreame L10s Ultra Gen 2",
+      "sku": "SKU-GIA-0252",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0274",
+    "expected": {
+      "name": "Robot hút bụi lau nhà Xiaomi Vacuum X20+",
+      "sku": "SKU-GIA-0274",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0253",
+    "canonical_expected": {
+      "name": "Robot hút bụi lau nhà Xiaomi Vacuum X20+",
+      "sku": "SKU-GIA-0253",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0275",
+    "expected": {
+      "name": "Tivi Xiaomi Google Tivi A Pro 4K 65 inch 2026",
+      "sku": "SKU-GIA-0275",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0254",
+    "canonical_expected": {
+      "name": "Tivi Xiaomi Google Tivi A Pro 4K 65 inch 2026",
+      "sku": "SKU-GIA-0254",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0276",
+    "expected": {
+      "name": "Smart Tivi Samsung Crystal UHD 4K 55 inch UA55DU7700",
+      "sku": "SKU-GIA-0276",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0255",
+    "canonical_expected": {
+      "name": "Smart Tivi Samsung Crystal UHD 4K 55 inch UA55DU7700",
+      "sku": "SKU-GIA-0255",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0277",
+    "expected": {
+      "name": "Nồi chiên không dầu Philips XXL 7.2L HD9880/90",
+      "sku": "SKU-GIA-0277",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0256",
+    "canonical_expected": {
+      "name": "Nồi chiên không dầu kết hợp hấp Philips XXL 7.2L HD9880/90",
+      "sku": "SKU-GIA-0256",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  },
+  {
+    "source_id": "PROD_0278",
+    "expected": {
+      "name": "Máy lọc không khí Xiaomi Smart Air Purifier 4 Pro",
+      "sku": "SKU-GIA-0278",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "kind": "duplicate",
+    "canonical": "PROD_0257",
+    "canonical_expected": {
+      "name": "Máy lọc không khí Xiaomi Smart Air Purifier 4 Pro",
+      "sku": "SKU-GIA-0257",
+      "category": "Gia_dung_Smarthome",
+      "condition": "Mới 100% (Chính hãng)"
+    },
+    "reason": "Bản ghi lặp cùng mẫu/giá/tình trạng/ảnh, thiếu source_url; ngừng bán để đối soát, không gộp tồn."
+  }
+]

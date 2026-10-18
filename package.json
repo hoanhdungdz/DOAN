@@ -1,0 +1,23 @@
+{
+  "name": "tech-retail-system",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "admin",
+    "fe"
+  ],
+  "scripts": {
+    "dev:customer": "npm run dev -w fe",
+    "dev:admin": "npm run dev -w admin",
+    "build": "npm run build -w fe && npm run build -w admin",
+    "test:ui": "node --test tests/*.test.mjs && vitest run"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.2",
+    "prettier": "3.9.10",
+    "vitest": "5.0.4"
+  }
+}
