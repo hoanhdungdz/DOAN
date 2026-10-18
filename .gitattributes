@@ -9,3 +9,4 @@
 *.png binary
 *.jpg binary
 *.jpeg binary
+be/data/final_master_dataset.json -text
