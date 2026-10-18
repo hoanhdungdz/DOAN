@@ -16,3 +16,5 @@ dev-inbox/
 .coverage.*
 .DS_Store
 Thumbs.db
+/dataset_analysis.json
+/uml-contact-sheet.jpg
