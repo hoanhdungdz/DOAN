@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { Plus, Search, Eye, Pencil, X, Printer } from "lucide-react";
 import { resources, labels, actionLabels } from "../features/resources/config";
 import ResourceForm from "../features/resources/ResourceForm";
+import StockReceiptDialog from "../features/resources/StockReceiptDialog";
 import { useSession } from "../../../shared/session";
 import {
   api,
@@ -18,10 +19,36 @@ function cell(k, v) {
   if (v === null || v === undefined || v === "") return "—";
   if (typeof v === "boolean") return <Badge>{v ? "Có" : "Không"}</Badge>;
   if (["status", "kind"].includes(k)) return <Badge>{v}</Badge>;
-  if (["price", "amount"].includes(k)) return money(v);
+  if (["price", "amount", "min_subtotal", "max_discount"].includes(k))
+    return money(v);
+  if (k === "discount_type") return v === "PERCENT" ? "Phần trăm" : "Số tiền";
   if (k.endsWith("_at") || k === "date_joined") return dateTime(v);
   if (Array.isArray(v)) return v.join(", ");
   return String(v);
+}
+function InventoryStoreFilter({ value, onChange, user }) {
+  const remote = useRemote("stores/?page_size=100");
+  return (
+    <label className="inventory-store-filter">
+      Chi nhánh
+      <select
+        aria-label="Lọc chi nhánh"
+        value={value}
+        disabled={remote.loading}
+        onChange={(e) => onChange(e.target.value)}
+      >
+        <option value="">Tất cả chi nhánh được phép</option>
+        {remote.data?.results
+          ?.filter((store) => user.is_admin || user.stores.includes(store.id))
+          .map((store) => (
+            <option key={store.id} value={store.id}>
+              {store.name}
+            </option>
+          ))}
+      </select>
+      <ErrorBox error={remote.error} />
+    </label>
+  );
 }
 export default function ResourcePage() {
   const { resource: name } = useParams(),
@@ -36,6 +63,8 @@ export default function ResourcePage() {
     [busy, setBusy] = useState(false),
     [low, setLow] = useState(false),
     [store, setStore] = useState(""),
+    [receipt, setReceipt] = useState(null),
+    [receiptNotice, setReceiptNotice] = useState(null),
     keys = useRef(new Map());
   const query = new URLSearchParams({
     page,
@@ -96,6 +125,14 @@ export default function ResourcePage() {
           </button>
         )}
       </div>
+      {receiptNotice && (
+        <p className="notice">
+          {receiptNotice.posted
+            ? `Đã nhập thêm hàng theo phiếu #${receiptNotice.id}. Tồn kho đã được cập nhật.`
+            : `Phiếu nhập #${receiptNotice.id} đang chờ kiểm tra ghi sổ.`}{" "}
+          <Link to="/stock-documents">Xem chứng từ kho →</Link>
+        </p>
+      )}
       <div className="panel">
         <div className="toolbar">
           <div className="search-input">
@@ -123,14 +160,11 @@ export default function ResourcePage() {
                 />
                 Cảnh báo tồn thấp
               </label>
-              <input
-                style={{ width: 150 }}
-                type="number"
-                min="1"
-                placeholder="ID chi nhánh"
+              <InventoryStoreFilter
                 value={store}
-                onChange={(e) => {
-                  setStore(e.target.value);
+                user={user}
+                onChange={(value) => {
+                  setStore(value);
                   setPage(1);
                 }}
               />
@@ -190,6 +224,36 @@ export default function ResourcePage() {
                             Lịch sử
                           </Link>
                         )}
+                        {["products", "variants", "inventory"].includes(name) &&
+                          can("manage_stock") && (
+                            <button
+                              disabled={
+                                name === "products" && !row.variants?.length
+                              }
+                              onClick={() => {
+                                const variants =
+                                  name === "products"
+                                    ? row.variants
+                                    : name === "variants"
+                                      ? [row]
+                                      : [
+                                          {
+                                            id: row.variant,
+                                            sku: row.sku,
+                                            product_name: row.product_name,
+                                          },
+                                        ];
+                                setReceipt({
+                                  variants,
+                                  warehouse:
+                                    name === "inventory" ? row.warehouse : "",
+                                  productName: row.product_name || row.name,
+                                });
+                              }}
+                            >
+                              <Plus size={14} /> Nhập thêm hàng
+                            </button>
+                          )}
                         {writable &&
                           !config.noEdit &&
                           (!config.actions || row.status === "DRAFT") && (
@@ -259,6 +323,20 @@ export default function ResourcePage() {
           onSaved={saved}
         />
       )}{" "}
+      {receipt && (
+        <StockReceiptDialog
+          {...receipt}
+          onClose={(id) => {
+            setReceipt(null);
+            if (id) setReceiptNotice({ id, posted: false });
+          }}
+          onReceived={(document) => {
+            setReceipt(null);
+            setReceiptNotice({ id: document.id, posted: true });
+            setRevision((value) => value + 1);
+          }}
+        />
+      )}
       {detail && (
         <div className="modal-backdrop">
           <section

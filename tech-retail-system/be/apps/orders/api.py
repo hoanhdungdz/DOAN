@@ -7,12 +7,13 @@ from rest_framework.exceptions import PermissionDenied
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from drf_spectacular.utils import extend_schema, extend_schema_view
+from drf_spectacular.utils import extend_schema, extend_schema_view, extend_schema_field
 from apps.accounts.permissions import store_ids
 from apps.products.models import ProductVariant
 from apps.products.api import VariantSerializer
 from .models import Order, OrderItem, OrderStatusHistory, Cart, CartItem, Invoice
-from .services import create_order, transition_order, finish_pos
+from .services import create_order, transition_order, finish_pos, expire_orders
+from apps.stores.models import Warehouse
 from common.filters import SearchMixin
 
 
@@ -36,8 +37,17 @@ class CheckoutSerializer(serializers.Serializer):
     phone = serializers.CharField(max_length=30)
     address = serializers.CharField(max_length=500, required=False, allow_blank=True, default="")
     fulfillment = serializers.ChoiceField(choices=["DELIVERY", "PICKUP"])
-    payment_method = serializers.ChoiceField(choices=["COD", "CASH", "BANK_TRANSFER"])
+    payment_method = serializers.ChoiceField(
+        choices=["COD", "CASH", "BANK_TRANSFER", "VNPAY_SANDBOX"]
+    )
     items = CheckoutItem(many=True)
+    coupon_code = serializers.CharField(max_length=32, required=False, allow_blank=True, default="")
+    quoted_total = serializers.DecimalField(
+        max_digits=18, decimal_places=2, min_value=0, required=False
+    )
+
+    def validate_coupon_code(self, value):
+        return value.strip().upper()
 
     def validate_phone(self, value):
         return normalize_phone(value)
@@ -70,10 +80,21 @@ class HistorySerializer(serializers.ModelSerializer):
 
 
 class OrderSerializer(serializers.ModelSerializer):
+    vnpay_payment = serializers.SerializerMethodField()
     items = OrderItemSerializer(many=True, read_only=True)
     history = HistorySerializer(many=True, read_only=True)
     store_name = serializers.CharField(source="warehouse.store.name", read_only=True)
     store = serializers.IntegerField(source="warehouse.store_id", read_only=True)
+
+    @extend_schema_field({"type": "object", "nullable": True, "additionalProperties": True})
+    def get_vnpay_payment(self, obj):
+        from apps.payments.vnpay import public_attempt
+
+        attempts = list(obj.vnpay_attempts.all())
+        relevant = next(
+            (a for a in attempts if a.status == "REVIEW"), attempts[0] if attempts else None
+        )
+        return public_attempt(relevant) if relevant else None
 
     class Meta:
         model = Order
@@ -81,9 +102,10 @@ class OrderSerializer(serializers.ModelSerializer):
 
 
 class OrderViewSet(viewsets.GenericViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = (
         Order.objects.select_related("customer", "warehouse__store")
-        .prefetch_related("items", "history")
+        .prefetch_related("items", "history", "vnpay_attempts")
         .all()
         .order_by("-pk")
     )
@@ -92,7 +114,7 @@ class OrderViewSet(viewsets.GenericViewSet):
     def get_queryset(self):
         user = self.request.user
         if not user.is_authenticated:
-            raise PermissionDenied("Cần đăng nhập hoặc tra cứu bằng OTP.")
+            raise PermissionDenied("Đăng nhập để xem đơn hàng của bạn.")
         ids = (
             store_ids(user, "manage_sales")
             + store_ids(user, "manage_payments")
@@ -133,7 +155,6 @@ class OrderViewSet(viewsets.GenericViewSet):
         order = create_order(
             s.validated_data, request.user, scope, request.headers.get("Idempotency-Key", "")
         )
-        # Guest receives only its newly created order, never a general order-list grant.
         return Response(self.get_serializer(order).data, status=201)
 
     def do(self, request, action):
@@ -180,6 +201,31 @@ class OrderViewSet(viewsets.GenericViewSet):
         )
 
 
+class CancelOwnOrderInput(serializers.Serializer):
+    reason = serializers.CharField(max_length=500)
+
+
+class MyOrderViewSet(SearchMixin, viewsets.ReadOnlyModelViewSet):
+    """Personal order history never inherits an employee's branch permissions."""
+
+    permission_classes = [IsAuthenticated]
+    serializer_class = OrderSerializer
+    queryset = OrderViewSet.queryset
+    search_fields = ("code",)
+
+    def get_queryset(self):
+        return self.queryset.filter(customer__user=self.request.user)
+
+    @extend_schema(request=CancelOwnOrderInput, responses=OrderSerializer)
+    @action(detail=True, methods=["post"])
+    def cancel(self, request, pk=None):
+        order = self.get_object()
+        data = CancelOwnOrderInput(data=request.data)
+        data.is_valid(raise_exception=True)
+        result = transition_order(order.pk, "cancel", request.user, data.validated_data["reason"])
+        return Response(self.get_serializer(result).data)
+
+
 class CartInputSerializer(serializers.Serializer):
     items = CheckoutItem(many=True)
 
@@ -187,6 +233,51 @@ class CartInputSerializer(serializers.Serializer):
 class CartResponseSerializer(serializers.Serializer):
     items = serializers.ListField(child=serializers.DictField())
     warnings = serializers.ListField(child=serializers.CharField())
+
+
+class CartAvailabilityView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    @extend_schema(request=CartInputSerializer, responses=CartResponseSerializer)
+    def post(self, request):
+        data = CartInputSerializer(data=request.data)
+        data.is_valid(raise_exception=True)
+        rows = data.validated_data["items"]
+        if not rows or len(rows) > 100 or len({row["variant"] for row in rows}) != len(rows):
+            raise serializers.ValidationError("Cần 1–100 dòng hàng không trùng.")
+        # Refresh is a CSRF-protected POST: release expired holds in relevant active
+        # warehouses before deciding which branches can fulfill this basket.
+        warehouses = list(
+            Warehouse.objects.filter(
+                is_active=True,
+                store__is_active=True,
+                balances__variant_id__in=[row["variant"] for row in rows],
+            )
+            .values_list("id", flat=True)
+            .distinct()
+        )
+        expire_orders(warehouses)
+        variants = (
+            ProductVariant.objects.filter(
+                pk__in=[row["variant"] for row in rows],
+                is_active=True,
+                product__is_active=True,
+                product__category__is_active=True,
+                product__brand__is_active=True,
+            )
+            .select_related("product")
+            .prefetch_related("product__images")
+        )
+        details = {
+            variant.pk: VariantSerializer(variant, context={"request": request}).data
+            for variant in variants
+        }
+        return Response(
+            {
+                "items": [{**row, "details": details.get(row["variant"])} for row in rows],
+                "warnings": [],
+            }
+        )
 
 
 @extend_schema_view(

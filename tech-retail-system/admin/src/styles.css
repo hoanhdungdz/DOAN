@@ -856,3 +856,18 @@
     padding: 14px;
   }
 }
+.receipt-fields {
+  border: 0;
+  padding: 0;
+  margin: 20px 0;
+  min-width: 0;
+}
+.inventory-store-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.inventory-store-filter select {
+  width: min(320px, 100%);
+}

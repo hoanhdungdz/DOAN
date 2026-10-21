@@ -16,6 +16,7 @@ import ResourcePage from "./pages/ResourcePage";
 import OrdersPage from "./pages/OrdersPage";
 import POSPage from "./pages/POSPage";
 import InvoicePage from "./pages/InvoicePage";
+import FeedbackPage from "./pages/FeedbackPage";
 import "../../shared/styles.css";
 import "./styles.css";
 function ResourceRoute() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="orders" element={<OrdersPage />} />
         <Route path="orders/:id" element={<OrdersPage />} />
         <Route path="pos" element={<POSPage />} />
+        <Route path="feedback" element={<FeedbackPage />} />
         <Route path="invoices/:id" element={<InvoicePage />} />
         <Route path=":resource" element={<ResourceRoute />} />
       </Route>

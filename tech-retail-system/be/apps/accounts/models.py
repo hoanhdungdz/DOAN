@@ -77,3 +77,31 @@ class ResetChallenge(models.Model):
     expires_at = models.DateTimeField()
     used_at = models.DateTimeField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class GoogleLoginAttempt(models.Model):
+    """Five-minute, single-use OAuth state, bound to the initiating browser session."""
+
+    state_hash = models.CharField(max_length=64, primary_key=True)
+    session_hash = models.CharField(max_length=64)
+    nonce = models.CharField(max_length=128)
+    code_verifier = models.CharField(max_length=128)
+    redirect_uri = models.URLField(max_length=500)
+    next_path = models.CharField(max_length=500, blank=True)
+    link_account = models.BooleanField(default=False)
+    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    expires_at = models.DateTimeField(db_index=True)
+    used_at = models.DateTimeField(null=True)
+
+
+class FacebookLoginAttempt(models.Model):
+    """Single-use Facebook code flow state, bound to a browser and optional account."""
+
+    state_hash = models.CharField(max_length=64, primary_key=True)
+    session_hash = models.CharField(max_length=64)
+    redirect_uri = models.URLField(max_length=500)
+    next_path = models.CharField(max_length=500, blank=True)
+    link_account = models.BooleanField(default=False)
+    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    expires_at = models.DateTimeField(db_index=True)
+    used_at = models.DateTimeField(null=True)

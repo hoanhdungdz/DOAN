@@ -1,5 +1,6 @@
 from django.db import models
 from common.models import Timestamped
+from django.conf import settings
 
 
 class Category(models.Model):
@@ -72,3 +73,88 @@ class ProductSpecification(models.Model):
 
     class Meta:
         indexes = [models.Index(fields=["definition", "numeric_value"])]
+
+
+class ProductFeedback(Timestamped):
+    product = models.ForeignKey(Product, on_delete=models.PROTECT, related_name="feedback")
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    kind = models.CharField(
+        max_length=10, choices=[("REVIEW", "Đánh giá"), ("QUESTION", "Hỏi đáp")]
+    )
+    title = models.CharField(max_length=150, blank=True)
+    body = models.CharField(max_length=3000)
+    rating = models.PositiveSmallIntegerField(null=True)
+    verified_order = models.ForeignKey("orders.Order", null=True, on_delete=models.PROTECT)
+    # NULL for questions; one review per customer/product enforced also under concurrency.
+    review_identity = models.CharField(max_length=80, null=True, unique=True)
+    status = models.CharField(
+        max_length=10,
+        default="PENDING",
+        choices=[("PENDING", "Chờ duyệt"), ("APPROVED", "Đã duyệt"), ("HIDDEN", "Đã ẩn")],
+    )
+
+    class Meta:
+        ordering = ["-created_at", "-id"]
+        indexes = [models.Index(fields=["product", "kind", "status", "created_at"])]
+        constraints = [
+            models.CheckConstraint(
+                condition=(
+                    models.Q(
+                        kind="REVIEW",
+                        rating__isnull=False,
+                        rating__gte=1,
+                        rating__lte=5,
+                        verified_order__isnull=False,
+                        review_identity__isnull=False,
+                    )
+                    | models.Q(
+                        kind="QUESTION",
+                        rating__isnull=True,
+                        verified_order__isnull=True,
+                        review_identity__isnull=True,
+                    )
+                ),
+                name="feedback_valid_review_or_question",
+            )
+        ]
+
+
+class FeedbackPhoto(models.Model):
+    feedback = models.ForeignKey(ProductFeedback, on_delete=models.CASCADE, related_name="photos")
+    content = models.BinaryField()
+
+
+class FeedbackReply(Timestamped):
+    feedback = models.ForeignKey(ProductFeedback, on_delete=models.PROTECT, related_name="replies")
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    body = models.CharField(max_length=3000)
+    is_staff_reply = models.BooleanField(default=False)
+    status = models.CharField(
+        max_length=10,
+        default="PENDING",
+        choices=[("PENDING", "Chờ duyệt"), ("APPROVED", "Đã duyệt"), ("HIDDEN", "Đã ẩn")],
+    )
+
+    class Meta:
+        ordering = ["created_at", "id"]
+
+
+class FeedbackVote(models.Model):
+    feedback = models.ForeignKey(ProductFeedback, on_delete=models.CASCADE, related_name="votes")
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["feedback", "user"], name="feedback_vote_once")
+        ]
+
+
+class FeedbackReport(Timestamped):
+    feedback = models.ForeignKey(ProductFeedback, on_delete=models.PROTECT, related_name="reports")
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    reason = models.CharField(max_length=500)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["feedback", "user"], name="feedback_report_once")
+        ]

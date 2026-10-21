@@ -11,6 +11,11 @@ from .models import PaymentTransaction
 
 def payment_locked(order, actor, kind, key, reference=""):
     require(actor, "manage_payments", order.warehouse.store_id)
+    if order.payment_method == "VNPAY_SANDBOX":
+        raise BusinessError(
+            "Đơn VNPay nhận thu tiền qua IPN. Hoàn tiền cần đối soát riêng với VNPay, chưa hỗ trợ xác nhận thủ công.",
+            "PROVIDER_PAYMENT_REQUIRED",
+        )
     if not key or len(key) > 100:
         raise BusinessError("Cần Idempotency-Key hợp lệ.", "IDEMPOTENCY_REQUIRED", 400)
     existing = order.transactions.filter(key=key).first()
@@ -35,6 +40,10 @@ def payment_locked(order, actor, kind, key, reference=""):
         order=order, actor=actor, kind=kind, amount=order.grand_total, key=key, reference=reference
     )
     order.save()
+    if kind == "CAPTURE":
+        from apps.orders.promotions import use_coupon
+
+        use_coupon(order)
     audit(
         actor,
         "payment." + kind.lower(),

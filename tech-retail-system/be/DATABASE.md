@@ -13,6 +13,10 @@ erDiagram
  Store ||--o{ RoleAssignment : scope
  Group }o--o{ Permission : grants
  User ||--o{ SocialIdentity : identity
+ User |o--o{ GoogleLoginAttempt : initiates
+ User |o--o{ FacebookLoginAttempt : initiates
+ Order ||--o{ VnpayAttempt : payment_requests
+ VnpayAttempt |o--o| PaymentTransaction : provider_capture
  Store ||--o{ Warehouse : contains
  Category ||--o{ Product : groups
  Brand ||--o{ Product : brand
@@ -39,7 +43,7 @@ erDiagram
  Order ||--o{ OrderStatusHistory : changes
  Order ||--o{ PaymentTransaction : cashflow
  Order ||--o| Invoice : document
- Order ||--o{ OTPChallenge : lookup
+ Order ||--o{ OTPChallenge : legacy_history
  Store ||--o{ AuditLog : changes
 ```
 
@@ -48,3 +52,5 @@ Unique: normalized email; namespace+source_id; SKU; internal slug; warehouse+var
 Mapping: id->source_id; category->Category.source_key/name; brand->Brand.name sau whitespace; name/description->Product; price/condition/warranty_months/sku->Variant; image->Image.url; specs->raw_specs và Specification text/numeric/unit có kiểm chứng; inventory->default Warehouse/Balance + INITIAL movement; total_stock->reconciliation; slug->original_slug + unique slug; source_url/url và mọi khóa->source_snapshot. Không dùng URL nguồn cho route nội bộ. Không lưu lịch sử chatbot.
 
 Từ điển mọi field/type/null/PK/FK và constraints/indexes của code thực tế ở [MODEL_DICTIONARY.md](MODEL_DICTIONARY.md), sinh bằng `python scripts/export_model_dictionary.py`. ERD mô tả quan hệ nghiệp vụ; dòng sản phẩm vừa tạo thủ công có thể chưa có variant, public API chỉ hiển thị khi có variant đang bán. Import nguồn luôn tạo một variant mặc định.
+
+Coupon có M2M Category để giới hạn tiền hàng đủ điều kiện. CouponRedemption nối Coupon/User/Order, unique theo Order và trạng thái RESERVED/USED/RELEASED; không xóa lịch sử đã dùng. Order bổ sung coupon_code, coupon_snapshot và discount_total, tổng = subtotal - discount_total + shipping_fee. Snapshot không đổi khi quản trị viên chỉnh mã. Xem ../docs/COUPONS.md.

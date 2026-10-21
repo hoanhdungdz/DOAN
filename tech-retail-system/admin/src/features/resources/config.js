@@ -14,6 +14,65 @@ const select = (name, label, source, extra = {}) => ({
 });
 const flag = (name, label) => ({ name, label, type: "boolean" });
 export const resources = {
+  coupons: {
+    title: "Mã giảm giá",
+    description:
+      "Một mã mỗi đơn online. Giữ lượt khi đặt hàng, chốt khi thu tiền; trả lượt cho đơn chưa thanh toán bị hủy hoặc hết hạn.",
+    permission: "manage_accounts",
+    fields: [
+      text("code", "Mã giảm giá (không đổi sau khi tạo)"),
+      text("name", "Tên chương trình"),
+      select("discount_type", "Loại giảm", null, {
+        options: [
+          ["FIXED", "Số tiền VND"],
+          ["PERCENT", "Phần trăm"],
+        ],
+        default: "FIXED",
+      }),
+      text("value", "Mức giảm (VND hoặc %)", { type: "number", min: 0.01 }),
+      text("min_subtotal", "Tiền hàng đủ điều kiện tối thiểu (VND)", {
+        type: "number",
+        min: 0,
+        default: 0,
+      }),
+      text("max_discount", "Giảm tối đa VND (bắt buộc với %)", {
+        type: "number",
+        min: 1,
+        optional: true,
+      }),
+      {
+        name: "categories",
+        label: "Danh mục áp dụng (không chọn = toàn bộ)",
+        type: "multiselect",
+        source: "categories/",
+        optional: true,
+      },
+      { ...flag("first_order_only", "Chỉ đơn đầu tiên"), default: false },
+      text("per_user_limit", "Lượt mỗi khách", {
+        type: "number",
+        min: 1,
+        default: 1,
+      }),
+      text("usage_limit", "Tổng lượt tối đa", {
+        type: "number",
+        min: 1,
+        default: 100,
+      }),
+      text("starts_at", "Bắt đầu", { type: "datetime-local" }),
+      text("ends_at", "Kết thúc", { type: "datetime-local" }),
+      flag("is_active", "Đang áp dụng"),
+    ],
+    columns: [
+      "code",
+      "name",
+      "discount_type",
+      "value",
+      "min_subtotal",
+      "used_count",
+      "reserved_count",
+      "is_active",
+    ],
+  },
   products: {
     title: "Sản phẩm",
     description: "Danh mục thiết bị và nội dung hiển thị.",
@@ -142,7 +201,8 @@ export const resources = {
     columns: [
       "sku",
       "product_name",
-      "warehouse",
+      "store_name",
+      "warehouse_name",
       "on_hand",
       "reserved",
       "available",
@@ -308,6 +368,10 @@ export const resources = {
   },
 };
 export const labels = {
+  discount_type: "Loại giảm",
+  min_subtotal: "Đơn tối thiểu",
+  used_count: "Đã dùng",
+  reserved_count: "Đang giữ lượt",
   id: "Mã",
   name: "Tên",
   sku: "SKU",
@@ -358,6 +422,7 @@ export const labels = {
   unit: "Đơn vị",
   source_key: "Mã nguồn",
   store_name: "Chi nhánh",
+  warehouse_name: "Kho",
   address: "Địa chỉ",
   product: "Sản phẩm",
   url: "URL",

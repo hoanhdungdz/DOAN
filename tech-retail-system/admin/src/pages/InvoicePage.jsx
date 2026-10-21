@@ -59,6 +59,15 @@ export default function InvoicePage() {
           ))}
         </tbody>
       </table>
+      {s.coupon_code && (
+        <p>
+          Tiền hàng: {money(s.subtotal)}
+          <br />
+          Mã {s.coupon_code}: −{money(s.discount_total)}
+          <br />
+          Phí giao hàng: {money(s.shipping_fee)}
+        </p>
+      )}
       <p className="print-total">Tổng cộng {money(s.total)}</p>
       <footer>In lại chứng từ không phát sinh thu tiền hoặc xuất kho.</footer>
     </article>

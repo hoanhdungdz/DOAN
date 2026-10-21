@@ -51,8 +51,8 @@ export default function CustomerLayout() {
     <>
       <div className="announcement">
         <span>CÔNG NGHỆ CHO MỖI NGÀY</span>
-        <Link to="/lookup">
-          Tra cứu đơn hàng <ArrowUpRight size={12} />
+        <Link to="/orders">
+          Đơn hàng của tôi <ArrowUpRight size={12} />
         </Link>
       </div>
       <header className="customer-header">
@@ -129,16 +129,8 @@ export default function CustomerLayout() {
         </div>
         <div>
           <small>HỖ TRỢ</small>
-          <Link to="/lookup">Tra cứu đơn bằng OTP</Link>
+          <Link to="/orders">Theo dõi đơn hàng của tôi</Link>
           <Link to="/profile">Tài khoản</Link>
-        </div>
-        <div>
-          <small>VỀ HỆ THỐNG</small>
-          <p>
-            Hệ thống phục vụ đồ án.
-            <br />
-            Dữ liệu catalog từ bộ dữ liệu cung cấp.
-          </p>
         </div>
         <div className="footer-bottom">
           © 2026 Tech Retail <span>Được xây dựng cho trải nghiệm rõ ràng.</span>

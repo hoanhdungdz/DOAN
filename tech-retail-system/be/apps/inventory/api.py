@@ -34,6 +34,7 @@ class BalanceSerializer(serializers.ModelSerializer):
     product_name = serializers.CharField(source="variant.product.name", read_only=True)
     store = serializers.IntegerField(source="warehouse.store_id", read_only=True)
     warehouse_name = serializers.CharField(source="warehouse.name", read_only=True)
+    store_name = serializers.CharField(source="warehouse.store.name", read_only=True)
 
     class Meta:
         model = InventoryBalance
@@ -43,7 +44,7 @@ class BalanceSerializer(serializers.ModelSerializer):
 class BalanceViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = BalanceSerializer
     queryset = (
-        InventoryBalance.objects.select_related("warehouse", "variant__product")
+        InventoryBalance.objects.select_related("warehouse__store", "variant__product")
         .all()
         .order_by("warehouse_id", "variant_id")
     )

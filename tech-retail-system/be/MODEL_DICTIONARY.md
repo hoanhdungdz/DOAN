@@ -193,6 +193,42 @@ Constraints: Django PK/FK/field unique.
 
 Indexes: PK/unique/FK indexes mặc định.
 
+## accounts.GoogleLoginAttempt — `accounts_googleloginattempt`
+
+| Field | MySQL type | Null | Key / reference |
+|---|---|---|---|
+| state_hash | varchar(64) | False | PK |
+| session_hash | varchar(64) | False |  |
+| nonce | varchar(128) | False |  |
+| code_verifier | varchar(128) | False |  |
+| redirect_uri | varchar(500) | False |  |
+| next_path | varchar(500) | False |  |
+| link_account | bool | False |  |
+| user | bigint | True | FK accounts.User |
+| expires_at | datetime(6) | False |  |
+| used_at | datetime(6) | True |  |
+
+Constraints: Django PK/FK/field unique.
+
+Indexes: PK/unique/FK indexes mặc định.
+
+## accounts.FacebookLoginAttempt — `accounts_facebookloginattempt`
+
+| Field | MySQL type | Null | Key / reference |
+|---|---|---|---|
+| state_hash | varchar(64) | False | PK |
+| session_hash | varchar(64) | False |  |
+| redirect_uri | varchar(500) | False |  |
+| next_path | varchar(500) | False |  |
+| link_account | bool | False |  |
+| user | bigint | True | FK accounts.User |
+| expires_at | datetime(6) | False |  |
+| used_at | datetime(6) | True |  |
+
+Constraints: Django PK/FK/field unique.
+
+Indexes: PK/unique/FK indexes mặc định.
+
 ## products.Category — `products_category`
 
 | Field | MySQL type | Null | Key / reference |
@@ -526,6 +562,9 @@ Indexes: PK/unique/FK indexes mặc định.
 | address | varchar(500) | False |  |
 | fulfillment | varchar(15) | False |  |
 | subtotal | numeric(18, 2) | False |  |
+| discount_total | numeric(18, 2) | False |  |
+| coupon_code | varchar(32) | False |  |
+| coupon_snapshot | json | False |  |
 | shipping_fee | numeric(18, 2) | False |  |
 | grand_total | numeric(18, 2) | False |  |
 | expires_at | datetime(6) | True |  |
@@ -600,6 +639,57 @@ Constraints: Django PK/FK/field unique.
 
 Indexes: PK/unique/FK indexes mặc định.
 
+## orders.Coupon_categories — `orders_coupon_categories`
+
+| Field | MySQL type | Null | Key / reference |
+|---|---|---|---|
+| id | bigint AUTO_INCREMENT | False | PK |
+| coupon | bigint | False | FK orders.Coupon |
+| category | bigint | False | FK products.Category |
+
+Constraints: Django PK/FK/field unique.
+
+Indexes: PK/unique/FK indexes mặc định.
+
+## orders.Coupon — `orders_coupon`
+
+| Field | MySQL type | Null | Key / reference |
+|---|---|---|---|
+| id | bigint AUTO_INCREMENT | False | PK |
+| created_at | datetime(6) | False |  |
+| updated_at | datetime(6) | False |  |
+| code | varchar(32) | False | UNIQUE |
+| name | varchar(150) | False |  |
+| discount_type | varchar(10) | False |  |
+| value | numeric(18, 2) | False |  |
+| min_subtotal | numeric(18, 2) | False |  |
+| max_discount | numeric(18, 2) | True |  |
+| first_order_only | bool | False |  |
+| per_user_limit | integer UNSIGNED | False |  |
+| usage_limit | integer UNSIGNED | False |  |
+| starts_at | datetime(6) | False |  |
+| ends_at | datetime(6) | False |  |
+| is_active | bool | False |  |
+
+Constraints: <CheckConstraint: condition=(AND: ('value__gt', 0)) name='coupon_value_positive'>; <CheckConstraint: condition=(AND: ('min_subtotal__gte', 0)) name='coupon_min_nonnegative'>; <CheckConstraint: condition=(AND: ('per_user_limit__gt', 0), ('usage_limit__gt', 0)) name='coupon_limits_positive'>; <CheckConstraint: condition=(AND: ('ends_at__gt', F(starts_at))) name='coupon_date_range'>
+
+Indexes: PK/unique/FK indexes mặc định.
+
+## orders.CouponRedemption — `orders_couponredemption`
+
+| Field | MySQL type | Null | Key / reference |
+|---|---|---|---|
+| id | bigint AUTO_INCREMENT | False | PK |
+| coupon | bigint | False | FK orders.Coupon |
+| user | bigint | False | FK accounts.User |
+| order | bigint | False | FK orders.Order |
+| status | varchar(10) | False |  |
+| created_at | datetime(6) | False |  |
+
+Constraints: Django PK/FK/field unique.
+
+Indexes: <Index: fields=['coupon', 'user', 'status'] name='orders_coup_coupon__df936f_idx'>
+
 ## payments.PaymentTransaction — `payments_paymenttransaction`
 
 | Field | MySQL type | Null | Key / reference |
@@ -610,10 +700,36 @@ Indexes: PK/unique/FK indexes mặc định.
 | amount | numeric(18, 2) | False |  |
 | key | varchar(100) | False |  |
 | reference | varchar(200) | False |  |
-| actor | bigint | False | FK accounts.User |
+| actor | bigint | True | FK accounts.User |
 | created_at | datetime(6) | False |  |
 
 Constraints: <UniqueConstraint: fields=('order', 'key') name='payment_order_key'>; <CheckConstraint: condition=(AND: ('amount__gt', 0)) name='payment_amount_positive'>
+
+Indexes: PK/unique/FK indexes mặc định.
+
+## payments.VnpayAttempt — `payments_vnpayattempt`
+
+| Field | MySQL type | Null | Key / reference |
+|---|---|---|---|
+| reference | char(32) | False | PK |
+| order | bigint | False | FK orders.Order |
+| amount | numeric(18, 2) | False |  |
+| merchant | varchar(32) | False |  |
+| bank_mode | varchar(10) | False |  |
+| status | varchar(12) | False |  |
+| payment_url | longtext | False |  |
+| provider_transaction | varchar(100) | True | UNIQUE |
+| response_code | varchar(2) | False |  |
+| bank_code | varchar(30) | False |  |
+| promotion_code | varchar(100) | False |  |
+| promotion_amount | numeric(18, 2) | False |  |
+| review_reason | varchar(200) | False |  |
+| transaction | bigint | True | FK payments.PaymentTransaction |
+| created_at | datetime(6) | False |  |
+| expires_at | datetime(6) | False |  |
+| notified_at | datetime(6) | True |  |
+
+Constraints: <CheckConstraint: condition=(AND: ('amount__gt', 0)) name='vnpay_amount_positive'>
 
 Indexes: PK/unique/FK indexes mặc định.
 

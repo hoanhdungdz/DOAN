@@ -26,7 +26,14 @@ export default function ResourceForm({
       Object.fromEntries(
         config.fields.map((f) => [
           f.name,
-          record?.[f.name] ??
+          (f.type === "datetime-local" && record?.[f.name]
+            ? new Date(
+                new Date(record[f.name]).getTime() -
+                  new Date(record[f.name]).getTimezoneOffset() * 60000,
+              )
+                .toISOString()
+                .slice(0, 16)
+            : record?.[f.name]) ??
             f.default ??
             (f.type === "boolean"
               ? true
@@ -106,7 +113,13 @@ export default function ResourceForm({
         if (f.optionalOnEdit && record && !v) continue;
         if (f.type === "number")
           body[f.name] =
-            v === "" ? null : f.name === "price" ? String(v) : Number(v);
+            v === ""
+              ? null
+              : f.name === "price" ||
+                  (name === "coupons" &&
+                    ["value", "min_subtotal", "max_discount"].includes(f.name))
+                ? String(v)
+                : Number(v);
         else if (f.type === "select")
           body[f.name] = v === "" ? null : f.source ? Number(v) : v;
         else if (f.type === "items")
@@ -114,6 +127,8 @@ export default function ResourceForm({
             variant: Number(r.variant),
             quantity: Number(r.quantity),
           }));
+        else if (f.type === "datetime-local")
+          body[f.name] = v ? new Date(v).toISOString() : null;
         else body[f.name] = v;
       }
       const id = name === "products" ? record?.slug : record?.id;

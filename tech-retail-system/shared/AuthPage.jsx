@@ -3,7 +3,12 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { useSession } from "./session";
 import { api, errorText } from "./api";
+import { customerReturnPath } from "./returnPath";
 import { Field, ErrorBox } from "./ui";
+import GoogleSignInButton, { googleErrorMessage } from "./GoogleSignInButton";
+import FacebookSignInButton, {
+  facebookErrorMessage,
+} from "./FacebookSignInButton";
 export default function AuthPage({
   mode = "login",
   onAuthenticated,
@@ -12,6 +17,7 @@ export default function AuthPage({
   const { authenticate } = useSession(),
     navigate = useNavigate(),
     [params] = useSearchParams();
+  const next = internal ? "" : customerReturnPath(params.get("next"));
   const [form, setForm] = useState({
       email: "",
       password: "",
@@ -35,9 +41,15 @@ export default function AuthPage({
       if (["login", "register"].includes(mode)) {
         await authenticate(mode, form);
         const warnings = onAuthenticated ? await onAuthenticated() : [];
-        navigate(internal ? "/dashboard" : warnings?.length ? "/cart" : "/", {
-          state: warnings?.length ? { notice: warnings.join(" ") } : undefined,
-        });
+        navigate(
+          internal ? "/dashboard" : next || (warnings?.length ? "/cart" : "/"),
+          {
+            replace: true,
+            state: warnings?.length
+              ? { notice: warnings.join(" ") }
+              : undefined,
+          },
+        );
       } else {
         const d = await api(`auth/${mode}/`, { method: "POST", body: form });
         setMessage(d.message);
@@ -87,7 +99,11 @@ export default function AuthPage({
           <p>
             {internal
               ? "Quản lý sản phẩm, đơn hàng và chi nhánh trong một không gian."
-              : "Khám phá thiết bị phù hợp và theo dõi hành trình đơn hàng của bạn."}
+              : next?.startsWith("/orders")
+                ? "Đăng nhập để xem danh sách và chi tiết đơn hàng của bạn."
+                : next === "/checkout"
+                  ? "Đăng nhập để đặt hàng và lưu đơn vào tài khoản của bạn."
+                  : "Khám phá thiết bị phù hợp và theo dõi hành trình đơn hàng của bạn."}
           </p>
         </div>
         <small>
@@ -103,7 +119,13 @@ export default function AuthPage({
               ? "Dành cho tài khoản nhân viên được quản trị viên cấp."
               : "Một tài khoản cho những trải nghiệm của bạn."}
           </p>
-          <ErrorBox error={error} />
+          <ErrorBox
+            error={
+              error ||
+              googleErrorMessage(params.get("google_error")) ||
+              facebookErrorMessage(params.get("facebook_error"))
+            }
+          />
           {message ? (
             <div className="notice">
               {message}
@@ -146,12 +168,25 @@ export default function AuthPage({
               </button>
             </form>
           )}
+          {!internal && ["login", "register"].includes(mode) && (
+            <>
+              <GoogleSignInButton next={next} />
+              <FacebookSignInButton next={next} />
+            </>
+          )}
           {mode === "login" && !internal && (
             <p className="subtle">
-              Chưa có tài khoản? <Link to="/register">Đăng ký</Link>
+              Chưa có tài khoản?{" "}
+              <Link
+                to={
+                  "/register" +
+                  (next ? "?next=" + encodeURIComponent(next) : "")
+                }
+              >
+                Đăng ký
+              </Link>
             </p>
           )}
-          <p className="fine">Đăng nhập Google và Facebook chưa được bật.</p>
         </div>
       </section>
     </main>

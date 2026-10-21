@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  ArrowLeft,
-  ShoppingBag,
-  Check,
-  MapPin,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowLeft, ShoppingBag, MapPin, ShieldCheck } from "lucide-react";
 import useRemote from "../hooks/useRemote";
 import { useCart } from "../features/cart/CartContext";
 import { money } from "../../../shared/api";
 import { imageNote } from "../../../shared/productImages";
 import ProductWarranty from "../components/ProductWarranty";
+import ProductCommunity from "../components/ProductCommunity";
 import { productWarranty, warrantyDescription } from "../../../shared/warranty";
 import {
   Loading,
@@ -140,29 +135,31 @@ export default function ProductDetail() {
           </p>
         </section>
       </div>
-      <div className="detail-description">
-        <section>
-          <span className="eyebrow">THÔNG TIN THIẾT BỊ</span>
-          <h2>Hiểu rõ lựa chọn của bạn.</h2>
-          <p>{warrantyDescription(p.description, productWarranty(p, v))}</p>
-        </section>
-        <section className="panel product-specifications">
-          <h3>Thông số kỹ thuật</h3>
-          <table>
-            <tbody>
-              {p.specifications.map((s) => (
-                <tr key={s.id}>
-                  <td>{s.name}</td>
-                  <td>{s.value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          {!p.specifications.length && (
-            <p>{p.raw_specs || "Chưa có thông số."}</p>
-          )}
-        </section>
-      </div>
+      <ProductCommunity product={p}>
+        <div className="detail-description">
+          <section>
+            <span className="eyebrow">THÔNG TIN THIẾT BỊ</span>
+            <h2>Hiểu rõ lựa chọn của bạn.</h2>
+            <p>{warrantyDescription(p.description, productWarranty(p, v))}</p>
+          </section>
+          <section className="panel product-specifications">
+            <h3>Thông số kỹ thuật</h3>
+            <table>
+              <tbody>
+                {p.specifications.map((s) => (
+                  <tr key={s.id}>
+                    <td>{s.name}</td>
+                    <td>{s.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {!p.specifications.length && (
+              <p>{p.raw_specs || "Chưa có thông số."}</p>
+            )}
+          </section>
+        </div>
+      </ProductCommunity>
     </main>
   );
 }

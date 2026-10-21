@@ -156,6 +156,12 @@ export default function OrdersPage() {
                   </tbody>
                 </table>
               </div>
+              {o.coupon_code && (
+                <p className="subtle">
+                  Tiền hàng: {money(o.subtotal)} · Mã {o.coupon_code}: −
+                  {money(o.discount_total)}
+                </p>
+              )}
               <p className="print-total">{money(o.grand_total)}</p>
               <div className="actions">
                 {sales &&
@@ -181,16 +187,19 @@ export default function OrdersPage() {
                 <br />
                 {o.channel} · {o.payment_method}
               </p>
-              <Field label="Tham chiếu thu / hoàn tiền">
-                <input
-                  maxLength={200}
-                  placeholder="Mã giao dịch hoặc biên nhận xác nhận"
-                  value={reference}
-                  onChange={(e) => setReference(e.target.value)}
-                />
-              </Field>
+              {o.payment_method !== "VNPAY_SANDBOX" && (
+                <Field label="Tham chiếu thu / hoàn tiền">
+                  <input
+                    maxLength={200}
+                    placeholder="Mã giao dịch hoặc biên nhận xác nhận"
+                    value={reference}
+                    onChange={(e) => setReference(e.target.value)}
+                  />
+                </Field>
+              )}
               <div className="actions">
                 {payments &&
+                  o.payment_method !== "VNPAY_SANDBOX" &&
                   o.payment_status === "UNPAID" &&
                   o.status !== "DRAFT" &&
                   o.status !== "CANCELLED" && (
@@ -198,21 +207,43 @@ export default function OrdersPage() {
                       Xác nhận đã thu tiền
                     </button>
                   )}
-                {payments && o.payment_status === "REFUND_PENDING" && (
-                  <button disabled={busy} onClick={() => pay("REFUND")}>
-                    Xác nhận đã hoàn tiền
-                  </button>
-                )}
+                {payments &&
+                  o.payment_method !== "VNPAY_SANDBOX" &&
+                  o.payment_status === "REFUND_PENDING" && (
+                    <button disabled={busy} onClick={() => pay("REFUND")}>
+                      Xác nhận đã hoàn tiền
+                    </button>
+                  )}
                 {o.status === "COMPLETED" && (
                   <Link to="/invoices" className="button">
                     <Printer size={15} /> Chứng từ
                   </Link>
                 )}
               </div>
-              <p className="fine">
-                Xác nhận thủ công sau khi đã kiểm tra thu/hoàn thực tế. Không có
-                đối soát ngân hàng tự động.
-              </p>
+              {o.payment_method === "VNPAY_SANDBOX" ? (
+                <>
+                  <p className="fine">
+                    VNPay sandbox xác nhận thu tiền qua IPN. Không xác nhận thu
+                    / hoàn tiền thủ công tại đây.
+                  </p>
+                  {o.vnpay_payment && (
+                    <p className="fine">
+                      Mã yêu cầu: {o.vnpay_payment.reference}
+                      <br />
+                      Giao dịch VNPay:{" "}
+                      {o.vnpay_payment.provider_transaction || "Chưa có"}
+                    </p>
+                  )}
+                  {o.vnpay_payment?.status === "REVIEW" && (
+                    <ErrorBox error={o.vnpay_payment.review_reason} />
+                  )}
+                </>
+              ) : (
+                <p className="fine">
+                  Xác nhận thủ công sau khi đã kiểm tra thu/hoàn thực tế. Không
+                  có đối soát ngân hàng tự động.
+                </p>
+              )}
             </section>
           </div>
           <section className="panel timeline">

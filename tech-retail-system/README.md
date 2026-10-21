@@ -12,10 +12,16 @@ Chạy ba app (PowerShell từ thư mục này):
 ./scripts/start-local.ps1
 ```
 
-- Khách hàng: http://127.0.0.1:5173
-- Nhân viên: http://127.0.0.1:5174
-- API: http://127.0.0.1:8000/api/v1/
-- Swagger: http://127.0.0.1:8000/api/docs/
+Script đợi MySQL sẵn sàng trước khi chạy Django, kiểm tra API catalog có truy cập database và kiểm tra proxy API của cả hai giao diện. Chỉ khi các bước này đạt mới hiện dòng `Ready: all services and API proxies responded successfully.` Có thể chạy lại script khi các dịch vụ đang chạy; script dùng lại các cổng đã sẵn sàng.
+
+Nếu script dừng, đọc thông báo lỗi và file log được chỉ ra trong `.runtime`. Lỗi `Can't connect to server` thường cần kiểm tra database đúng host/port trong `be/.env`; MySQL riêng của máy hiện tại là cổng 3307. Không chạy lại script bootstrap hoặc tạo lại database để xử lý lỗi kết nối. Cổng 8000 phục vụ API; dùng đường dẫn `/api/docs/` để mở tài liệu API.
+
+- Khách hàng: http://localhost:5173
+- Nhân viên: http://localhost:5174
+- API: http://localhost:8000/api/v1/
+- Swagger: http://localhost:8000/api/docs/
+
+Dùng `localhost` khi mở web để khớp callback Facebook đã cấu hình. Dịch vụ vẫn lắng nghe trên địa chỉ loopback 127.0.0.1 của máy; địa chỉ trình duyệt và callback OAuth phải thống nhất hostname.
 
 Tạo Admin bằng command tương tác; nhập mật khẩu của bạn, không đưa vào mã nguồn:
 
@@ -73,6 +79,8 @@ Online checkout giữ tồn, giá lấy backend. PENDING hết hạn sau 30 phú
 
 Chứng từ kho nhập/xuất/điều chỉnh có lý do; POSTED không sửa/xóa. Điều chuyển approve giữ nguồn, dispatch đưa vào IN_TRANSIT ngoài hai kho, receive nhận toàn bộ một lần. Số thực nhận khác từ request `items` bị từ chối và ghi audit ngoại lệ. Kiểm soát đồng thời bằng atomic + khóa kho rồi số dư theo thứ tự ổn định.
 
+Nhập thêm số lượng từ Sản phẩm/Biến thể & giá/Tồn kho bằng nút **Nhập thêm hàng** (cần quyền kho): chọn kho/SKU, số lượng bổ sung, lý do → Xác nhận nhập kho. Hệ thống tạo và ghi sổ phiếu IN có lịch sử. Checkout chỉ cho chọn kho đủ toàn bộ giỏ, hiển thị tồn từng chi nhánh và kiểm tra lại khi quay về tab. Xem [docs/STOCK_CHECKOUT_FIX.md](docs/STOCK_CHECKOUT_FIX.md).
+
 Chạy `expire_reservations` mỗi phút bằng Windows Task Scheduler hoặc cron, dùng đúng working directory `be` và đường dẫn Python tuyệt đối. Không tự cài lịch lên máy. Checkout cũng giải phóng đơn PENDING đã hết hạn trong kho đang chọn. Đối chiếu định kỳ:
 
 ```powershell
@@ -82,11 +90,11 @@ Chạy `expire_reservations` mỗi phút bằng Windows Task Scheduler hoặc cr
 
 ## Demo các luồng chính
 
-1. Khách: tìm sản phẩm → chi tiết/chi nhánh → giỏ → checkout COD/chuyển khoản → giữ mã đơn.
+1. Khách: tìm sản phẩm → chi tiết/chi nhánh → giỏ → đăng nhập/đăng ký → checkout COD/chuyển khoản → xem chi tiết đơn trong tài khoản.
 2. Nhân viên: đơn PENDING → confirm → pack → ship → xác nhận thu tiền → complete → xem/in invoice.
 3. POS: chọn sản phẩm/kho/khách → tạo draft → chi tiết đơn → nhập reference nếu chuyển khoản → finish.
 4. Kho: tạo StockDocument nháp → ghi sổ; hoặc Transfer → approve → dispatch → receive.
-5. Tra cứu guest: mã đơn + điện thoại → OTP → xác minh → trạng thái/hàng mua tối thiểu. Development SMS nằm trong `%LOCALAPPDATA%/TechRetailRuntime/dev-inbox`, ngoài webroot, không có API công khai lấy OTP. Chỉ dùng local/test; không phải SMS gửi thật.
+5. Đơn hàng của tôi: đăng nhập → `/orders` → chọn **Xem chi tiết** để xem sản phẩm, số tiền, địa chỉ nhận, thanh toán và tiến trình; có thể hủy đơn đang chờ. Không cần OTP hoặc nhập mã đơn/số điện thoại. Đường dẫn `/lookup` cũ chuyển đến `/orders`; chưa đăng nhập thì quay về trang đơn sau khi đăng nhập. API `my-orders` chỉ trả đơn thuộc tài khoản, kể cả khi tài khoản là nhân viên/Admin. Đặt hàng online bắt buộc đăng nhập và đơn tự gắn với tài khoản; đơn khách vãng lai cũ không tự ghép theo số điện thoại. API tra cứu OTP cũ đã gỡ; bảng lịch sử OTP cũ được giữ nguyên.
 6. Quên mật khẩu: thư mô phỏng ở terminal backend hoặc `.runtime/backend.log` nếu dùng start-local. Token 1 giờ, dùng một lần; không trả token trong API. Không phải email gửi thật.
 7. Báo cáo: chọn ngày/chi nhánh trong scope; doanh thu đơn hoàn tất theo completed_at, thu/hoàn theo created_at giao dịch. Có ngày/tháng/chi nhánh/kênh/bán chạy, tồn và CSV an toàn. Nhóm ngày bằng Python ZoneInfo để không phụ thuộc timezone tables MySQL Windows.
 
@@ -107,16 +115,32 @@ npm.cmd run build
 
 Dev tooling: `pip install -r be/requirements-dev.txt`; `ruff check be scripts`, `ruff format --check be scripts`, `npx prettier --check shared fe/src admin/src tests`. Kết quả thực chạy và giới hạn tại `docs/TEST_RESULTS.md`. Không dùng SQLite để chứng minh khóa MySQL.
 
+Admin và cửa hàng có phiên đăng nhập/CSRF riêng, có thể dùng hai tài khoản trong cùng trình duyệt. Khi cập nhật từ bản dùng chung phiên, đăng nhập lại admin một lần; nếu cửa hàng đã bị đổi sang admin từ trước, đăng nhập lại tài khoản khách ở cửa hàng. Nút Mở cửa hàng không chuyển tài khoản. Proxy giữ Host như cấu hình Vite hiện có; ADMIN_FRONTEND_URL và CUSTOMER_FRONTEND_URL cần chỉ đúng hai frontend.
+
+Nút Mở cửa hàng lấy URL từ CUSTOMER_FRONTEND_URL qua features API, không ghi cứng cổng. Báo cáo kiểm tra phiên ngày 21/10, các ca kiểm thử và hướng dẫn loại bỏ phiên cũ: [docs/PORTAL_SESSIONS.md](docs/PORTAL_SESSIONS.md).
+
 Fixture UI tường minh (chỉ sau khi test runner đã tạo và giữ test DB bằng --keepdb): đặt `$env:DB_NAME='test_tech_retail'`, chạy `scripts/prepare_ui_smoke.py`. Script từ chối DB khác và lưu mật khẩu random trong `.runtime/ui-smoke.json`. Chạy backend test trên 8001 với SESSION_COOKIE_NAME=tech_retail_test_session và CSRF_COOKIE_NAME=tech_retail_test_csrf; Vite test đặt API_PROXY_TARGET=http://127.0.0.1:8001, cổng 5175/5176. Không dùng credential fixture trên DB ứng dụng. Dừng server test trước khi chạy test runner vì database sẽ bị tạo lại.
 
 ## Trạng thái tích hợp và triển khai
 
-Google/Facebook/Gemini **DEFERRED**, mặc định tắt; chưa có SDK/provider thật. AI chat trả 503 AI_NOT_CONFIGURED; retrieval catalog hoạt động độc lập. Chat history chỉ React state, xóa khi refresh/logout/đổi tài khoản. Không mock kết quả provider trong ứng dụng.
+VNPay sandbox: tạo đơn mới chọn VNPay, mở cổng để chọn QR/thẻ thử. Backend xác minh IPN hoặc QueryDR trước khi ghi nhận thu tiền; return trình duyệt không cập nhật tiền. Cần merchant sandbox và IPN HTTPS công khai cho luồng tự động; nút kiểm tra tra cứu trực tiếp khi thiếu IPN. Đã xác minh thanh toán NCB sandbox do người dùng thực hiện cùng ưu đãi cửa hàng + VNPay. Hướng dẫn cấu hình và giới hạn tại [docs/VNPAY_SANDBOX.md](docs/VNPAY_SANDBOX.md).
 
-Email console/SMS development chỉ local/test. Chưa kiểm chứng SMTP/SMS thật; production từ chối DEBUG/development delivery. Không dùng Django runserver/Vite dev server cho production: cần WSGI/HTTPS/reverse proxy, static React build với rewrite SPA và `/api` proxy, cấu hình origins/cookie an toàn, backup MySQL và delivery adapter thật trước khi đưa vào vận hành. Phần production hosting/delivery ngoài chưa được nghiệm thu.
+Google Login đã triển khai theo yêu cầu 19/10/2026: nút trên login/register, xác minh OpenID Connect qua backend, tạo phiên và quay lại trang đơn/checkout. Máy hiện tại đã cấu hình secret riêng trong `be/.env`; bản ví dụ vẫn tắt cho máy chưa cấu hình. Email trùng tài khoản cũ cần đăng nhập mật khẩu rồi chọn Liên kết tài khoản Google trong Hồ sơ cá nhân để giữ lịch sử đơn. Hướng dẫn cấu hình callback, giới hạn kiểm thử và cách dùng tại [docs/GOOGLE_LOGIN.md](docs/GOOGLE_LOGIN.md).
+
+Facebook Login đã tích hợp: nút đăng nhập khách hàng, liên kết trong hồ sơ, kiểm tra token ở backend; xem [hướng dẫn Facebook](docs/FACEBOOK_LOGIN.md). Gemini **DEFERRED**, mặc định tắt. AI chat trả 503 AI_NOT_CONFIGURED; retrieval catalog hoạt động độc lập. Chat history chỉ React state, xóa khi refresh/logout/đổi tài khoản. Không mock kết quả provider trong ứng dụng.
+
+Email console chỉ local/test. Chưa kiểm chứng SMTP thật; production từ chối DEBUG/email console. Tra cứu đơn dùng tài khoản, không cần tích hợp SMS. Không dùng Django runserver/Vite dev server cho production: cần WSGI/HTTPS/reverse proxy, static React build với rewrite SPA và `/api` proxy, cấu hình origins/cookie an toàn, backup MySQL và SMTP thật trước khi đưa vào vận hành. Phần production hosting/delivery ngoài chưa được nghiệm thu.
 
 Tài liệu: ARCHITECTURE.md; be/DATABASE.md + MODEL_DICTIONARY.md (field/type/constraint đầy đủ); be/API.md + openapi.yaml; admin/DESIGN.md; fe/DESIGN.md; docs/BUSINESS_RULES.md, REQUIREMENTS_TRACEABILITY.md, TEST_PLAN.md, TEST_RESULTS.md, DEFERRED_INTEGRATIONS.md.
 
 Ảnh sản phẩm được phục vụ local từ shared/public và copy vào cả hai bản build; các URL 404 được đối chiếu trong shared/product-image-overrides.json, không sửa dataset gốc. Cách cập nhật ảnh, các mâu thuẫn thông tin nguồn và kết quả kiểm tra bố cục 320–1920px tại docs/IMAGE_RESPONSIVE_FIX.md.
 
-Lỗi thường gặp: DB connection refused → kiểm tra đúng port/instance; Access denied → user/grants/env; CSRF 403 → tải lại csrfToken sau login, credentials include và hostname nhất quán; 409 → đọc code lỗi nghiệp vụ, không PATCH status/balance để bỏ qua; ảnh nguồn lỗi → placeholder; dev HMR đổi cấu hình → refresh trang. Không in/đưa secrets vào frontend VITE_*.
+Lỗi thường gặp: DB connection refused → kiểm tra đúng port/instance; Access denied → user/grants/env; CSRF → client lấy token mới trước mỗi yêu cầu ghi và chỉ thử lại tối đa một lần khi nhận HTTP 403 với mã `CSRF_FAILED` (lỗi bị chặn trước khi nghiệp vụ chạy), giữ nguyên body/idempotency key. Yêu cầu đồng thời dùng chung lần lấy token đang chờ; endpoint token không được cache. Không tự gửi lại khi lỗi quyền, nghiệp vụ hoặc mạng. Giữ hostname nhất quán giữa localhost/127.0.0.1. Lỗi 409 → đọc code nghiệp vụ, không PATCH status/balance để bỏ qua; ảnh nguồn lỗi → placeholder; dev HMR đổi cấu hình → refresh trang. Không in/đưa secrets vào frontend VITE_*.
+
+## Mã giảm giá
+
+Checkout đã có danh sách/chọn/nhập mã và tổng tiền sau giảm. Sau migration chạy `python manage.py seed_coupons` trong `be/` để tạo ba mã TECH100K, CHAO5, PHUKIEN50K; admin quản lý ở `/coupons`. Xem [quy tắc mã giảm giá](docs/COUPONS.md).
+
+## Đánh giá sản phẩm và hỏi đáp
+
+Trang chi tiết có tab Đánh giá/Hỏi đáp, bắt đầu trống và chỉ hiển thị nội dung thật đã duyệt. Khách có đơn COMPLETED/PAID được đánh giá một lần mỗi sản phẩm, có thể đính kèm ảnh; khách đăng nhập được hỏi/trả lời câu hỏi. Admin duyệt và trả lời ở `/feedback`. Cài requirements mới (có Pillow) và chạy migration trước khi khởi động backend. Xem [hướng dẫn và API](docs/PRODUCT_FEEDBACK.md).

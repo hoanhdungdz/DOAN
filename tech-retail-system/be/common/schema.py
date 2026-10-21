@@ -32,6 +32,8 @@ class UserInfoSerializer(serializers.Serializer):
     email = serializers.EmailField()
     full_name = serializers.CharField()
     is_admin = serializers.BooleanField()
+    google_linked = serializers.BooleanField()
+    facebook_linked = serializers.BooleanField()
     permissions = serializers.ListField(child=serializers.CharField())
     stores = serializers.ListField(child=serializers.IntegerField())
 
@@ -42,20 +44,12 @@ class SessionResponseSerializer(MessageSerializer):
 
 
 class FeatureSerializer(serializers.Serializer):
+    customer_frontend_url = serializers.URLField()
     google_login = serializers.BooleanField()
     facebook_login = serializers.BooleanField()
+    vnpay_sandbox = serializers.BooleanField()
     gemini = serializers.BooleanField()
     ai_status = serializers.CharField()
-
-
-class LookupResponseSerializer(MessageSerializer):
-    challenge = serializers.UUIDField(required=False)
-    expires_in = serializers.IntegerField(required=False)
-    code = serializers.CharField(required=False)
-    status = serializers.CharField(required=False)
-    payment_status = serializers.CharField(required=False)
-    grand_total = serializers.DecimalField(max_digits=18, decimal_places=2, required=False)
-    items = serializers.ListField(child=serializers.DictField(), required=False)
 
 
 def errors_hook(result, generator, request, public):

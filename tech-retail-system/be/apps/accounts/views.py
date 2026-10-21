@@ -9,6 +9,8 @@ from django.core.mail import send_mail
 from django.db import transaction
 from django.middleware.csrf import get_token
 from django.utils import timezone
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import never_cache
 from rest_framework import serializers
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -19,7 +21,7 @@ from common.schema import AuthInputSerializer, SessionResponseSerializer
 from common.errors import BusinessError
 from common.audit import audit
 from apps.customers.models import Customer
-from .models import User, ResetChallenge
+from .models import User, ResetChallenge, SocialIdentity
 from .permissions import capabilities, store_ids, is_admin
 
 
@@ -31,6 +33,8 @@ def user_payload(user):
         "is_admin": is_admin(user),
         "permissions": capabilities(user),
         "stores": store_ids(user),
+        "google_linked": SocialIdentity.objects.filter(user=user, provider="google").exists(),
+        "facebook_linked": SocialIdentity.objects.filter(user=user, provider="facebook").exists(),
     }
 
 
@@ -47,6 +51,7 @@ class Credentials(serializers.Serializer):
     full_name = serializers.CharField(max_length=150, required=False, allow_blank=True)
 
 
+@method_decorator(never_cache, name="dispatch")
 class CsrfView(APIView):
     @extend_schema(responses=SessionResponseSerializer)
     def get(self, request):

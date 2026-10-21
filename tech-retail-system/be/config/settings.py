@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    "common.portal_sessions.PortalCookieMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -55,6 +56,20 @@ MIDDLEWARE = [
     "common.middleware.RequestContextMiddleware",
 ]
 ROOT_URLCONF = "config.urls"
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    }
+]
 WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
@@ -114,34 +129,44 @@ EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
 DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", "development@localhost")
 EMAIL_TIMEOUT = 10
-SMS_DELIVERY_MODE = os.getenv("SMS_DELIVERY_MODE", "development")
-DEV_INBOX = Path(
-    os.getenv(
-        "DEV_INBOX",
-        str(Path(os.getenv("LOCALAPPDATA", str(BASE_DIR))) / "TechRetailRuntime" / "dev-inbox"),
-    )
-)
 ORDER_PENDING_TTL_MINUTES = int(os.getenv("ORDER_PENDING_TTL_MINUTES", "30"))
-OTP_TTL_SECONDS = int(os.getenv("OTP_TTL_SECONDS", "300"))
-OTP_MAX_ATTEMPTS = int(os.getenv("OTP_MAX_ATTEMPTS", "5"))
-OTP_RESEND_COOLDOWN_SECONDS = int(os.getenv("OTP_RESEND_COOLDOWN_SECONDS", "60"))
 GOOGLE_LOGIN_ENABLED = flag("GOOGLE_LOGIN_ENABLED")
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
+GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
+GOOGLE_REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI", "")
+GOOGLE_REDIRECT_URIS = csv("GOOGLE_REDIRECT_URIS", GOOGLE_REDIRECT_URI) or (
+    [GOOGLE_REDIRECT_URI] if GOOGLE_REDIRECT_URI else []
+)
+if GOOGLE_LOGIN_ENABLED and not (
+    GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET and GOOGLE_REDIRECT_URIS
+):
+    raise ImproperlyConfigured("Google login requires a client ID, secret and registered callback.")
 FACEBOOK_LOGIN_ENABLED = flag("FACEBOOK_LOGIN_ENABLED")
+FACEBOOK_APP_ID = os.getenv("FACEBOOK_APP_ID", "")
+FACEBOOK_APP_SECRET = os.getenv("FACEBOOK_APP_SECRET", "")
+FACEBOOK_REDIRECT_URI = os.getenv("FACEBOOK_REDIRECT_URI", "")
+FACEBOOK_GRAPH_VERSION = os.getenv("FACEBOOK_GRAPH_VERSION", "v25.0")
+if FACEBOOK_LOGIN_ENABLED and not (
+    FACEBOOK_APP_ID and FACEBOOK_APP_SECRET and FACEBOOK_REDIRECT_URI
+):
+    raise ImproperlyConfigured("Facebook login requires an app ID, secret and registered callback.")
 GEMINI_ENABLED = flag("GEMINI_ENABLED")
-if any([GOOGLE_LOGIN_ENABLED, FACEBOOK_LOGIN_ENABLED, GEMINI_ENABLED]):
-    raise ImproperlyConfigured(
-        "Provider integration is DEFERRED. Keep provider flags false until implemented and verified."
-    )
-if APP_ENV == "production" and (
-    DEBUG
-    or EMAIL_DELIVERY_MODE != "smtp"
-    or SMS_DELIVERY_MODE == "development"
-    or not EMAIL_HOST
-    or not DEFAULT_FROM_EMAIL
+VNPAY_SANDBOX_ENABLED = flag("VNPAY_SANDBOX_ENABLED")
+VNPAY_TMN_CODE = os.getenv("VNPAY_TMN_CODE", "").strip()
+VNPAY_HASH_SECRET = os.getenv("VNPAY_HASH_SECRET", "")
+VNPAY_RETURN_URL = os.getenv("VNPAY_RETURN_URL", "")
+if VNPAY_SANDBOX_ENABLED and (
+    APP_ENV == "production" or not (VNPAY_TMN_CODE and VNPAY_HASH_SECRET and VNPAY_RETURN_URL)
 ):
     raise ImproperlyConfigured(
-        "Production requires debug=false, SMTP and a configured SMS delivery adapter."
+        "VNPay sandbox requires merchant credentials/return URL and a non-production environment."
     )
+if GEMINI_ENABLED:
+    raise ImproperlyConfigured("Gemini integration is DEFERRED. Keep this flag false.")
+if APP_ENV == "production" and (
+    DEBUG or EMAIL_DELIVERY_MODE != "smtp" or not EMAIL_HOST or not DEFAULT_FROM_EMAIL
+):
+    raise ImproperlyConfigured("Production requires debug=false and configured SMTP.")
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": ["common.authentication.CsrfSessionAuthentication"],
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
@@ -156,7 +181,8 @@ REST_FRAMEWORK = {
         "anon": "120/min",
         "user": "300/min",
         "auth": "10/min",
-        "lookup": "10/min",
+        "payment": "10/min",
+        "feedback": "10/min",
     },
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "COERCE_DECIMAL_TO_STRING": True,
@@ -169,4 +195,24 @@ SPECTACULAR_SETTINGS = {
         "drf_spectacular.hooks.postprocess_schema_enums",
         "common.schema.errors_hook",
     ],
+}
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "filters": {"oauth_query": {"()": "common.logging.RedactOAuthQuery"}},
+    "formatters": {
+        "dev_server": {
+            "()": "django.utils.log.ServerFormatter",
+            "format": "[{server_time}] {message}",
+            "style": "{",
+        }
+    },
+    "handlers": {
+        "dev_server": {
+            "class": "logging.StreamHandler",
+            "formatter": "dev_server",
+            "filters": ["oauth_query"],
+        }
+    },
+    "loggers": {"django.server": {"handlers": ["dev_server"], "level": "INFO", "propagate": False}},
 }

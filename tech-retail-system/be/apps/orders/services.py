@@ -3,6 +3,7 @@ import json
 from datetime import timedelta
 from decimal import Decimal
 from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.utils import timezone
 from common.audit import audit
@@ -19,6 +20,7 @@ from apps.inventory.services import (
     movement,
 )
 from .models import Order, OrderItem, OrderStatusHistory, Invoice
+from .promotions import reserve_coupon, release_coupon
 
 
 def history(order, status, actor=None, reason=""):
@@ -44,6 +46,10 @@ def invoice_for(order):
                 "store": order.warehouse.store.name,
                 "seller": order.seller.full_name if order.seller else "",
                 "total": str(order.grand_total),
+                "subtotal": str(order.subtotal),
+                "discount_total": str(order.discount_total),
+                "coupon_code": order.coupon_code,
+                "shipping_fee": str(order.shipping_fee),
                 "items": [
                     {
                         "name": i.name,
@@ -61,6 +67,7 @@ def invoice_for(order):
 
 def cancel_locked(order, actor=None, reason=""):
     release_reservations(order)
+    release_coupon(order)
     if order.payment_status == "PAID":
         order.payment_status = "REFUND_PENDING"
     history(order, "CANCELLED", actor, reason)
@@ -92,6 +99,13 @@ def create_order(data, actor, scope, key):
         if is_expired(previous):
             cancel_locked(previous, None, "Hết hạn giữ hàng")
         return previous
+    channel = data.get("channel", "ONLINE")
+    if channel == "ONLINE" and actor.is_authenticated:
+        # Serialize first-order eligibility, including concurrent orders without
+        # a coupon. Other order paths never acquire this lock after a warehouse.
+        get_user_model().objects.select_for_update().get(pk=actor.pk)
+    if data.get("coupon_code") and channel != "ONLINE":
+        raise BusinessError("Mã cửa hàng hiện áp dụng cho đơn online.", "COUPON_INVALID", 400)
     warehouse = lock_warehouses(data["warehouse"])[0]
     for old in (
         Order.objects.select_for_update()
@@ -100,6 +114,13 @@ def create_order(data, actor, scope, key):
     ):
         cancel_locked(old, None, "Hết hạn giữ hàng")
     channel = data.get("channel", "ONLINE")
+    if data["payment_method"] == "VNPAY_SANDBOX":
+        from apps.payments.vnpay import ready
+
+        if channel != "ONLINE" or not ready():
+            raise BusinessError(
+                "VNPay sandbox chưa khả dụng cho đơn này.", "VNPAY_NOT_CONFIGURED", 503
+            )
     if channel == "IN_STORE":
         require(actor, "manage_sales", warehouse.store_id)
     if channel == "ONLINE" and data["payment_method"] == "CASH":
@@ -140,6 +161,7 @@ def create_order(data, actor, scope, key):
         else None,
     )
     total = Decimal("0")
+    coupon_lines = []
     for row in sorted(data["items"], key=lambda r: r["variant"]):
         variant = (
             ProductVariant.objects.select_for_update()
@@ -158,6 +180,7 @@ def create_order(data, actor, scope, key):
         q = row["quantity"]
         line = variant.price * q
         total += line
+        coupon_lines.append((variant.product.category_id, line))
         OrderItem.objects.create(
             order=order,
             variant=variant,
@@ -169,9 +192,24 @@ def create_order(data, actor, scope, key):
             line_total=line,
         )
         if channel == "ONLINE":
-            reserve(balance_for(warehouse.pk, variant.pk), q, order=order, expires=order.expires_at)
+            balance = balance_for(warehouse.pk, variant.pk)
+            if balance.available < q:
+                raise BusinessError(
+                    f"{variant.product.name}: {warehouse.store.name} chỉ còn {balance.available}, "
+                    f"bạn cần {q}. Vui lòng chọn chi nhánh khác hoặc giảm số lượng.",
+                    "INSUFFICIENT_STOCK",
+                )
+            reserve(balance, q, order=order, expires=order.expires_at)
     order.subtotal = total
-    order.grand_total = total
+    if data.get("coupon_code"):
+        reserve_coupon(order, actor, coupon_lines, data["coupon_code"].strip().upper())
+    order.grand_total = total - order.discount_total + order.shipping_fee
+    if data.get("quoted_total") is not None and order.grand_total != data["quoted_total"]:
+        raise BusinessError(
+            "Giá hoặc ưu đãi đã thay đổi. Vui lòng kiểm tra tổng tiền và xác nhận lại.",
+            "PRICE_CHANGED",
+            409,
+        )
     order.save()
     history(order, order.status, actor)
     record.order = order
@@ -208,6 +246,10 @@ def _transition_locked(order, action, actor, reason):
     if action == "confirm":
         order.reservations.filter(status="ACTIVE").update(expires_at=None)
     if action == "ship":
+        if order.payment_method == "VNPAY_SANDBOX" and order.payment_status != "PAID":
+            raise BusinessError(
+                "Đơn VNPay cần thanh toán thành công trước khi xuất giao.", "PAYMENT_REQUIRED"
+            )
         release_reservations(order, True, actor)
     if action == "complete":
         if order.payment_status != "PAID":
@@ -279,13 +321,12 @@ def finish_pos(order_id, actor, key, reference=""):
         return order
 
 
-def expire_orders():
+def expire_orders(warehouse_ids=None):
     count = 0
-    ids = list(
-        Order.objects.filter(status="PENDING", expires_at__lte=timezone.now()).values_list(
-            "id", flat=True
-        )
-    )
+    expired = Order.objects.filter(status="PENDING", expires_at__lte=timezone.now())
+    if warehouse_ids is not None:
+        expired = expired.filter(warehouse_id__in=warehouse_ids)
+    ids = list(expired.values_list("id", flat=True))
     for pk in ids:
         with transaction.atomic():
             initial = Order.objects.get(pk=pk)

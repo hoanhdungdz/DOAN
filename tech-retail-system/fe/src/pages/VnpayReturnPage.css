@@ -1,0 +1,117 @@
+.vnpay-result-page {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+.vnpay-result-card {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 42px;
+  text-align: center;
+}
+.vnpay-result-icon {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  background: #edf3e8;
+  color: #537c49;
+}
+.vnpay-result-card.verifying .vnpay-result-icon {
+  background: transparent;
+  color: var(--green);
+}
+.vnpay-result-card.failed .vnpay-result-icon {
+  background: #fff0e9;
+  color: #b25136;
+}
+.vnpay-result-card.review .vnpay-result-icon,
+.vnpay-result-card.unconfirmed .vnpay-result-icon {
+  background: #fbf1d8;
+  color: #947329;
+}
+.vnpay-result-card h1 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.18;
+  margin: 18px 0;
+}
+.vnpay-result-card > .eyebrow {
+  font-size: 11px;
+}
+.vnpay-result-details {
+  margin: 28px 0;
+  padding: 20px 24px;
+  background: #f8faf5;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: left;
+}
+.vnpay-result-details > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 12px 0;
+  font-size: 13px;
+}
+.vnpay-result-details span {
+  color: var(--muted);
+}
+.vnpay-result-details strong {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.vnpay-result-total {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.vnpay-result-total strong {
+  font-size: 25px;
+  color: var(--green);
+  letter-spacing: -0.03em;
+}
+.vnpay-result-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0;
+}
+.vnpay-result-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.vnpay-result-card details p {
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+.vnpay-result-card summary {
+  cursor: pointer;
+}
+.vnpay-result-test {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+@media (max-width: 550px) {
+  .vnpay-result-page {
+    padding-top: 24px;
+  }
+  .vnpay-result-card {
+    padding: 28px 18px;
+  }
+  .vnpay-result-details {
+    padding: 14px;
+  }
+  .vnpay-result-details > div {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+  .vnpay-result-actions .button {
+    width: 100%;
+  }
+}

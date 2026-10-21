@@ -913,6 +913,142 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BusinessError'
+  /api/v1/auth/facebook/start/:
+    post:
+      operationId: v1_auth_facebook_start_create
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StartInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/StartInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/StartInputRequest'
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StartResponse'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/auth/google/start/:
+    post:
+      operationId: v1_auth_google_start_create
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StartInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/StartInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/StartInputRequest'
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StartResponse'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
   /api/v1/auth/me/:
     get:
       operationId: v1_auth_me_retrieve
@@ -1609,6 +1745,74 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BusinessError'
+  /api/v1/carts/availability/:
+    post:
+      operationId: v1_carts_availability_create
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CartInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CartInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CartInputRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CartResponse'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
   /api/v1/categories/:
     get:
       operationId: v1_categories_list
@@ -1842,6 +2046,421 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Category'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/checkout/promotions/:
+    post:
+      operationId: v1_checkout_promotions_create
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PromotionPreviewInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PromotionPreviewInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PromotionPreviewInputRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/coupons/:
+    get:
+      operationId: v1_coupons_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCouponList'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+    post:
+      operationId: v1_coupons_create
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CouponRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CouponRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CouponRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coupon'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/coupons/{id}/:
+    get:
+      operationId: v1_coupons_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this coupon.
+        required: true
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coupon'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+    put:
+      operationId: v1_coupons_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this coupon.
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CouponRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CouponRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CouponRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coupon'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+    patch:
+      operationId: v1_coupons_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this coupon.
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedCouponRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedCouponRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedCouponRequest'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coupon'
           description: ''
         '400':
           description: Structured validation, permission, business or availability
@@ -2426,6 +3045,494 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BusinessError'
+  /api/v1/feedback-admin/:
+    get:
+      operationId: v1_feedback_admin_retrieve
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeedbackPageOutput'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/feedback-admin/{id}/:
+    patch:
+      operationId: v1_feedback_admin_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedModerationInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedModerationInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedModerationInputRequest'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModerationOutput'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/feedback-admin/replies/{id}/:
+    patch:
+      operationId: v1_feedback_admin_replies_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedModerationInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedModerationInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedModerationInputRequest'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModerationOutput'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/feedback/{id}/helpful/:
+    put:
+      operationId: v1_feedback_helpful_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoteInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VoteInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VoteInputRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoteOutput'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/feedback/{id}/replies/:
+    post:
+      operationId: v1_feedback_replies_create
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TextInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TextInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TextInputRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReplyOutput'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/feedback/{id}/report/:
+    post:
+      operationId: v1_feedback_report_create
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReportInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ReportInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ReportInputRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReportOutput'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/feedback/photos/{id}/:
+    get:
+      operationId: v1_feedback_photos_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
   /api/v1/inventory/:
     get:
       operationId: v1_inventory_list
@@ -2828,26 +3935,33 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BusinessError'
-  /api/v1/order-lookup/{action}/:
+  /api/v1/my-orders/:
     get:
-      operationId: v1_order_lookup_retrieve
+      operationId: v1_my_orders_list
+      description: Personal order history never inherits an employee's branch permissions.
       parameters:
-      - in: path
-        name: action
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
         schema:
-          type: string
-        required: true
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
       tags:
       - v1
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LookupResponse'
+                $ref: '#/components/schemas/PaginatedOrderList'
           description: ''
         '400':
           description: Structured validation, permission, business or availability
@@ -2891,13 +4005,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BusinessError'
+  /api/v1/my-orders/{order_id}/vnpay/:
     post:
-      operationId: v1_order_lookup_create
+      operationId: v1_my_orders_vnpay_create
       parameters:
       - in: path
-        name: action
+        name: order_id
         schema:
-          type: string
+          type: integer
         required: true
       tags:
       - v1
@@ -2905,22 +4020,161 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LookupPayloadRequest'
+              $ref: '#/components/schemas/VnpayInputRequest'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/LookupPayloadRequest'
+              $ref: '#/components/schemas/VnpayInputRequest'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/LookupPayloadRequest'
+              $ref: '#/components/schemas/VnpayInputRequest'
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LookupResponse'
+                $ref: '#/components/schemas/VnpayResponse'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/my-orders/{id}/:
+    get:
+      operationId: v1_my_orders_retrieve
+      description: Personal order history never inherits an employee's branch permissions.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this order.
+        required: true
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/my-orders/{id}/cancel/:
+    post:
+      operationId: v1_my_orders_cancel_create
+      description: Personal order history never inherits an employee's branch permissions.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this order.
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelOwnOrderInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CancelOwnOrderInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CancelOwnOrderInputRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
           description: ''
         '400':
           description: Structured validation, permission, business or availability
@@ -2984,7 +4238,6 @@ paths:
       - v1
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3052,7 +4305,6 @@ paths:
         required: true
       security:
       - cookieAuth: []
-      - {}
       responses:
         '201':
           content:
@@ -3116,7 +4368,6 @@ paths:
       - v1
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3192,7 +4443,6 @@ paths:
         required: true
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3268,7 +4518,6 @@ paths:
         required: true
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3344,7 +4593,6 @@ paths:
         required: true
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3420,7 +4668,6 @@ paths:
         required: true
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3496,7 +4743,6 @@ paths:
         required: true
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3572,7 +4818,6 @@ paths:
         required: true
       security:
       - cookieAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -3781,6 +5026,130 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Payment'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/payments/vnpay/attempts/{reference}/:
+    get:
+      operationId: v1_payments_vnpay_attempts_retrieve
+      parameters:
+      - in: path
+        name: reference
+        schema:
+          type: string
+        required: true
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VnpayResponse'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/payments/vnpay/attempts/{reference}/check/:
+    post:
+      operationId: v1_payments_vnpay_attempts_check_create
+      parameters:
+      - in: path
+        name: reference
+        schema:
+          type: string
+        required: true
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VnpayResponse'
           description: ''
         '400':
           description: Structured validation, permission, business or availability
@@ -4524,6 +5893,143 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Product'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+  /api/v1/products/{slug}/feedback/:
+    get:
+      operationId: v1_products_feedback_retrieve
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeedbackPageOutput'
+          description: ''
+        '400':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '403':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '404':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '409':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '429':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+        '503':
+          description: Structured validation, permission, business or availability
+            error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessError'
+    post:
+      operationId: v1_products_feedback_create
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      tags:
+      - v1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackInputRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/FeedbackInputRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/FeedbackInputRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeedbackOutput'
           description: ''
         '400':
           description: Structured validation, permission, business or availability
@@ -8083,6 +9589,9 @@ components:
         warehouse_name:
           type: string
           readOnly: true
+        store_name:
+          type: string
+          readOnly: true
         created_at:
           type: string
           format: date-time
@@ -8117,10 +9626,19 @@ components:
       - product_name
       - sku
       - store
+      - store_name
       - updated_at
       - variant
       - warehouse
       - warehouse_name
+    BankModeEnum:
+      enum:
+      - VNPAYQR
+      type: string
+      description: "* `VNPAYQR` - VNPAYQR\n* `` - "
+    BlankEnum:
+      enum:
+      - ''
     Brand:
       type: object
       properties:
@@ -8146,6 +9664,15 @@ components:
           type: boolean
       required:
       - name
+    CancelOwnOrderInputRequest:
+      type: object
+      properties:
+        reason:
+          type: string
+          minLength: 1
+          maxLength: 500
+      required:
+      - reason
     CartInputRequest:
       type: object
       properties:
@@ -8274,6 +9801,14 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/CheckoutItemRequest'
+        coupon_code:
+          type: string
+          default: ''
+          maxLength: 32
+        quoted_total:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
       required:
       - fulfillment
       - items
@@ -8281,6 +9816,140 @@ components:
       - phone
       - recipient_name
       - warehouse
+    Coupon:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        reserved_count:
+          type: integer
+          readOnly: true
+        used_count:
+          type: integer
+          readOnly: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        code:
+          type: string
+          maxLength: 32
+        name:
+          type: string
+          maxLength: 150
+        discount_type:
+          $ref: '#/components/schemas/DiscountTypeEnum'
+        value:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        min_subtotal:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        max_discount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+          nullable: true
+        first_order_only:
+          type: boolean
+        per_user_limit:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+        usage_limit:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+        starts_at:
+          type: string
+          format: date-time
+        ends_at:
+          type: string
+          format: date-time
+        is_active:
+          type: boolean
+        categories:
+          type: array
+          items:
+            type: integer
+      required:
+      - code
+      - created_at
+      - discount_type
+      - ends_at
+      - id
+      - name
+      - reserved_count
+      - starts_at
+      - updated_at
+      - used_count
+      - value
+    CouponRequest:
+      type: object
+      properties:
+        code:
+          type: string
+          minLength: 1
+          maxLength: 32
+        name:
+          type: string
+          minLength: 1
+          maxLength: 150
+        discount_type:
+          $ref: '#/components/schemas/DiscountTypeEnum'
+        value:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        min_subtotal:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        max_discount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+          nullable: true
+        first_order_only:
+          type: boolean
+        per_user_limit:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+        usage_limit:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+        starts_at:
+          type: string
+          format: date-time
+        ends_at:
+          type: string
+          format: date-time
+        is_active:
+          type: boolean
+        categories:
+          type: array
+          items:
+            type: integer
+      required:
+      - code
+      - discount_type
+      - ends_at
+      - name
+      - starts_at
+      - value
     Customer:
       type: object
       properties:
@@ -8339,6 +10008,14 @@ components:
           maxLength: 200
       required:
       - name
+    DiscountTypeEnum:
+      enum:
+      - FIXED
+      - PERCENT
+      type: string
+      description: |-
+        * `FIXED` - Số tiền
+        * `PERCENT` - Phần trăm
     Document:
       type: object
       properties:
@@ -8492,9 +10169,14 @@ components:
     Feature:
       type: object
       properties:
+        customer_frontend_url:
+          type: string
+          format: uri
         google_login:
           type: boolean
         facebook_login:
+          type: boolean
+        vnpay_sandbox:
           type: boolean
         gemini:
           type: boolean
@@ -8502,9 +10184,132 @@ components:
           type: string
       required:
       - ai_status
+      - customer_frontend_url
       - facebook_login
       - gemini
       - google_login
+      - vnpay_sandbox
+    FeedbackInputKindEnum:
+      enum:
+      - REVIEW
+      - QUESTION
+      type: string
+      description: |-
+        * `REVIEW` - REVIEW
+        * `QUESTION` - QUESTION
+    FeedbackInputRequest:
+      type: object
+      properties:
+        kind:
+          $ref: '#/components/schemas/FeedbackInputKindEnum'
+        title:
+          type: string
+          default: ''
+          maxLength: 150
+        body:
+          type: string
+          minLength: 5
+          maxLength: 3000
+        rating:
+          type: integer
+          maximum: 5
+          minimum: 1
+        photos:
+          type: array
+          items:
+            type: string
+            format: binary
+          maxItems: 5
+      required:
+      - body
+      - kind
+    FeedbackOutput:
+      type: object
+      properties:
+        id:
+          type: integer
+        kind:
+          type: string
+        title:
+          type: string
+        body:
+          type: string
+        rating:
+          type: integer
+          nullable: true
+        status:
+          type: string
+        author:
+          type: string
+        is_mine:
+          type: boolean
+        verified_purchase:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+        photos:
+          type: array
+          items:
+            type: string
+        helpful_count:
+          type: integer
+        helpful:
+          type: boolean
+        replies:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReplyOutput'
+        product_name:
+          type: string
+        product_slug:
+          type: string
+        reports:
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
+      required:
+      - author
+      - body
+      - created_at
+      - helpful
+      - helpful_count
+      - id
+      - is_mine
+      - kind
+      - photos
+      - rating
+      - replies
+      - status
+      - title
+      - verified_purchase
+    FeedbackPageOutput:
+      type: object
+      properties:
+        count:
+          type: integer
+        next:
+          type: string
+          format: uri
+          nullable: true
+        previous:
+          type: string
+          format: uri
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/FeedbackOutput'
+        summary:
+          $ref: '#/components/schemas/SummaryOutput'
+        viewer:
+          $ref: '#/components/schemas/ViewerOutput'
+      required:
+      - count
+      - next
+      - previous
+      - results
     FulfillmentEnum:
       enum:
       - DELIVERY
@@ -8682,51 +10487,16 @@ components:
       required:
       - quantity
       - variant
-    LookupInputRequest:
+    ModerationOutput:
       type: object
       properties:
-        code:
-          type: string
-          minLength: 1
-          maxLength: 30
-        phone:
-          type: string
-          minLength: 1
-          maxLength: 30
-      required:
-      - code
-      - phone
-    LookupPayloadRequest:
-      oneOf:
-      - $ref: '#/components/schemas/LookupInputRequest'
-      - $ref: '#/components/schemas/VerifyInputRequest'
-    LookupResponse:
-      type: object
-      properties:
-        message:
-          type: string
-        delivery_mode:
-          type: string
-        challenge:
-          type: string
-          format: uuid
-        expires_in:
+        id:
           type: integer
-        code:
-          type: string
         status:
           type: string
-        payment_status:
-          type: string
-        grand_total:
-          type: string
-          format: decimal
-          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
-        items:
-          type: array
-          items:
-            type: object
-            additionalProperties: {}
+      required:
+      - id
+      - status
     Movement:
       type: object
       properties:
@@ -8770,6 +10540,11 @@ components:
       properties:
         id:
           type: integer
+          readOnly: true
+        vnpay_payment:
+          type: object
+          nullable: true
+          additionalProperties: true
           readOnly: true
         items:
           type: array
@@ -8826,6 +10601,14 @@ components:
           type: string
           format: decimal
           pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        discount_total:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        coupon_code:
+          type: string
+          maxLength: 32
+        coupon_snapshot: {}
         shipping_fee:
           type: string
           format: decimal
@@ -8865,6 +10648,7 @@ components:
       - store
       - store_name
       - updated_at
+      - vnpay_payment
       - warehouse
     OrderItem:
       type: object
@@ -8992,6 +10776,14 @@ components:
           type: string
           format: decimal
           pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        discount_total:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        coupon_code:
+          type: string
+          maxLength: 32
+        coupon_snapshot: {}
         shipping_fee:
           type: string
           format: decimal
@@ -9140,6 +10932,29 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Category'
+    PaginatedCouponList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Coupon'
     PaginatedCustomerList:
       type: object
       required:
@@ -9631,6 +11446,56 @@ components:
           maxLength: 100
         is_active:
           type: boolean
+    PatchedCouponRequest:
+      type: object
+      properties:
+        code:
+          type: string
+          minLength: 1
+          maxLength: 32
+        name:
+          type: string
+          minLength: 1
+          maxLength: 150
+        discount_type:
+          $ref: '#/components/schemas/DiscountTypeEnum'
+        value:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        min_subtotal:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        max_discount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+          nullable: true
+        first_order_only:
+          type: boolean
+        per_user_limit:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+        usage_limit:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+        starts_at:
+          type: string
+          format: date-time
+        ends_at:
+          type: string
+          format: date-time
+        is_active:
+          type: boolean
+        categories:
+          type: array
+          items:
+            type: integer
     PatchedCustomerRequest:
       type: object
       properties:
@@ -9703,6 +11568,11 @@ components:
           format: int64
         product:
           type: integer
+    PatchedModerationInputRequest:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/StatusEnum'
     PatchedProductRequest:
       type: object
       properties:
@@ -9895,8 +11765,8 @@ components:
           type: integer
         actor:
           type: integer
+          nullable: true
       required:
-      - actor
       - amount
       - created_at
       - id
@@ -9939,11 +11809,13 @@ components:
       - COD
       - CASH
       - BANK_TRANSFER
+      - VNPAY_SANDBOX
       type: string
       description: |-
         * `COD` - COD
         * `CASH` - CASH
         * `BANK_TRANSFER` - BANK_TRANSFER
+        * `VNPAY_SANDBOX` - VNPAY_SANDBOX
     Permission:
       type: object
       properties:
@@ -10094,6 +11966,58 @@ components:
           maxLength: 500
       required:
       - name
+    PromotionPreviewInputRequest:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/CheckoutItemRequest'
+        coupon_code:
+          type: string
+          default: ''
+          maxLength: 32
+      required:
+      - items
+    ReplyOutput:
+      type: object
+      properties:
+        id:
+          type: integer
+        author:
+          type: string
+        body:
+          type: string
+        is_staff_reply:
+          type: boolean
+        status:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+      required:
+      - author
+      - body
+      - created_at
+      - id
+      - is_staff_reply
+      - status
+    ReportInputRequest:
+      type: object
+      properties:
+        reason:
+          type: string
+          minLength: 5
+          maxLength: 500
+      required:
+      - reason
+    ReportOutput:
+      type: object
+      properties:
+        message:
+          type: string
+      required:
+      - message
     ReportResponse:
       type: object
       properties:
@@ -10308,6 +12232,33 @@ components:
       - definition
       - product
       - value
+    StartInputRequest:
+      type: object
+      properties:
+        next:
+          type: string
+          maxLength: 500
+        link_account:
+          type: boolean
+          default: false
+    StartResponse:
+      type: object
+      properties:
+        authorization_url:
+          type: string
+          format: uri
+      required:
+      - authorization_url
+    StatusEnum:
+      enum:
+      - PENDING
+      - APPROVED
+      - HIDDEN
+      type: string
+      description: |-
+        * `PENDING` - PENDING
+        * `APPROVED` - APPROVED
+        * `HIDDEN` - HIDDEN
     Store:
       type: object
       properties:
@@ -10355,6 +12306,26 @@ components:
           type: boolean
       required:
       - name
+    SummaryOutput:
+      type: object
+      properties:
+        count:
+          type: integer
+        average:
+          type: number
+          format: double
+          nullable: true
+        distribution:
+          type: object
+          additionalProperties:
+            type: integer
+        questions:
+          type: integer
+      required:
+      - average
+      - count
+      - distribution
+      - questions
     Supplier:
       type: object
       properties:
@@ -10400,6 +12371,15 @@ components:
           type: boolean
       required:
       - name
+    TextInputRequest:
+      type: object
+      properties:
+        body:
+          type: string
+          minLength: 2
+          maxLength: 3000
+      required:
+      - body
     Transfer:
       type: object
       properties:
@@ -10518,6 +12498,10 @@ components:
           type: string
         is_admin:
           type: boolean
+        google_linked:
+          type: boolean
+        facebook_linked:
+          type: boolean
         permissions:
           type: array
           items:
@@ -10528,7 +12512,9 @@ components:
             type: integer
       required:
       - email
+      - facebook_linked
       - full_name
+      - google_linked
       - id
       - is_admin
       - permissions
@@ -10644,19 +12630,96 @@ components:
       - price
       - product
       - sku
-    VerifyInputRequest:
+    ViewerOutput:
       type: object
       properties:
-        challenge:
+        can_review:
+          type: boolean
+        review_status:
           type: string
-          format: uuid
-        otp:
-          type: string
-          minLength: 1
-          pattern: ^\d{6}$
+          nullable: true
+        authenticated:
+          type: boolean
       required:
-      - challenge
-      - otp
+      - authenticated
+      - can_review
+      - review_status
+    VnpayInputRequest:
+      type: object
+      properties:
+        bank_mode:
+          default: ''
+          oneOf:
+          - $ref: '#/components/schemas/BankModeEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+    VnpayResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+        order:
+          type: integer
+        amount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        status:
+          type: string
+        expires_at:
+          type: string
+          format: date-time
+        payment_url:
+          type: string
+          format: uri
+          nullable: true
+        response_code:
+          type: string
+        provider_transaction:
+          type: string
+          nullable: true
+        review_reason:
+          type: string
+        bank_mode:
+          type: string
+        promotion_code:
+          type: string
+        promotion_amount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        customer_amount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,16}(?:\.\d{0,2})?$
+        order_payment_status:
+          type: string
+      required:
+      - amount
+      - bank_mode
+      - customer_amount
+      - expires_at
+      - order
+      - promotion_amount
+      - promotion_code
+      - provider_transaction
+      - reference
+      - response_code
+      - review_reason
+      - status
+    VoteInputRequest:
+      type: object
+      properties:
+        helpful:
+          type: boolean
+      required:
+      - helpful
+    VoteOutput:
+      type: object
+      properties:
+        helpful_count:
+          type: integer
+      required:
+      - helpful_count
     Warehouse:
       type: object
       properties:

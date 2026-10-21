@@ -1,16 +1,13 @@
 import hashlib
 import re
-import tempfile
 from datetime import timedelta
-from pathlib import Path
 from django.test import TestCase, override_settings
 from django.utils import timezone
-from django.contrib.auth.hashers import make_password
 from django.core.cache import cache
 from django.core import mail
 from rest_framework.test import APIClient
 from apps.accounts.models import User, ResetChallenge
-from apps.orders.models import Order, OTPChallenge
+from apps.orders.models import Order
 from apps.orders.services import create_order, transition_order
 from apps.payments.services import record_payment
 from .factories import scenario, checkout, assign
@@ -161,6 +158,7 @@ class APITests(TestCase):
         self.assertEqual(changes["after"]["price"], "1999000.00")
 
     def test_checkout_server_price_and_public_status_injection(self):
+        self.as_user(self.s["customer"])
         payload = checkout(self.s)
         payload.update(grand_total="1", status="COMPLETED", payment_status="PAID")
         r = self.client.post("/api/v1/orders/", payload, format="json", HTTP_IDEMPOTENCY_KEY="key")
@@ -527,85 +525,3 @@ class SessionSecurityTests(TestCase):
             ).status_code,
             400,
         )
-
-
-class OTPTests(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        cls.s = scenario()
-        cls.order = create_order(checkout(cls.s), cls.s["customer"], "otp", "key")
-
-    def setUp(self):
-        cache.clear()
-        self.client = APIClient()
-
-    def challenge(self, **extra):
-        return OTPChallenge.objects.create(
-            order=self.order,
-            code_hash=make_password("123456"),
-            expires_at=timezone.now() + timedelta(minutes=5),
-            **extra,
-        )
-
-    def verify(self, c, otp="123456"):
-        return self.client.post(
-            "/api/v1/order-lookup/verify/", {"challenge": str(c.pk), "otp": otp}, format="json"
-        )
-
-    def test_wrong_attempts_persist_and_lock(self):
-        c = self.challenge()
-        for _ in range(5):
-            self.assertEqual(self.verify(c, "000000").status_code, 400)
-        self.assertEqual(self.verify(c).status_code, 400)
-        c.refresh_from_db()
-        self.assertEqual(c.attempts, 5)
-
-    def test_expired_and_used(self):
-        c = self.challenge()
-        OTPChallenge.objects.filter(pk=c.pk).update(
-            expires_at=timezone.now() - timedelta(seconds=1)
-        )
-        self.assertEqual(self.verify(c).status_code, 400)
-        c = self.challenge()
-        self.assertEqual(self.verify(c).status_code, 200)
-        self.assertEqual(self.verify(c).status_code, 400)
-
-    def test_grant_single_order_and_minimal_data(self):
-        c = self.challenge()
-        self.verify(c)
-        data = self.client.get("/api/v1/order-lookup/result/?order=999").json()
-        self.assertEqual(data["code"], self.order.code)
-        self.assertNotIn("phone", data)
-        self.assertNotIn("address", data)
-        self.assertEqual(self.client.get(f"/api/v1/orders/{self.order.pk}/").status_code, 403)
-
-    def test_grant_expiration(self):
-        c = self.challenge()
-        self.verify(c)
-        session = self.client.session
-        session["order_lookup"] = {"order": self.order.pk, "expires": 0}
-        session.save()
-        self.assertEqual(self.client.get("/api/v1/order-lookup/result/").status_code, 403)
-
-    def test_request_delivery_cooldown_and_no_otp_returned(self):
-        with (
-            tempfile.TemporaryDirectory() as path,
-            override_settings(DEV_INBOX=Path(path)),
-            self.captureOnCommitCallbacks(execute=True),
-        ):
-            body = {"code": self.order.code, "phone": self.order.phone}
-            r = self.client.post("/api/v1/order-lookup/request/", body, format="json")
-            self.assertEqual(r.status_code, 200)
-            self.assertNotIn("otp", r.json())
-            self.client.post("/api/v1/order-lookup/request/", body, format="json")
-            self.assertEqual(OTPChallenge.objects.count(), 1)
-        # callbacks execute at context exit; cooldown must not create an additional challenge.
-
-    def test_invalid_order_generic_message(self):
-        r = self.client.post(
-            "/api/v1/order-lookup/request/",
-            {"code": "UNKNOWN", "phone": "0901234567"},
-            format="json",
-        )
-        self.assertEqual(r.status_code, 200)
-        self.assertFalse(OTPChallenge.objects.exists())

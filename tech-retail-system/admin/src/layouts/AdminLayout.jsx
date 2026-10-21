@@ -13,12 +13,13 @@ import {
   LogOut,
   Menu,
   X,
-  ArrowUpRight,
   Search,
   ChevronRight,
+  MessageSquare,
 } from "lucide-react";
 import { useSession } from "../../../shared/session";
 import { Loading, ErrorBox } from "../../../shared/ui";
+import StorefrontLink from "../components/StorefrontLink";
 const groups = [
   {
     label: "KHÔNG GIAN LÀM VIỆC",
@@ -57,6 +58,8 @@ const groups = [
     label: "BÁN HÀNG & CON NGƯỜI",
     items: [
       ["/payments", "Thu / hoàn tiền", FileText, "manage_payments"],
+      ["/coupons", "Mã giảm giá", ShoppingBag, "manage_accounts"],
+      ["/feedback", "Đánh giá & hỏi đáp", MessageSquare, "manage_accounts"],
       ["/invoices", "Chứng từ bán hàng", FileText, "manage_sales"],
       ["/customers", "Khách hàng", Users, "manage_sales"],
       ["/employees", "Nhân viên", Users, "manage_people"],
@@ -192,9 +195,7 @@ export default function AdminLayout() {
               placeholder="Tìm mã đơn…"
             />
           </form>
-          <a href="http://localhost:5173" target="_blank" rel="noreferrer">
-            Mở cửa hàng <ArrowUpRight size={14} />
-          </a>
+          <StorefrontLink />
         </header>
         <main className="admin-body">
           <Outlet />
