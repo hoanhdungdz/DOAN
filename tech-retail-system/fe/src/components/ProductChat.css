@@ -1,0 +1,148 @@
+.chat-panel.rag-chat {
+  width: min(440px, calc(100vw - 30px));
+  max-height: calc(100dvh - 115px);
+  display: flex;
+  flex-direction: column;
+}
+.rag-chat header {
+  flex-shrink: 0;
+}
+.rag-chat header strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+.rag-chat header small {
+  font-size: 11px;
+}
+.rag-chat .chat-content {
+  max-height: 470px;
+  min-height: 150px;
+}
+.rag-chat .chat-welcome > p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+.rag-chat .chat-welcome p {
+  margin: 0 0 10px;
+}
+.rag-chat .chat-examples {
+  display: grid;
+  gap: 8px;
+  margin: 15px 0 5px;
+}
+.rag-chat .chat-examples button {
+  text-align: left;
+  font-size: 12px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #f6f8f2;
+}
+.rag-chat .chat-exchange {
+  margin-bottom: 22px;
+}
+.rag-chat .chat-question {
+  margin: 0 0 12px 24px;
+  font-size: 14px;
+}
+.rag-chat .chat-answer {
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.rag-chat .chat-error {
+  color: #a33718;
+}
+.rag-chat .chat-retry {
+  font-size: 12px;
+  padding: 7px 10px;
+}
+.rag-chat .chat-product {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #dfe7dc;
+  border-radius: 10px;
+  margin: 12px 0;
+  background: #fafbf7;
+}
+.rag-chat .chat-product img {
+  width: 62px;
+  height: 70px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.rag-chat .chat-product strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.rag-chat .chat-product-price {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 6px 0;
+  color: #184c41;
+}
+.rag-chat .chat-product small {
+  display: block;
+  font-size: 11px;
+  color: #64756b;
+  line-height: 1.6;
+}
+.rag-chat .chat-product-link,
+.rag-chat .chat-action {
+  display: inline-block;
+  font-size: 12px;
+  color: #195b49;
+  margin-top: 8px;
+  font-weight: 600;
+}
+.rag-chat .chat-sources {
+  font-size: 12px;
+  margin: 12px 0;
+  color: #66776a;
+}
+.rag-chat .chat-exchange > small.fine {
+  display: block;
+  margin-top: 8px;
+}
+.rag-chat .chat-sources summary {
+  cursor: pointer;
+  color: #205748;
+}
+.rag-chat .chat-sources > div {
+  border-top: 1px solid #e5eadd;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.rag-chat .chat-sources p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+.rag-chat form {
+  flex-shrink: 0;
+  border-top: 1px solid #e5eadd;
+}
+.rag-chat form input {
+  min-width: 0;
+  flex: 1;
+  font-size: 13px;
+}
+.rag-chat > .fine {
+  font-size: 10px;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .chat-panel.rag-chat {
+    bottom: 78px;
+  }
+  .rag-chat .chat-content {
+    max-height: min(470px, calc(100dvh - 310px));
+  }
+}

@@ -405,6 +405,7 @@ class APITests(TestCase):
         self.s["balance"].refresh_from_db()
         self.assertEqual(self.s["balance"].on_hand, 9)
 
+    @override_settings(GEMINI_ENABLED=False)
     def test_features_and_disabled_ai(self):
         self.assertEqual(self.client.get("/api/v1/features/").json()["gemini"], False)
         r = self.client.post("/api/v1/ai/chat/", {"question": "Laptop phù hợp?"}, format="json")

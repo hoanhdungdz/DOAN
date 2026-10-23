@@ -151,6 +151,10 @@ if FACEBOOK_LOGIN_ENABLED and not (
 ):
     raise ImproperlyConfigured("Facebook login requires an app ID, secret and registered callback.")
 GEMINI_ENABLED = flag("GEMINI_ENABLED")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.1-flash-lite"
+GEMINI_EMBEDDING_MODEL = "gemini-embedding-001"
+RAG_INDEX_PATH = BASE_DIR.parent / ".runtime" / "rag" / "index.json"
 VNPAY_SANDBOX_ENABLED = flag("VNPAY_SANDBOX_ENABLED")
 VNPAY_TMN_CODE = os.getenv("VNPAY_TMN_CODE", "").strip()
 VNPAY_HASH_SECRET = os.getenv("VNPAY_HASH_SECRET", "")
@@ -161,8 +165,8 @@ if VNPAY_SANDBOX_ENABLED and (
     raise ImproperlyConfigured(
         "VNPay sandbox requires merchant credentials/return URL and a non-production environment."
     )
-if GEMINI_ENABLED:
-    raise ImproperlyConfigured("Gemini integration is DEFERRED. Keep this flag false.")
+if GEMINI_ENABLED and not GEMINI_API_KEY:
+    raise ImproperlyConfigured("Gemini requires GEMINI_API_KEY in the backend environment.")
 if APP_ENV == "production" and (
     DEBUG or EMAIL_DELIVERY_MODE != "smtp" or not EMAIL_HOST or not DEFAULT_FROM_EMAIL
 ):
@@ -183,6 +187,7 @@ REST_FRAMEWORK = {
         "auth": "10/min",
         "payment": "10/min",
         "feedback": "10/min",
+        "chat": "8/min",
     },
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "COERCE_DECIMAL_TO_STRING": True,
