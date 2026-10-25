@@ -89,6 +89,8 @@ class GeminiProvider:
         if len(texts) > 24:
             raise ValueError("embedding batch exceeds 24 documents")
         model = settings.GEMINI_EMBEDDING_MODEL
+        if query:
+            texts = [f"task: search result | query: {text}" for text in texts]
         data = self._post(
             model,
             "batchEmbedContents",
@@ -97,7 +99,6 @@ class GeminiProvider:
                     {
                         "model": "models/" + model,
                         "content": {"parts": [{"text": text}]},
-                        "taskType": "RETRIEVAL_QUERY" if query else "RETRIEVAL_DOCUMENT",
                         "outputDimensionality": DIMENSIONS,
                     }
                     for text in texts

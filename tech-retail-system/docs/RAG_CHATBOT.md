@@ -4,7 +4,7 @@
 
 Trợ lý tư vấn bằng tiếng Việt, tìm sản phẩm theo ý nghĩa kết hợp từ khóa, lọc danh mục/hãng/ngân sách/chi nhánh, giải thích chính sách bảo hành và checkout. Trả lời có thẻ sản phẩm, nguồn tham khảo mở rộng và thời điểm đọc giá/tồn kho. Câu hỏi về đơn hàng riêng tư hoặc bảo mật được hướng dẫn tới trang chức năng; chatbot không đọc đơn hoặc thực hiện giao dịch.
 
-Đây là tích hợp Gemini thật: model generation cấu hình ở backend, mặc định `gemini-3.1-flash-lite`; embedding `gemini-embedding-001`, 768 chiều. Đã xác minh cả embedding và generation bằng key local; model 2.5 Flash Lite trả 404 trong lần kiểm tra nên không dùng làm cấu hình mặc định.
+Model generation hiện được cấu hình là `gemini-3.5-flash-lite`; embedding mặc định là `gemini-embedding-2`, 768 chiều. Việc đổi model generation này chưa được kiểm chứng bằng request mới. Gemini Embedding 2 không nhận `taskType`; truy vấn và tài liệu được định dạng bằng tiền tố văn bản. Vector từ `gemini-embedding-001` không tương thích, vì vậy cần tạo lại toàn bộ chỉ mục sau khi đổi model. Việc chuyển embedding này chưa được kiểm chứng bằng request mới.
 
 ## Kiến trúc
 
@@ -56,17 +56,18 @@ File riêng `be/.env` (không commit):
 ```dotenv
 GEMINI_ENABLED=true
 GEMINI_API_KEY=your_private_key
-GEMINI_MODEL=gemini-3.1-flash-lite
+GEMINI_MODEL=gemini-3.5-flash-lite
+GEMINI_EMBEDDING_MODEL=gemini-embedding-2
 ```
 
 Sau đổi `.env`, khởi động lại Django. Từ thư mục ứng dụng:
 
 ```powershell
 cd be
-..\.venv\Scripts\python.exe manage.py rebuild_rag_index
+..\.venv\Scripts\python.exe manage.py rebuild_rag_index --rebuild
 ```
 
-Lệnh mặc định đồng bộ tăng dần. Chỉ dùng `--rebuild` khi muốn embed lại toàn bộ; tốn thêm quota. Không cần migration mới. Với một key/model khác, kiểm tra model được cấp quyền và hạn mức trong AI Studio trước khi bật. `.runtime` và `.env` bị Git bỏ qua; Vite không phục vụ thư mục chỉ mục.
+Chuyển model yêu cầu `--rebuild` để tạo lại mọi vector; thao tác này dùng quota của embedding mới. Model mới vẫn có hạn mức riêng và không đảm bảo bỏ được giới hạn token. Không cần migration MySQL. Với một key/model khác, kiểm tra model được cấp quyền và hạn mức trong AI Studio trước khi bật. `.runtime` và `.env` bị Git bỏ qua; Vite không phục vụ thư mục chỉ mục.
 
 ## Kiểm chứng và giới hạn
 

@@ -152,8 +152,8 @@ if FACEBOOK_LOGIN_ENABLED and not (
     raise ImproperlyConfigured("Facebook login requires an app ID, secret and registered callback.")
 GEMINI_ENABLED = flag("GEMINI_ENABLED")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.1-flash-lite"
-GEMINI_EMBEDDING_MODEL = "gemini-embedding-001"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.5-flash-lite"
+GEMINI_EMBEDDING_MODEL = os.getenv("GEMINI_EMBEDDING_MODEL", "").strip() or "gemini-embedding-2"
 RAG_INDEX_PATH = BASE_DIR.parent / ".runtime" / "rag" / "index.json"
 VNPAY_SANDBOX_ENABLED = flag("VNPAY_SANDBOX_ENABLED")
 VNPAY_TMN_CODE = os.getenv("VNPAY_TMN_CODE", "").strip()

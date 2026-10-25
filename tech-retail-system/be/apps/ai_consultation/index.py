@@ -86,7 +86,7 @@ def documents():
 
 
 def signature():
-    return {"version": 1, "model": settings.GEMINI_EMBEDDING_MODEL, "dimensions": DIMENSIONS}
+    return {"version": 2, "model": settings.GEMINI_EMBEDDING_MODEL, "dimensions": DIMENSIONS}
 
 
 def load_index():
@@ -141,7 +141,9 @@ def sync_index(docs, provider, *, rebuild=False, progress=None):
             pending.append(doc)
         for start in range(0, len(pending), 12):
             batch = pending[start : start + 12]
-            vectors = provider.embed([f"{doc['title']}\n{doc['text']}" for doc in batch])
+            vectors = provider.embed(
+                [f"title: {doc['title']} | text: {doc['text']}" for doc in batch]
+            )
             if len(vectors) != len(batch):
                 raise BusinessError("Chỉ mục tìm kiếm chưa đầy đủ.", "AI_INVALID_RESPONSE", 503)
             for doc, vector in zip(batch, vectors, strict=True):
