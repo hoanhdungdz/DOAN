@@ -871,3 +871,76 @@
 .inventory-store-filter select {
   width: min(320px, 100%);
 }
+.voucher-date-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.voucher-date-controls input {
+  flex: 1;
+  min-width: 130px;
+}
+.voucher-date-controls select {
+  width: 64px;
+  flex-shrink: 0;
+  padding-inline: 8px;
+}
+.voucher-date-time .fine {
+  margin: 7px 0 0;
+}
+.product-record-detail > header {
+  margin-bottom: 20px;
+}
+.product-record-detail h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.product-record-detail section {
+  border-top: 1px solid #e0e8dc;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+.product-record-detail h4 {
+  font-size: 17px;
+  margin: 0 0 16px;
+}
+.product-record-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+.product-record-images img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  border: 1px solid #e0e8dc;
+  border-radius: 9px;
+  background: white;
+}
+.product-variant-stock {
+  margin: 16px 0;
+  padding: 14px;
+  border-radius: 9px;
+  background: #f4f7ef;
+}
+.product-variant-stock h5 {
+  margin: 0 0 10px;
+  font-size: 13px;
+}
+.product-variant-stock ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.product-variant-stock li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 0;
+}
+.product-record-detail details {
+  margin-top: 24px;
+}

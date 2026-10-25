@@ -3,6 +3,9 @@ import { X, Plus, Trash2 } from "lucide-react";
 import { api, all, errorText, operationKey } from "../../../../shared/api";
 import { Field, ErrorBox, Loading } from "../../../../shared/ui";
 import { useSession } from "../../../../shared/session";
+import SearchSelect from "../../../../shared/SearchSelect";
+import { vietnamLocal, vietnamIso } from "../../../../shared/vietnamTime";
+import VietnamDateTime from "./VietnamDateTime";
 function labelFor(r) {
   return r.product_name
     ? `${r.sku} — ${r.product_name}`
@@ -27,12 +30,7 @@ export default function ResourceForm({
         config.fields.map((f) => [
           f.name,
           (f.type === "datetime-local" && record?.[f.name]
-            ? new Date(
-                new Date(record[f.name]).getTime() -
-                  new Date(record[f.name]).getTimezoneOffset() * 60000,
-              )
-                .toISOString()
-                .slice(0, 16)
+            ? vietnamLocal(record[f.name])
             : record?.[f.name]) ??
             f.default ??
             (f.type === "boolean"
@@ -128,9 +126,18 @@ export default function ResourceForm({
             quantity: Number(r.quantity),
           }));
         else if (f.type === "datetime-local")
-          body[f.name] = v ? new Date(v).toISOString() : null;
+          body[f.name] = v
+            ? record?.[f.name] && vietnamLocal(record[f.name]) === v
+              ? record[f.name]
+              : vietnamIso(v)
+            : null;
         else body[f.name] = v;
       }
+      if (
+        name === "coupons" &&
+        new Date(body.ends_at) <= new Date(body.starts_at)
+      )
+        throw new Error("Thời gian kết thúc phải sau thời gian bắt đầu.");
       const id = name === "products" ? record?.slug : record?.id;
       await api(`${name}/${record ? id + "/" : ""}`, {
         method: record ? "PATCH" : "POST",
@@ -187,6 +194,24 @@ export default function ResourceForm({
                         <option value="true">Có</option>
                         <option value="false">Không</option>
                       </select>
+                    ) : f.type === "datetime-local" ? (
+                      <VietnamDateTime
+                        label={f.label}
+                        value={form[f.name]}
+                        onChange={(value) => set(f.name, value)}
+                        required={!f.optional}
+                      />
+                    ) : f.type === "select" && f.source ? (
+                      <SearchSelect
+                        label={f.label}
+                        required={!f.optional}
+                        value={form[f.name]}
+                        options={(options[f.source] || []).map((row) => ({
+                          value: row.id,
+                          label: labelFor(row),
+                        }))}
+                        onChange={(value) => set(f.name, value)}
+                      />
                     ) : f.type === "select" || f.type === "multiselect" ? (
                       <select
                         required={!f.optional}
@@ -231,28 +256,23 @@ export default function ResourceForm({
                       <div>
                         {form.items.map((r, i) => (
                           <div className="line-row" key={i}>
-                            <select
-                              aria-label="Sản phẩm"
+                            <SearchSelect
+                              label={`Sản phẩm dòng ${i + 1}`}
+                              placeholder="Nhập tên sản phẩm hoặc SKU…"
                               required
                               value={r.variant}
-                              onChange={(e) =>
+                              options={(options["variants/"] || []).map(
+                                (v) => ({ value: v.id, label: labelFor(v) }),
+                              )}
+                              onChange={(value) =>
                                 set(
                                   "items",
                                   form.items.map((row, j) =>
-                                    j === i
-                                      ? { ...row, variant: e.target.value }
-                                      : row,
+                                    j === i ? { ...row, variant: value } : row,
                                   ),
                                 )
                               }
-                            >
-                              <option value="">Chọn sản phẩm / SKU</option>
-                              {options["variants/"]?.map((v) => (
-                                <option key={v.id} value={v.id}>
-                                  {labelFor(v)}
-                                </option>
-                              ))}
-                            </select>
+                            />
                             <input
                               aria-label="Số lượng"
                               required

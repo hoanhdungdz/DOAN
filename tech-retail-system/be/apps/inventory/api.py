@@ -186,6 +186,14 @@ class DocumentViewSet(viewsets.ModelViewSet):
 
 class TransferSerializer(serializers.ModelSerializer):
     items = ItemInput(many=True)
+    source_label = serializers.SerializerMethodField()
+    destination_label = serializers.SerializerMethodField()
+
+    def get_source_label(self, obj) -> str:
+        return f"{obj.source.store.name} — {obj.source.name}"
+
+    def get_destination_label(self, obj) -> str:
+        return f"{obj.destination.store.name} — {obj.destination.name}"
 
     class Meta:
         model = StockTransfer
@@ -225,7 +233,12 @@ class TransferSerializer(serializers.ModelSerializer):
 
 class TransferViewSet(viewsets.ModelViewSet):
     serializer_class = TransferSerializer
-    queryset = StockTransfer.objects.prefetch_related("items").all().order_by("-pk")
+    queryset = (
+        StockTransfer.objects.select_related("source__store", "destination__store")
+        .prefetch_related("items__variant__product")
+        .all()
+        .order_by("-pk")
+    )
     http_method_names = ["get", "post", "head", "options"]
 
     def get_queryset(self):
@@ -234,7 +247,16 @@ class TransferViewSet(viewsets.ModelViewSet):
             raise PermissionDenied()
         qs = self.queryset.filter(Q(source__store_id__in=ids) | Q(destination__store_id__in=ids))
         if self.request.query_params.get("search"):
-            qs = qs.filter(reason__icontains=self.request.query_params["search"][:200])
+            search = self.request.query_params["search"][:200]
+            qs = qs.filter(
+                Q(reason__icontains=search)
+                | Q(source__name__icontains=search)
+                | Q(source__store__name__icontains=search)
+                | Q(destination__name__icontains=search)
+                | Q(destination__store__name__icontains=search)
+                | Q(items__variant__product__name__icontains=search)
+                | Q(items__variant__sku__icontains=search)
+            ).distinct()
         return qs
 
     def do(self, request, action):

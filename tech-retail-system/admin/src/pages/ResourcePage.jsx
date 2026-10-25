@@ -15,6 +15,8 @@ import {
 } from "../../../shared/api";
 import { Loading, Empty, ErrorBox, Pager, Badge } from "../../../shared/ui";
 import useRemote from "../hooks/useRemote";
+import StructuredData from "../../../shared/StructuredData";
+import ProductRecordDetails from "../features/resources/ProductRecordDetails";
 function cell(k, v) {
   if (v === null || v === undefined || v === "") return "—";
   if (typeof v === "boolean") return <Badge>{v ? "Có" : "Không"}</Badge>;
@@ -351,25 +353,13 @@ export default function ResourcePage() {
                 <X size={18} />
               </button>
             </div>
-            {detail.items && (
-              <table>
-                <thead>
-                  <tr>
-                    <th>Sản phẩm / biến thể</th>
-                    <th>Số lượng</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {detail.items.map((i, k) => (
-                    <tr key={k}>
-                      <td>{i.name || i.variant}</td>
-                      <td>{i.quantity}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
-            <pre>{JSON.stringify(detail, null, 2)}</pre>
+            <div className="record-details">
+              {name === "products" ? (
+                <ProductRecordDetails product={detail} />
+              ) : (
+                <StructuredData value={detail} labels={labels} />
+              )}
+            </div>
           </section>
         </div>
       )}

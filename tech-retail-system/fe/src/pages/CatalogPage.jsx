@@ -18,19 +18,34 @@ import {
   Pager,
   ProductImage,
 } from "../../../shared/ui";
-import { money } from "../../../shared/api";
+import { money, all, errorText } from "../../../shared/api";
+import SearchSelect from "../../../shared/SearchSelect";
 export default function CatalogPage({ home = false }) {
   const [params, setParams] = useSearchParams(),
     [page, setPage] = useState(1),
-    [filtersOpen, setFiltersOpen] = useState(false);
+    [filtersOpen, setFiltersOpen] = useState(false),
+    [brands, setBrands] = useState({ data: null, loading: true, error: "" });
   const query = new URLSearchParams(params);
   query.set("page", page);
   if (home && !params.toString()) query.set("page_size", "8");
   const size = home && !params.toString() ? 8 : 20;
   const products = useRemote("products/?" + query),
     categories = useRemote("categories/?page_size=100"),
-    brands = useRemote("brands/?page_size=100"),
     stores = useRemote("stores/?page_size=100");
+  useEffect(() => {
+    let live = true;
+    all("brands/")
+      .then((results) => {
+        if (live) setBrands({ data: { results }, loading: false, error: "" });
+      })
+      .catch((error) => {
+        if (live)
+          setBrands({ data: null, loading: false, error: errorText(error) });
+      });
+    return () => {
+      live = false;
+    };
+  }, []);
   useEffect(() => setPage(1), [params.toString()]);
   function filter(k, v) {
     const q = new URLSearchParams(params);
@@ -143,20 +158,21 @@ export default function CatalogPage({ home = false }) {
             <div className="filter-title">
               Lọc sản phẩm <SlidersHorizontal size={15} />
             </div>
-            <label>
-              Thương hiệu
-              <select
+            <div className="filter-brand">
+              <span>Thương hiệu</span>
+              <SearchSelect
+                label="Thương hiệu"
+                placeholder="Nhập tên hãng…"
+                emptyLabel="Tất cả thương hiệu"
+                disabled={brands.loading}
                 value={params.get("brand") || ""}
-                onChange={(e) => filter("brand", e.target.value)}
-              >
-                <option value="">Tất cả thương hiệu</option>
-                {brands.data?.results?.map((b) => (
-                  <option key={b.id} value={b.id}>
-                    {b.name}
-                  </option>
-                ))}
-              </select>
-            </label>
+                options={(brands.data?.results || []).map((brand) => ({
+                  value: brand.id,
+                  label: brand.name,
+                }))}
+                onChange={(value) => filter("brand", value)}
+              />
+            </div>
             <label>
               Khoảng giá
               <input
