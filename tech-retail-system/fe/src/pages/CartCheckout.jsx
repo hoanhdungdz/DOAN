@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Trash2, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useCart } from "../features/cart/CartContext";
 import { api, money, errorText, operationKey } from "../../../shared/api";
+import { useSession } from "../../../shared/session";
 import {
   Loading,
   ErrorBox,
@@ -20,6 +21,9 @@ import {
 } from "../../../shared/checkoutStock";
 export default function CartCheckout({ checkout = false }) {
   const location = useLocation();
+  const { user } = useSession();
+  const editedRecipientFields = useRef(new Set());
+  const [profileError, setProfileError] = useState("");
   const {
       items,
       replace,
@@ -71,6 +75,40 @@ export default function CartCheckout({ checkout = false }) {
     fulfillment: "DELIVERY",
     payment_method: "COD",
   });
+  useEffect(() => {
+    if (!checkout || !user?.id) return;
+    let live = true;
+    setProfileError("");
+    api("auth/profile/")
+      .then((profile) => {
+        if (!live) return;
+        setForm((current) => {
+          const next = { ...current };
+          for (const [field, source] of [
+            ["recipient_name", "name"],
+            ["phone", "phone"],
+            ["address", "address"],
+          ]) {
+            if (!editedRecipientFields.current.has(field) && !current[field])
+              next[field] = profile[source] || "";
+          }
+          return next;
+        });
+      })
+      .catch(() => {
+        if (live)
+          setProfileError(
+            "Chưa tải được hồ sơ. Bạn có thể nhập thông tin nhận hàng bên dưới.",
+          );
+      });
+    return () => {
+      live = false;
+    };
+  }, [checkout, user?.id]);
+  function updateRecipient(field, value) {
+    editedRecipientFields.current.add(field);
+    setForm((current) => ({ ...current, [field]: value }));
+  }
   useEffect(() => {
     let live = true;
     setLoading(true);
@@ -312,6 +350,7 @@ export default function CartCheckout({ checkout = false }) {
                 onSubmit={submit}
               >
                 <h3>Thông tin nhận hàng</h3>
+                {profileError && <p className="subtle">{profileError}</p>}
                 <div className="form-grid">
                   <Field label="Họ và tên người nhận">
                     <input
@@ -319,7 +358,7 @@ export default function CartCheckout({ checkout = false }) {
                       maxLength={150}
                       value={form.recipient_name}
                       onChange={(e) =>
-                        setForm({ ...form, recipient_name: e.target.value })
+                        updateRecipient("recipient_name", e.target.value)
                       }
                     />
                   </Field>
@@ -328,9 +367,7 @@ export default function CartCheckout({ checkout = false }) {
                       required
                       type="tel"
                       value={form.phone}
-                      onChange={(e) =>
-                        setForm({ ...form, phone: e.target.value })
-                      }
+                      onChange={(e) => updateRecipient("phone", e.target.value)}
                     />
                   </Field>
                   <Field label="Hình thức nhận">
@@ -373,7 +410,7 @@ export default function CartCheckout({ checkout = false }) {
                         maxLength={500}
                         value={form.address}
                         onChange={(e) =>
-                          setForm({ ...form, address: e.target.value })
+                          updateRecipient("address", e.target.value)
                         }
                       />
                     </Field>

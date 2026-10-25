@@ -3,14 +3,19 @@ import { createRoot } from "react-dom/client";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
 import CartCheckout from "../fe/src/pages/CartCheckout";
+import RequireAccount from "../fe/src/components/RequireAccount";
 import { checkoutWarehouses } from "./checkoutStock";
 import { api } from "./api";
 
 const state = vi.hoisted(() => ({
+  user: null,
   items: [],
   stock: [],
   replace: vi.fn(),
   clear: vi.fn(),
+}));
+vi.mock("./session", () => ({
+  useSession: () => ({ user: state.user }),
 }));
 vi.mock("../fe/src/features/cart/CartContext", () => ({
   useCart: () => ({
@@ -35,6 +40,7 @@ beforeEach(() => {
   container = document.createElement("div");
   document.body.append(container);
   root = createRoot(container);
+  state.user = { id: 1 };
   state.items = [{ variant: 330, quantity: 1 }];
   state.stock = [
     { warehouse: 4, available: 3 },
@@ -44,6 +50,12 @@ beforeEach(() => {
   state.clear.mockReset();
   api.mockReset();
   api.mockImplementation(async (path, options) => {
+    if (path === "auth/profile/")
+      return {
+        name: "Nguyễn An",
+        phone: "0901234567",
+        address: "12 Đường A, Hà Nội",
+      };
     if (path === "checkout/promotions/") {
       const selected = options.body.coupon_code;
       const subtotal = String(16390000 * state.items[0].quantity);
@@ -99,14 +111,171 @@ afterEach(async () => {
   await act(async () => root.unmount());
   container.remove();
 });
-const render = () =>
+const render = (checkout = true) =>
   act(async () =>
     root.render(
       <MemoryRouter>
-        <CartCheckout checkout />
+        {checkout ? (
+          <RequireAccount>
+            <CartCheckout checkout />
+          </RequireAccount>
+        ) : (
+          <CartCheckout />
+        )}
       </MemoryRouter>,
     ),
   );
+
+const recipientInputs = () =>
+  container.querySelectorAll('#checkout-form input:not([type="number"])');
+const inputValue = async (input, value) =>
+  act(async () => {
+    Object.getOwnPropertyDescriptor(
+      HTMLInputElement.prototype,
+      "value",
+    ).set.call(input, value);
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+
+test("checkout fills the saved profile and submits an editable recipient without changing the profile", async () => {
+  await render();
+  const [name, phone, address] = recipientInputs();
+  expect([name.value, phone.value, address.value]).toEqual([
+    "Nguyễn An",
+    "0901234567",
+    "12 Đường A, Hà Nội",
+  ]);
+  await inputValue(name, "Người nhận khác");
+  await inputValue(address, "Địa chỉ nhận khác");
+  api.mockImplementationOnce(async () => ({
+    id: 9,
+    code: "TEST",
+    grand_total: "16390000",
+    payment_status: "UNPAID",
+    payment_method: "COD",
+  }));
+  await act(async () =>
+    container
+      .querySelector("#checkout-form")
+      .dispatchEvent(new Event("submit", { bubbles: true, cancelable: true })),
+  );
+  expect(
+    api.mock.calls.find(([path]) => path === "orders/")[1].body,
+  ).toMatchObject({
+    recipient_name: "Người nhận khác",
+    phone: "0901234567",
+    address: "Địa chỉ nhận khác",
+  });
+  expect(api.mock.calls.filter(([path]) => path === "auth/profile/")).toEqual([
+    ["auth/profile/"],
+  ]);
+});
+
+test("a delayed profile fills only untouched fields, including preserving an intentionally cleared name", async () => {
+  const original = api.getMockImplementation();
+  let resolveProfile;
+  api.mockImplementation((path, options) =>
+    path === "auth/profile/"
+      ? new Promise((resolve) => {
+          resolveProfile = resolve;
+        })
+      : original(path, options),
+  );
+  await render();
+  const [name, phone] = recipientInputs();
+  await inputValue(name, "Tên tự nhập");
+  await inputValue(name, "");
+  await inputValue(phone, "0987654321");
+  await act(async () =>
+    resolveProfile({
+      name: "Tên trong hồ sơ",
+      phone: "0901234567",
+      address: "Địa chỉ trong hồ sơ",
+    }),
+  );
+  expect([...recipientInputs()].map((input) => input.value)).toEqual([
+    "",
+    "0987654321",
+    "Địa chỉ trong hồ sơ",
+  ]);
+});
+
+test("tab focus and same-account session refresh preserve recipient edits without refetching the profile", async () => {
+  await render();
+  await inputValue(recipientInputs()[2], "Địa chỉ đặt hộ");
+  state.user = { id: 1, full_name: "Updated session" };
+  await render();
+  await act(async () => window.dispatchEvent(new Event("focus")));
+  expect(recipientInputs()[2].value).toBe("Địa chỉ đặt hộ");
+  expect(
+    api.mock.calls.filter(([path]) => path === "auth/profile/"),
+  ).toHaveLength(1);
+});
+
+test("switching accounts discards the previous recipient and ignores the previous account's pending profile", async () => {
+  const original = api.getMockImplementation();
+  const pending = [];
+  api.mockImplementation((path, options) =>
+    path === "auth/profile/"
+      ? new Promise((resolve) => {
+          pending.push(resolve);
+        })
+      : original(path, options),
+  );
+  await render();
+  await inputValue(recipientInputs()[0], "Người nhận cũ");
+  state.user = { id: 2 };
+  await render();
+  await act(async () =>
+    pending[0]({
+      name: "Hồ sơ cũ",
+      phone: "0901234567",
+      address: "Địa chỉ cũ",
+    }),
+  );
+  expect([...recipientInputs()].map((input) => input.value)).toEqual([
+    "",
+    "",
+    "",
+  ]);
+  await act(async () =>
+    pending[1]({
+      name: "Khách mới",
+      phone: "0987654321",
+      address: "Địa chỉ mới",
+    }),
+  );
+  expect([...recipientInputs()].map((input) => input.value)).toEqual([
+    "Khách mới",
+    "0987654321",
+    "Địa chỉ mới",
+  ]);
+});
+
+test("profile failure still allows manual checkout, and the cart page never requests a profile", async () => {
+  const original = api.getMockImplementation();
+  api.mockImplementation((path, options) =>
+    path === "auth/profile/"
+      ? Promise.reject(new Error("Network unavailable"))
+      : original(path, options),
+  );
+  await render(false);
+  expect(api.mock.calls.some(([path]) => path === "auth/profile/")).toBe(false);
+  await render();
+  expect(container.textContent).toContain("Chưa tải được hồ sơ");
+  const [name, phone, address] = recipientInputs();
+  await inputValue(name, "Khách tự nhập");
+  await inputValue(phone, "0901234567");
+  await inputValue(address, "Địa chỉ tự nhập");
+  expect(container.querySelector('button[form="checkout-form"]').disabled).toBe(
+    false,
+  );
+  expect([...recipientInputs()].map((input) => input.value)).toEqual([
+    "Khách tự nhập",
+    "0901234567",
+    "Địa chỉ tự nhập",
+  ]);
+});
 test("checkout selects the branch with stock and disables the empty branch from the screenshot", async () => {
   await render();
   const select = [...container.querySelectorAll("select")].find((s) =>
